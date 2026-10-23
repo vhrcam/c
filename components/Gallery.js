@@ -20,7 +20,7 @@ export default function Gallery({ open, items, onClose, onOpen, onRemove }) {
       <aside
         role="dialog"
         aria-label="Your gallery"
-        className={`absolute inset-y-0 right-0 flex w-[380px] max-w-[92vw] flex-col bg-paper shadow-[-12px_0_40px_rgba(26,25,22,0.18)] transition-transform duration-500 ease-[cubic-bezier(.2,.75,.15,1)] ${open ? "translate-x-0" : "translate-x-full"}`}
+        className={`absolute inset-y-0 right-0 flex w-[380px] max-w-[92vw] flex-col bg-paper transition-[translate,box-shadow] duration-500 ease-[cubic-bezier(.2,.75,.15,1)] ${open ? "translate-x-0 shadow-[-12px_0_40px_rgba(26,25,22,0.18)]" : "translate-x-full"}`}
       >
         <div className="flex items-center justify-between px-5 pb-3 pt-5">
           <h2 className="font-serif text-[26px] italic">your gallery</h2>
