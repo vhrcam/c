@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { LABELS, PLACES, TIMES, applySwap, newSeed, normalize } from "@/lib/scene";
+import { LABELS, PLACES, STYLES, TIMES, applySwap, newSeed, normalize } from "@/lib/scene";
 import { thumb } from "@/lib/thumbs";
 import { caption, edit, read } from "@/lib/words";
 import Describe from "./Describe";
@@ -43,10 +43,12 @@ export default function Studio() {
   const [busy, setBusy] = useState(false);
   const [toast, setToast] = useState("");
   const [versions, setVersions] = useState([]);
+  const [previews, setPreviews] = useState({ key: "", images: {} });
   const hero = useRef(null);
   const canvas = useRef(null);
   const ticket = useRef(0);
   const toastTimer = useRef(0);
+  const previewKey = useRef("");
   const scene = job?.scene || draft;
 
   useEffect(() => {
@@ -65,6 +67,29 @@ export default function Studio() {
       timers.forEach(clearTimeout);
     };
   }, []);
+
+  useEffect(() => {
+    if (status !== "done" || !job) return;
+    const base = job.scene;
+    const key = JSON.stringify({ ...base, style: "" });
+    if (previewKey.current === key) return;
+    previewKey.current = key;
+    const images = {};
+    let i = 0;
+    let timer;
+    const next = () => {
+      const style = STYLES[i++];
+      if (!style) return;
+      images[style] = thumb({ ...base, style }, 240);
+      setPreviews({ key, images: { ...images } });
+      timer = setTimeout(next, 40);
+    };
+    timer = setTimeout(next, 300);
+    return () => {
+      clearTimeout(timer);
+      if (i <= STYLES.length) previewKey.current = "";
+    };
+  }, [status, job]);
 
   useEffect(() => {
     if (step >= 4) return;
@@ -209,6 +234,15 @@ export default function Studio() {
             </div>
           )}
           {status === "done" && <Refine busy={busy} onSubmit={refine} />}
+          {status === "done" && (
+            <Strip
+              label="styles"
+              wide
+              items={STYLES.map((s) => ({ key: s, title: LABELS.style[s], image: previews.key === JSON.stringify({ ...job.scene, style: "" }) ? previews.images[s] : null }))}
+              current={job.scene.style}
+              onPick={(item) => item.key !== job.scene.style && start({ ...job.scene, style: item.key }, "play")}
+            />
+          )}
           {status === "done" && versions.length > 1 && (
             <Strip
               label="versions"
