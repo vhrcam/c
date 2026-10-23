@@ -108,9 +108,9 @@ export default function Studio() {
       if (!style) return;
       images[style] = thumb({ ...base, style }, 240);
       setPreviews({ key, images: { ...images } });
-      timer = setTimeout(next, 40);
+      timer = setTimeout(next, 120);
     };
-    timer = setTimeout(next, 300);
+    timer = setTimeout(next, 1300);
     return () => {
       clearTimeout(timer);
       if (i <= STYLES.length) previewKey.current = "";
@@ -135,7 +135,11 @@ export default function Studio() {
   const finish = (done) => {
     setStatus("done");
     const key = JSON.stringify(done);
-    setVersions((list) => (list.some((v) => v.key === key) ? list : [...list, { key, scene: done, image: thumb(done, 260) }]));
+    if (versions.some((v) => v.key === key)) return;
+    setTimeout(() => {
+      const image = thumb(done, 260);
+      setVersions((list) => (list.some((v) => v.key === key) ? list : [...list, { key, scene: done, image }]));
+    }, 900);
   };
 
   const share = async () => {
