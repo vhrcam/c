@@ -2,11 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { newSeed, normalize } from "@/lib/scene";
+import { LABELS, PLACES, TIMES, newSeed, normalize } from "@/lib/scene";
 import { read } from "@/lib/words";
 import Describe from "./Describe";
 import Logo from "./Logo";
 import Painting from "./Painting";
+import Pill from "./Pill";
 import SceneTags from "./SceneTags";
 
 const STEPS = [
@@ -34,6 +35,7 @@ export default function Studio() {
   const [job, setJob] = useState(null);
   const [status, setStatus] = useState("idle");
   const [draft, setDraft] = useState(null);
+  const [question, setQuestion] = useState(null);
   const hero = useRef(null);
   const canvas = useRef(null);
   const ticket = useRef(0);
@@ -71,9 +73,10 @@ export default function Studio() {
   }, [step]);
 
   const start = (next, how = "play") => {
+    setQuestion(null);
     setDraft(next);
     setStatus("painting");
-    setJob({ scene: next, how, id: Date.now() });
+    setJob({ scene: next, how });
   };
 
   const paint = async ({ text, picks, style }) => {
@@ -90,11 +93,17 @@ export default function Studio() {
     });
     if (!text) return;
     let next = local;
+    let asked = null;
     try {
       const out = await ask({ text, picks, style });
       next = normalize({ ...out.scene, seed, style, caption: text });
+      asked = out.question;
     } catch {}
-    if (mine === ticket.current) start(next);
+    if (mine !== ticket.current) return;
+    if (!asked) return start(next);
+    setDraft(next);
+    setQuestion(asked);
+    setStatus("asking");
   };
 
   const home = () => {
@@ -103,6 +112,7 @@ export default function Studio() {
       setView("home");
       setJob(null);
       setDraft(null);
+      setQuestion(null);
       setStatus("idle");
     });
   };
@@ -126,8 +136,24 @@ export default function Studio() {
           </nav>
         </header>
         <section className="mx-auto w-full max-w-[1120px] px-4 pb-28 pt-5 sm:px-7">
-          <div className="mx-auto" style={{ width: "min(100%, calc((100dvh - 230px) * 1.5))" }}>
+          <div className="relative mx-auto" style={{ width: "min(100%, calc((100dvh - 230px) * 1.5))" }}>
             <Painting ref={canvas} job={job} label={scene?.caption} onDone={() => setStatus("done")} />
+            {status === "reading" && <p className="absolute inset-0 grid animate-pulse place-items-center font-serif text-[19px] italic text-faint">reading your words…</p>}
+            {status === "asking" && question && (
+              <div className="rise absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+                <p className="text-balance font-serif text-[24px] italic leading-snug text-ink sm:text-[28px]">{question.text}</p>
+                <div className="mt-5 flex max-w-lg flex-wrap justify-center gap-1">
+                  {(question.field === "time" ? TIMES : PLACES).map((value) => (
+                    <Pill key={value} onClick={() => start(normalize({ ...draft, [question.field]: value }))}>
+                      {LABELS[question.field][value]}
+                    </Pill>
+                  ))}
+                </div>
+                <button type="button" onClick={() => start(draft)} className="mt-4 text-[14px] italic text-faint transition-colors hover:text-ink">
+                  just paint it
+                </button>
+              </div>
+            )}
           </div>
           {scene && (
             <div className="rise">
@@ -135,7 +161,6 @@ export default function Studio() {
               <SceneTags scene={scene} />
             </div>
           )}
-          {status === "reading" && <p className="mt-6 animate-pulse text-center font-serif text-[17px] italic text-faint">reading your words…</p>}
           {status === "done" && <p className="sr-only">Finished painting</p>}
         </section>
       </main>
