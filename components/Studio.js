@@ -3,12 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { LABELS, PLACES, TIMES, applySwap, newSeed, normalize } from "@/lib/scene";
-import { caption, read } from "@/lib/words";
+import { caption, edit, read } from "@/lib/words";
 import Describe from "./Describe";
 import Logo from "./Logo";
 import Painting from "./Painting";
 import Pill from "./Pill";
+import Refine from "./Refine";
 import SceneTags from "./SceneTags";
+import Toast from "./Toast";
 
 const STEPS = [
   [1900, 2],
@@ -36,9 +38,12 @@ export default function Studio() {
   const [status, setStatus] = useState("idle");
   const [draft, setDraft] = useState(null);
   const [question, setQuestion] = useState(null);
+  const [busy, setBusy] = useState(false);
+  const [toast, setToast] = useState("");
   const hero = useRef(null);
   const canvas = useRef(null);
   const ticket = useRef(0);
+  const toastTimer = useRef(0);
   const scene = job?.scene || draft;
 
   useEffect(() => {
@@ -79,6 +84,31 @@ export default function Studio() {
     setJob({ scene: next, how });
   };
 
+  const say = (message) => {
+    setToast(message);
+    clearTimeout(toastTimer.current);
+    toastTimer.current = setTimeout(() => setToast(""), 2600);
+  };
+
+  const refine = async (text) => {
+    const current = job.scene;
+    const mine = ++ticket.current;
+    setBusy(true);
+    let next = null;
+    try {
+      const out = await ask({ mode: "edit", text, scene: current });
+      if (out.changed !== false) next = normalize({ ...out.scene, seed: current.seed, caption: current.caption });
+    } catch {}
+    if (!next) {
+      const local = edit(text, current);
+      if (local.changed) next = local.scene;
+    }
+    if (mine !== ticket.current) return;
+    setBusy(false);
+    if (!next || JSON.stringify(next) === JSON.stringify(current)) return say("Try naming what to change, like “make it night”");
+    start(next, next.style !== current.style ? "play" : "auto");
+  };
+
   const swap = (tag, value) => {
     const next = applySwap(job.scene, tag, value);
     if (job.scene.caption === caption(job.scene)) next.caption = caption(next);
@@ -114,6 +144,7 @@ export default function Studio() {
 
   const home = () => {
     ticket.current++;
+    setBusy(false);
     morph(() => {
       setView("home");
       setJob(null);
@@ -167,8 +198,9 @@ export default function Studio() {
               <SceneTags scene={scene} onSwap={job ? swap : null} />
             </div>
           )}
-          {status === "done" && <p className="sr-only">Finished painting</p>}
+          {status === "done" && <Refine busy={busy} onSubmit={refine} />}
         </section>
+        <Toast message={toast} />
       </main>
     );
 
