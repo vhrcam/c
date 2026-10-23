@@ -67,3 +67,13 @@ body {
     animation: none;
   }
 }
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+textarea:focus-visible,
+input:focus-visible {
+  outline: none;
+}
