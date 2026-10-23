@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { LOGO_BOX, drawC } from "@/lib/paint/logo";
 
 const ease = (t) => -(Math.cos(Math.PI * t) - 1) / 2;
@@ -8,7 +8,7 @@ const ease = (t) => -(Math.cos(Math.PI * t) - 1) / 2;
 export default function Logo({ draw = false, delay = 0, duration = 1800, className = "" }) {
   const ref = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const canvas = ref.current;
     const ctx = canvas.getContext("2d");
     let progress = draw ? 0 : 1;
