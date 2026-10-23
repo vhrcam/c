@@ -9,7 +9,7 @@ const EMPTY = { place: "", time: "", weather: "", extras: [] };
 export default function Describe({ visible, tags, onPaint }) {
   const [text, setText] = useState("");
   const [picks, setPicks] = useState(EMPTY);
-  const [style, setStyle] = useState("watercolor");
+  const [style, setStyle] = useState("");
   const [more, setMore] = useState(false);
   const input = useRef(null);
   const ready = text.trim().length > 0 || Boolean(picks.place || picks.time || picks.weather || picks.extras.length);
@@ -102,7 +102,7 @@ export default function Describe({ visible, tags, onPaint }) {
         <div {...row(TAG_GROUPS.length)}>
           <div className="flex flex-wrap gap-1">
             {STYLES.map((value) => (
-              <Pill key={value} on={style === value} onClick={() => setStyle(value)}>
+              <Pill key={value} on={style === value} onClick={() => setStyle(style === value ? "" : value)}>
                 {LABELS.style[value]}
               </Pill>
             ))}

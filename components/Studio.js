@@ -229,7 +229,7 @@ export default function Studio() {
     let asked = null;
     try {
       const out = await ask({ text, picks, style });
-      next = normalize({ ...out.scene, seed, style, caption: text });
+      next = normalize({ ...out.scene, seed, style: style || out.scene.style, caption: text });
       asked = out.question;
     } catch {}
     if (mine !== ticket.current) return;

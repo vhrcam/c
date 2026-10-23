@@ -110,7 +110,7 @@ export async function POST(request) {
   try {
     const out = clean(await askJSON(current ? editPrompt(text, current) : newPrompt(text, body.picks), SCHEMA));
     if (current) return Response.json({ scene: normalize({ ...current, ...out }), changed: true, source: "ai" });
-    const scene = withPicks(normalize({ ...out, style: body.style }), body.picks);
+    const scene = withPicks(normalize({ ...out, style: body.style || out.style }), body.picks);
     const question = out.question?.ask && out.question.text ? { text: out.question.text, field: out.question.field } : null;
     return Response.json({ scene, question, source: "ai" });
   } catch {
