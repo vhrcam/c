@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { newSeed } from "@/lib/scene";
+import { newSeed, normalize } from "@/lib/scene";
 import { read } from "@/lib/words";
 import Describe from "./Describe";
 import Logo from "./Logo";
@@ -14,6 +14,12 @@ const STEPS = [
   [3000, 3],
   [3550, 4],
 ];
+
+async function ask(body) {
+  const res = await fetch("/api/scene", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body), signal: AbortSignal.timeout(16000) });
+  if (!res.ok) throw new Error(`Scene request failed: ${res.status}`);
+  return res.json();
+}
 
 function morph(update) {
   if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) return update();
@@ -27,9 +33,11 @@ export default function Studio() {
   const [view, setView] = useState("home");
   const [job, setJob] = useState(null);
   const [status, setStatus] = useState("idle");
+  const [draft, setDraft] = useState(null);
   const hero = useRef(null);
   const canvas = useRef(null);
-  const scene = job?.scene;
+  const ticket = useRef(0);
+  const scene = job?.scene || draft;
 
   useEffect(() => {
     const quick = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -63,24 +71,41 @@ export default function Studio() {
   }, [step]);
 
   const start = (next, how = "play") => {
+    setDraft(next);
     setStatus("painting");
     setJob({ scene: next, how, id: Date.now() });
   };
 
-  const paint = ({ text, picks, style }) => {
+  const paint = async ({ text, picks, style }) => {
+    const seed = newSeed();
+    const local = read(text, picks, style, seed);
+    const mine = ++ticket.current;
     setSkipped(true);
     morph(() => {
       setView("studio");
-      start(read(text, picks, style, newSeed()));
+      if (!text) return start(local);
+      setJob(null);
+      setDraft(local);
+      setStatus("reading");
     });
+    if (!text) return;
+    let next = local;
+    try {
+      const out = await ask({ text, picks, style });
+      next = normalize({ ...out.scene, seed, style, caption: text });
+    } catch {}
+    if (mine === ticket.current) start(next);
   };
 
-  const home = () =>
+  const home = () => {
+    ticket.current++;
     morph(() => {
       setView("home");
       setJob(null);
+      setDraft(null);
       setStatus("idle");
     });
+  };
 
   if (view === "studio")
     return (
@@ -110,6 +135,7 @@ export default function Studio() {
               <SceneTags scene={scene} />
             </div>
           )}
+          {status === "reading" && <p className="mt-6 animate-pulse text-center font-serif text-[17px] italic text-faint">reading your words…</p>}
           {status === "done" && <p className="sr-only">Finished painting</p>}
         </section>
       </main>
