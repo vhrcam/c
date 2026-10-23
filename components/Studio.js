@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { LABELS, PLACES, STYLES, TIMES, applySwap, newSeed, normalize } from "@/lib/scene";
 import { list, remove, save } from "@/lib/gallery";
+import { decode, encode } from "@/lib/share";
 import { thumb } from "@/lib/thumbs";
 import { caption, edit, read } from "@/lib/words";
 import Actions from "./Actions";
@@ -53,10 +54,30 @@ export default function Studio() {
   const ticket = useRef(0);
   const toastTimer = useRef(0);
   const previewKey = useRef("");
+  const shared = useRef(null);
   const scene = job?.scene || draft;
+
+  const start = (next, how = "play") => {
+    setQuestion(null);
+    setDraft(next);
+    setStatus("painting");
+    setJob({ scene: next, how });
+  };
+
+  const showShared = useEffectEvent(() => {
+    const next = shared.current;
+    if (!next) return;
+    shared.current = null;
+    setSkipped(true);
+    morph(() => {
+      setView("studio");
+      start(next);
+    });
+  });
 
   useEffect(() => {
     const quick = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    shared.current = location.hash.startsWith("#p=") ? decode(location.hash.slice(3)) : null;
     const frame = requestAnimationFrame(() => {
       const box = hero.current.getBoundingClientRect();
       setLift(innerHeight / 2 - (box.top + box.height / 2));
@@ -66,6 +87,7 @@ export default function Studio() {
       }
     });
     const timers = quick ? [] : STEPS.map(([ms, s]) => setTimeout(() => setStep(s), ms));
+    if (shared.current) timers.push(setTimeout(showShared, quick ? 0 : 2900));
     return () => {
       cancelAnimationFrame(frame);
       timers.forEach(clearTimeout);
@@ -100,6 +122,7 @@ export default function Studio() {
     const skip = () => {
       setSkipped(true);
       setStep(4);
+      showShared();
     };
     addEventListener("pointerdown", skip);
     addEventListener("keydown", skip);
@@ -109,17 +132,19 @@ export default function Studio() {
     };
   }, [step]);
 
-  const start = (next, how = "play") => {
-    setQuestion(null);
-    setDraft(next);
-    setStatus("painting");
-    setJob({ scene: next, how });
-  };
-
   const finish = (done) => {
     setStatus("done");
     const key = JSON.stringify(done);
     setVersions((list) => (list.some((v) => v.key === key) ? list : [...list, { key, scene: done, image: thumb(done, 260) }]));
+  };
+
+  const share = async () => {
+    const url = `${location.origin}/#p=${encode(job.scene)}`;
+    try {
+      if (navigator.share && matchMedia("(pointer: coarse)").matches) return await navigator.share({ title: "c", text: job.scene.caption, url });
+      await navigator.clipboard.writeText(url);
+      say("Link copied. Whoever opens it watches it paint itself");
+    } catch {}
   };
 
   const openGallery = () => setShelf({ open: true, items: list() });
@@ -203,6 +228,7 @@ export default function Studio() {
 
   const home = () => {
     ticket.current++;
+    if (location.hash) history.replaceState(null, "", location.pathname);
     setBusy(false);
     morph(() => {
       setView("home");
@@ -277,6 +303,7 @@ export default function Studio() {
             <Actions
               items={[
                 { label: "Save", icon: "save", onClick: keep },
+                { label: "Share", icon: "share", onClick: share },
                 { label: "Paint again", icon: "again", onClick: () => canvas.current.replay() },
               ]}
             />
