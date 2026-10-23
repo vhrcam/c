@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { LABELS, PLACES, TIMES, applySwap, newSeed, normalize } from "@/lib/scene";
+import { thumb } from "@/lib/thumbs";
 import { caption, edit, read } from "@/lib/words";
 import Describe from "./Describe";
 import Logo from "./Logo";
@@ -10,6 +11,7 @@ import Painting from "./Painting";
 import Pill from "./Pill";
 import Refine from "./Refine";
 import SceneTags from "./SceneTags";
+import Strip from "./Strip";
 import Toast from "./Toast";
 
 const STEPS = [
@@ -40,6 +42,7 @@ export default function Studio() {
   const [question, setQuestion] = useState(null);
   const [busy, setBusy] = useState(false);
   const [toast, setToast] = useState("");
+  const [versions, setVersions] = useState([]);
   const hero = useRef(null);
   const canvas = useRef(null);
   const ticket = useRef(0);
@@ -84,6 +87,12 @@ export default function Studio() {
     setJob({ scene: next, how });
   };
 
+  const finish = (done) => {
+    setStatus("done");
+    const key = JSON.stringify(done);
+    setVersions((list) => (list.some((v) => v.key === key) ? list : [...list, { key, scene: done, image: thumb(done, 260) }]));
+  };
+
   const say = (message) => {
     setToast(message);
     clearTimeout(toastTimer.current);
@@ -120,6 +129,7 @@ export default function Studio() {
     const local = read(text, picks, style, seed);
     const mine = ++ticket.current;
     setSkipped(true);
+    setVersions([]);
     morph(() => {
       setView("studio");
       if (!text) return start(local);
@@ -174,7 +184,7 @@ export default function Studio() {
         </header>
         <section className="mx-auto w-full max-w-[1120px] px-4 pb-28 pt-5 sm:px-7">
           <div className="relative mx-auto" style={{ width: "min(100%, calc((100dvh - 230px) * 1.5))" }}>
-            <Painting ref={canvas} job={job} label={scene?.caption} onDone={() => setStatus("done")} />
+            <Painting ref={canvas} job={job} label={scene?.caption} onDone={finish} />
             {status === "reading" && <p className="absolute inset-0 grid animate-pulse place-items-center font-serif text-[19px] italic text-faint">reading your words…</p>}
             {status === "asking" && question && (
               <div className="rise absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
@@ -199,6 +209,16 @@ export default function Studio() {
             </div>
           )}
           {status === "done" && <Refine busy={busy} onSubmit={refine} />}
+          {status === "done" && versions.length > 1 && (
+            <Strip
+              label="versions"
+              items={versions.map((v, i) => ({ ...v, title: i ? `change ${i}` : "first" }))}
+              current={JSON.stringify(job.scene)}
+              onPick={(v) => {
+                setJob({ scene: v.scene, how: "show" });
+              }}
+            />
+          )}
         </section>
         <Toast message={toast} />
       </main>
