@@ -60,7 +60,7 @@ export default function Studio() {
             picture your memories
           </p>
         </div>
-        <Describe visible={step >= 3} />
+        <Describe visible={step >= 3} tags={step >= 4} />
       </div>
     </main>
   );
