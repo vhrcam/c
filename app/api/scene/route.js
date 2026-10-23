@@ -56,7 +56,7 @@ const RULES = `Rules:
 - weather: clear unless they mention clouds, rain, falling snow or fog.
 - extras: only things they mention or clearly imply: flowers, stars, fireflies, birds, trees, lanterns, aurora (northern lights), shooting-star.
 - mood: warm, dreamy, calm, moody or bright.
-- people: one entry per person in the moment, at most 5. Adults have height 1, children 0.6 to 0.75. Put clothing colors on the right person as hex colors. Set dress true for a dress, gown or skirt, and use top for its color. Hair color as hex and hairLength short, long or bun when mentioned, otherwise "unknown". Skin as hex only if they describe it. Leave anything not mentioned as "".
+- people: one entry per person in the moment, at most 5. The person telling the memory counts when they were there ("I", "me", "we", "us", "our"), so "walking with my girlfriend" is two people and "my family" is usually four. Use no people only for pure scenery. Adults have height 1, children 0.6 to 0.75. Put clothing colors on the right person as hex colors. Set dress true for a dress, gown or skirt, and use top for its color. Hair color as hex and hairLength short, long or bun when mentioned, otherwise "unknown". Skin as hex only if they describe it. Leave anything not mentioned as "".
 - pose: kiss, hug, hold (holding hands), sit, walk or stand. Two people with no clear pose: hold.
 - style: watercolor unless they ask for oil, storybook, ink or pixel.
 - skyTint: "" unless they want the sky to be a certain color.`;
