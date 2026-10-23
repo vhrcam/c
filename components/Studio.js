@@ -5,7 +5,7 @@ import { flushSync } from "react-dom";
 import { LABELS, PLACES, STYLES, TIMES, applySwap, newSeed, normalize } from "@/lib/scene";
 import { list, remove, save } from "@/lib/gallery";
 import { decode, encode } from "@/lib/share";
-import { thumb } from "@/lib/thumbs";
+import { download, thumb } from "@/lib/thumbs";
 import { caption, edit, read } from "@/lib/words";
 import Actions from "./Actions";
 import Describe from "./Describe";
@@ -145,6 +145,15 @@ export default function Studio() {
       await navigator.clipboard.writeText(url);
       say("Link copied. Whoever opens it watches it paint itself");
     } catch {}
+  };
+
+  const exportImage = () => {
+    const current = job.scene;
+    say("Getting your painting ready…");
+    setTimeout(async () => {
+      await download(current);
+      say("Downloaded");
+    }, 60);
   };
 
   const openGallery = () => setShelf({ open: true, items: list() });
@@ -303,6 +312,7 @@ export default function Studio() {
             <Actions
               items={[
                 { label: "Save", icon: "save", onClick: keep },
+                { label: "Download", icon: "download", onClick: exportImage },
                 { label: "Share", icon: "share", onClick: share },
                 { label: "Paint again", icon: "again", onClick: () => canvas.current.replay() },
               ]}
