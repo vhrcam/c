@@ -3,9 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { LABELS, PLACES, STYLES, TIMES, applySwap, newSeed, normalize } from "@/lib/scene";
+import { list, remove, save } from "@/lib/gallery";
 import { thumb } from "@/lib/thumbs";
 import { caption, edit, read } from "@/lib/words";
+import Actions from "./Actions";
 import Describe from "./Describe";
+import Gallery from "./Gallery";
 import Logo from "./Logo";
 import Painting from "./Painting";
 import Pill from "./Pill";
@@ -44,6 +47,7 @@ export default function Studio() {
   const [toast, setToast] = useState("");
   const [versions, setVersions] = useState([]);
   const [previews, setPreviews] = useState({ key: "", images: {} });
+  const [shelf, setShelf] = useState({ open: false, items: [] });
   const hero = useRef(null);
   const canvas = useRef(null);
   const ticket = useRef(0);
@@ -118,6 +122,26 @@ export default function Studio() {
     setVersions((list) => (list.some((v) => v.key === key) ? list : [...list, { key, scene: done, image: thumb(done, 260) }]));
   };
 
+  const openGallery = () => setShelf({ open: true, items: list() });
+  const closeGallery = () => setShelf((s) => ({ ...s, open: false }));
+
+  const keep = () => {
+    const current = job.scene;
+    const image = versions.find((v) => v.key === JSON.stringify(current))?.image || thumb(current, 260);
+    say(save(current, image) ? "Saved to your gallery" : "Your browser is out of space for paintings");
+  };
+
+  const open = (saved) => {
+    ticket.current++;
+    setShelf((s) => ({ ...s, open: false }));
+    setSkipped(true);
+    setVersions([]);
+    morph(() => {
+      setView("studio");
+      start(saved, "show");
+    });
+  };
+
   const say = (message) => {
     setToast(message);
     clearTimeout(toastTimer.current);
@@ -189,6 +213,19 @@ export default function Studio() {
     });
   };
 
+  const gallery = (
+    <Gallery
+      open={shelf.open}
+      items={shelf.items}
+      onClose={closeGallery}
+      onOpen={open}
+      onRemove={(id) => {
+        remove(id);
+        setShelf({ open: true, items: list() });
+      }}
+    />
+  );
+
   if (view === "studio")
     return (
       <main className="min-h-dvh">
@@ -204,6 +241,9 @@ export default function Studio() {
           <nav className="flex items-center gap-1 text-sm text-muted">
             <button type="button" onClick={home} className="rounded-full px-3 py-1.5 transition-colors hover:bg-ink/[0.06] hover:text-ink">
               new
+            </button>
+            <button type="button" onClick={openGallery} className="rounded-full px-3 py-1.5 transition-colors hover:bg-ink/[0.06] hover:text-ink">
+              gallery
             </button>
           </nav>
         </header>
@@ -233,6 +273,14 @@ export default function Studio() {
               <SceneTags scene={scene} onSwap={job ? swap : null} />
             </div>
           )}
+          {status === "done" && (
+            <Actions
+              items={[
+                { label: "Save", icon: "save", onClick: keep },
+                { label: "Paint again", icon: "again", onClick: () => canvas.current.replay() },
+              ]}
+            />
+          )}
           {status === "done" && <Refine busy={busy} onSubmit={refine} />}
           {status === "done" && (
             <Strip
@@ -255,11 +303,18 @@ export default function Studio() {
           )}
         </section>
         <Toast message={toast} />
+        {gallery}
       </main>
     );
 
   return (
     <main className={`min-h-dvh ${skipped ? "[&_*]:duration-300!" : ""}`}>
+      <nav className={`fixed right-4 top-4 z-10 transition-opacity duration-700 sm:right-7 sm:top-5 ${step >= 4 ? "opacity-100" : "pointer-events-none opacity-0"}`}>
+        <button type="button" onClick={openGallery} className="rounded-full px-3 py-1.5 text-sm text-muted transition-colors hover:bg-ink/[0.06] hover:text-ink">
+          gallery
+        </button>
+      </nav>
+      {gallery}
       <div className="mx-auto w-full max-w-[680px] px-4 pb-24 pt-[13vh]">
         <div
           ref={hero}
