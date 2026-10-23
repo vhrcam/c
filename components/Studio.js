@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { LABELS, PLACES, TIMES, newSeed, normalize } from "@/lib/scene";
-import { read } from "@/lib/words";
+import { LABELS, PLACES, TIMES, applySwap, newSeed, normalize } from "@/lib/scene";
+import { caption, read } from "@/lib/words";
 import Describe from "./Describe";
 import Logo from "./Logo";
 import Painting from "./Painting";
@@ -77,6 +77,12 @@ export default function Studio() {
     setDraft(next);
     setStatus("painting");
     setJob({ scene: next, how });
+  };
+
+  const swap = (tag, value) => {
+    const next = applySwap(job.scene, tag, value);
+    if (job.scene.caption === caption(job.scene)) next.caption = caption(next);
+    start(next, "auto");
   };
 
   const paint = async ({ text, picks, style }) => {
@@ -158,7 +164,7 @@ export default function Studio() {
           {scene && (
             <div className="rise">
               <p className="mt-6 text-balance text-center font-serif text-[20px] italic leading-snug text-muted sm:text-[23px]">{scene.caption}</p>
-              <SceneTags scene={scene} />
+              <SceneTags scene={scene} onSwap={job ? swap : null} />
             </div>
           )}
           {status === "done" && <p className="sr-only">Finished painting</p>}
