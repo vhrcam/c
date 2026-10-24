@@ -14,6 +14,7 @@ const ease = (t) => -(Math.cos(Math.PI * t) - 1) / 2;
 export default function Lab() {
   const base = useRef(null);
   const live = useRef(null);
+  const pencil = useRef(null);
   const sig = useRef(null);
   const run = useRef(null);
   const raf = useRef(0);
@@ -51,6 +52,7 @@ export default function Lab() {
       last = now;
       t += dt * (p.fast ? 6 : 1);
       p.player.draw(t);
+      pencil.current.style.opacity = String(Math.max(0.16, 1 - Math.max(0, t - 7) / 6));
       sign(t, p.end, p.ink);
       if (t < stop) raf.current = requestAnimationFrame(tick);
       else setState((s) => ({ ...s, playing: false }));
@@ -67,13 +69,13 @@ export default function Lab() {
       const picture = await compose(seed);
       if (id !== job.current) return;
       const k = dpr();
-      for (const c of [base.current, live.current, sig.current]) {
+      for (const c of [base.current, live.current, pencil.current, sig.current]) {
         c.width = SIZE[0] * k;
         c.height = SIZE[1] * k;
       }
       const hex = picture.pal.ink.slice(1);
       const ink = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16)).join(",");
-      run.current = { player: plotter(base.current, live.current, picture, { dpr: k }), end: picture.end, ink, fast: false };
+      run.current = { player: plotter(base.current, live.current, pencil.current, picture, { dpr: k }), end: picture.end, ink, fast: false };
       setState({ busy: false, playing: true, seed, meta: picture.meta, error: "" });
       play(false);
     } catch (e) {
@@ -101,6 +103,7 @@ export default function Lab() {
       </header>
       <div className="relative mx-auto mt-5" style={{ width }}>
         <canvas ref={base} className="block w-full rounded-[4px] bg-[#f4ede2] shadow-[0_2px_18px_rgba(26,25,22,0.12)]" style={{ aspectRatio: "3 / 2" }} />
+        <canvas ref={pencil} className="pointer-events-none absolute inset-0 h-full w-full mix-blend-multiply" />
         <canvas ref={live} className="pointer-events-none absolute inset-0 h-full w-full mix-blend-multiply" />
         <canvas ref={sig} className="pointer-events-none absolute inset-0 h-full w-full" />
         {state.busy && <p className="absolute inset-0 grid place-items-center font-serif text-[19px] italic text-faint">composing…</p>}
