@@ -17,6 +17,7 @@ export default function Lab() {
   const raf = useRef(0);
   const [status, setStatus] = useState({ ready: false, progress: 0, playing: false, note: "" });
 
+  const ink = useRef("26,25,22");
   const sign = (t) => {
     const ctx = overlay.current.getContext("2d");
     ctx.setTransform(1, 0, 0, 1, 0, 0);
@@ -28,7 +29,7 @@ export default function Lab() {
     ctx.rotate(-0.04);
     ctx.scale(scale, scale);
     ctx.translate(-LOGO_BOX.x, -LOGO_BOX.y);
-    drawC(ctx, ease(Math.min(1, (t - s0) / (s1 - s0))), { seed: 7, bristles: 16, rgb: "26,25,22", alpha: 0.9 });
+    drawC(ctx, ease(Math.min(1, (t - s0) / (s1 - s0))), { seed: 7, bristles: 16, rgb: ink.current, alpha: 0.92 });
   };
 
   const play = (from = 0) => {
@@ -55,6 +56,7 @@ export default function Lab() {
       .then((p) => {
         if (cancelled) return;
         player.current = p;
+        ink.current = p.light(SIZE[0] - 196, SIZE[1] - 136, 112, 70) > 0.45 ? "26,25,22" : "243,238,228";
         setStatus((s) => ({ ...s, ready: true, note: `rendered in ${(p.renderMs / 1000).toFixed(1)}s` }));
         play();
       })
@@ -78,8 +80,10 @@ export default function Lab() {
         <canvas ref={canvas} className="block w-full rounded-[6px] bg-paper-deep" style={{ aspectRatio: "3 / 2" }} />
         <canvas ref={overlay} className="pointer-events-none absolute inset-0 h-full w-full" />
         {!status.ready && !status.note && <p className="absolute inset-0 grid place-items-center font-serif text-[19px] italic text-faint">getting the scene ready… {Math.round(status.progress * 100)}%</p>}
+      </div>
+      <div className="mx-auto mt-3 flex justify-end" style={{ width: "min(100%, calc((100dvh - 210px) * 1.5))" }}>
         {status.ready && (
-          <div className="absolute bottom-3 right-3 flex gap-1 rounded-full bg-paper/85 p-1 text-[13px] text-ink/75 shadow-[0_1px_8px_rgba(26,25,22,0.12)] backdrop-blur">
+          <div className="flex gap-1 text-[13px] text-muted">
             <button type="button" onClick={() => play(0)} className="rounded-full px-3 py-1.5 hover:bg-ink/[0.07] hover:text-ink">
               paint again
             </button>
