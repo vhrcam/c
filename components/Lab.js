@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { STAGES, prepare } from "@/lib/lab/render";
+import { SKY_GLSL } from "@/lib/lab/sky";
 import { LOGO_BOX, drawC } from "@/lib/paint/logo";
 import Logo from "./Logo";
 
@@ -50,7 +51,7 @@ export default function Lab() {
     let cancelled = false;
     overlay.current.width = SIZE[0];
     overlay.current.height = SIZE[1];
-    prepare(canvas.current, { width: SIZE[0], height: SIZE[1], ss: 2, onProgress: (progress) => !cancelled && setStatus((s) => ({ ...s, progress })) })
+    prepare(canvas.current, { width: SIZE[0], height: SIZE[1], ss: 2, sky: SKY_GLSL, onProgress: (progress) => !cancelled && setStatus((s) => ({ ...s, progress })) })
       .then((p) => {
         if (cancelled) return;
         player.current = p;
