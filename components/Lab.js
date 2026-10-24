@@ -69,7 +69,8 @@ export default function Lab() {
     setState((s) => ({ ...s, busy: true, seed, error: "" }));
     try {
       const size = screen();
-      const picture = await compose(seed, { width: size.w, height: size.h });
+      const shot = new URLSearchParams(window.location.search).get("shot") || undefined;
+      const picture = await compose(seed, { width: size.w, height: size.h, shot });
       if (id !== job.current) return;
       const k = (window.innerHeight / size.h) * Math.min(2, window.devicePixelRatio || 1);
       for (const c of [base.current, live.current, pencil.current, sig.current]) {
