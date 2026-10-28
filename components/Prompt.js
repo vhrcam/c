@@ -6,11 +6,11 @@ import Mark from "./Mark";
 const HINTS = [
   "describe anything",
   "a lighthouse in a storm, seen from the top",
-  "my dog running through autumn leaves",
-  "saturn, close enough to touch",
-  "two people under a streetlight in the snow",
-  "a banana in beautiful 8-bit",
-  "the house I grew up in, at dusk",
+  "a red vintage car on a coastal road",
+  "a cabin in the mountains at dawn",
+  "a steam train crossing a stone bridge in the fog",
+  "the city at night from a rooftop",
+  "an old windmill in a wheat field",
 ];
 
 export const MODES = ["3d"];
