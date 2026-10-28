@@ -75,7 +75,7 @@ export default function Dock({ done, playing, full, mode, onToggle, onSkip, onFu
           <Button label="Download PNG" text="png" icon="download" onClick={onDownload} />
           <Button label="Copy a share link" text="share" icon="share" onClick={onShare} />
           <Button label="Regenerate with a new seed" text="regenerate" icon="again" onClick={onRegenerate} />
-          <Button label={`Build it in ${other}`} text={other} onClick={onSwitch} />
+          {onSwitch && <Button label={`Build it in ${other}`} text={other} onClick={onSwitch} />}
           <Button label="New artwork" text="new" icon="plus" onClick={onNew} />
         </>
       ) : (

@@ -6,7 +6,7 @@ import { list, remove, save } from "@/lib/gallery";
 import { decode, encode } from "@/lib/share";
 import { morph } from "./morph";
 import Notice from "./Notice";
-import Prompt from "./Prompt";
+import Prompt, { MODES } from "./Prompt";
 import Stage from "./Stage";
 import Works from "./Works";
 
@@ -39,11 +39,12 @@ export default function App() {
 
   const play = (plan) => {
     const id = ++ticket.current;
+    const mode = MODES.includes(plan.mode) ? plan.mode : MODES[0];
     setIntro(false);
     setTone("");
     morph(() => {
       setView("stage");
-      setRun({ id, text: plan.text, mode: plan.mode, plan });
+      setRun({ id, text: plan.text, mode, plan: { ...plan, mode } });
     });
   };
 
@@ -142,7 +143,7 @@ export default function App() {
           onEdit={() => home(true)}
           onRetry={() => generate({ text: run.text, mode: run.mode })}
           onRegenerate={regenerate}
-          onSwitch={switchMode}
+          onSwitch={MODES.length > 1 ? switchMode : null}
           onSave={keep}
           onShare={share}
         />

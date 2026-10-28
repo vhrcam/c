@@ -13,7 +13,7 @@ const HINTS = [
   "the house I grew up in, at dusk",
 ];
 
-const MODES = ["2d", "3d"];
+export const MODES = ["3d"];
 
 const grow = (el) => {
   el.style.height = "auto";
@@ -116,14 +116,16 @@ export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWar
           )}
         </div>
         <div className="h-px bg-fg/15" />
-        <div className="mt-4 flex items-center justify-between">
-          <div role="radiogroup" aria-label="Mode" className="flex rounded-full border border-fg/12 p-[3px] font-mono text-[11px]">
-            {MODES.map((m) => (
-              <button key={m} type="button" role="radio" aria-checked={mode === m} onClick={() => setMode(m)} className={`rounded-full px-3 py-1 transition-colors ${mode === m ? "bg-fg text-bg" : "text-fg/45 hover:text-fg"}`}>
-                {m}
-              </button>
-            ))}
-          </div>
+        <div className="mt-4 flex items-center justify-end">
+          {MODES.length > 1 && (
+            <div role="radiogroup" aria-label="Mode" className="mr-auto flex rounded-full border border-fg/12 p-[3px] font-mono text-[11px]">
+              {MODES.map((m) => (
+                <button key={m} type="button" role="radio" aria-checked={mode === m} onClick={() => setMode(m)} className={`rounded-full px-3 py-1 transition-colors ${mode === m ? "bg-fg text-bg" : "text-fg/45 hover:text-fg"}`}>
+                  {m}
+                </button>
+              ))}
+            </div>
+          )}
           <button type="button" onClick={submit} aria-disabled={!ready} className={`flex items-center gap-2 font-mono text-[12px] transition-colors ${ready ? "text-fg" : "text-fg/25"}`}>
             generate <span className="text-fg/40">↵</span>
           </button>
