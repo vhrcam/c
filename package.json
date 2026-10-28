@@ -19,6 +19,7 @@
     "@tailwindcss/turbopack": "^4",
     "eslint": "^9",
     "eslint-config-next": "16.4.3",
+    "puppeteer-core": "^24.43.1",
     "tailwindcss": "^4"
   }
 }
