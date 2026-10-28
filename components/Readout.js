@@ -86,7 +86,9 @@ export default function Readout({ run, reference, phases, step, ready, done, err
     return step >= (i < 0 ? fallback : i);
   };
   const world = plan?.world;
-  const place = world ? [world.setting !== "void" && world.setting, world.time, world.season !== "none" && world.season, world.weather !== "clear" && world.weather, ...plan.particles.map((p) => `${p.kind} ${DRIFT[p.motion] || ""}`)].filter(Boolean).join(" · ") : "";
+  // 3D scenes no longer render particles, so only 2D lists them
+  const drift = plan?.mode === "3d" ? [] : plan?.particles.map((p) => `${p.kind} ${DRIFT[p.motion] || ""}`) || [];
+  const place = world ? [world.setting !== "void" && world.setting, world.time, world.season !== "none" && world.season, world.weather !== "clear" && world.weather, ...drift].filter(Boolean).join(" · ") : "";
   return (
     <div className="max-w-[560px] font-mono text-[11px] leading-[1.75] text-fg/75 sm:text-[12px]">
       {run.text && (
