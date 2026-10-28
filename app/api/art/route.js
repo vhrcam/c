@@ -42,7 +42,7 @@ Decide:
 - focus: people when the relationship is the heart of it, place when the place is ("the lake behind my grandparents' cabin"), moment when an action or event is.
 - setting: the place it happened (pick the closest), features that were really there (sun for sunrise and sunset, moon, stars, trees, mountains, water, buildings, road, birds, dock, house, cabin), time of day and weather. Infer a natural setting when they don't say, but never invent a sunset unless they mention evening, sunset or golden light.
 - mood and energy (0 calm to 1 intense).
-- directions: rank all four art directions by fit. expressive: painterly brush strokes, warm and emotional. geometric: faceted planes and flat bands, bright and structured. organic: textured silhouettes with branching light, quiet and mysterious. lines: fine engraving where line width carries light, nostalgic and precise.
+- directions: rank all eight constructions by fit for this memory. expressive: painterly brush strokes. geometric: adaptive faceted planes. organic: textured masses, strata and branching light. lines: engraving where line width carries light. mosaic: Voronoi cells that shrink where the memory matters. contours: a topographic map of the scene's light. stipple: dots that gather in shadow and link into networks. grid: a quadtree of rectangles, finest where the memory is.
 
 Memory: """${text}"""`;
 
