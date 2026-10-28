@@ -82,6 +82,7 @@ const SCHEMA = {
     mood: enumOf(MOODS),
     systems: { type: "array", items: { type: "object", properties: { subject: str, why: str }, required: ["subject", "why"] } },
     search: { type: "string", description: "3 to 6 word image search for a real photo of the scene" },
+    missing: { type: "array", items: str, description: "things they asked for that c cannot build" },
   },
   required: ["title", "read", "style", "subjects", "relations", "view", "world", "lights", "particles", "palette", "mood", "systems", "search"],
 };
@@ -107,7 +108,7 @@ Fields:
 - read: one sentence saying what a viewer recognizes first.
 - style: pixel only for pixel art, 8-bit, 16-bit or retro game looks; line for line art, sketches or drawings; cells for mosaic or stained glass; otherwise auto.
 - subjects: the 1 to 4 main things (people, animals, objects, structures, plants, a planet). Not the setting, weather or sky. id is a short unique slug. label uses the person's own words for it ("girlfriend", "me", "my dog", "the lighthouse").
-  - People and animals are not built yet: leave them out of subjects (they can still shape the mood, read and title).
+  - c only builds what it has real recipes for. Buildings (${BUILDINGS.join(", ")}), vehicles (${VEHICLE_TYPES.join(", ")}), trees, planets, and these objects: ${Object.keys(PRESETS).join(", ")}. Map their words onto the closest real recipe (a semi or a big rig is truck, a pickup truck is pickup, a pirate ship is galleon, a cottage by the sea is cottage). Anything else they ask for (people, animals, other objects) goes in missing, by name, and is left out of subjects. Never substitute a different thing.
   - form: building for any building or structure (house, mansion, castle, church, skyscraper, tower, lighthouse, barn, temple, pagoda, bridge, windmill, cabin) with building.style, floors, roof, wings (0 to 2 side wings), towers and columns (a portico); vehicle for cars, trucks, buses, trains and boats with vehicle.type; tree for a single tree; planet for a planet (size 1, traits ocean/gas/rings); parts for any other object.
   - size: largest dimension in meters (a banana 0.2, a car 4.7, a house 12, a lighthouse 30).
   - colors: hex, main color first. For a building: walls, roof, trim. For a vehicle: paint, then trim. count for identical copies.
