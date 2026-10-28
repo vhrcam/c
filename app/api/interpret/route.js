@@ -1,6 +1,7 @@
 import { askJSON } from "@/lib/ai";
 import { DRIFTS, FORMS, KINDS, LIGHTS, LOOKS, MATERIALS, MOODS, MOTIONS, PARTICLES, POSES, RELS, SEASONS, SETTINGS, SHAPES, SPECIES, STYLES, TEMPS, TIMES, VIEWS, WEATHER, normalizePlan } from "@/lib/engine/plan";
 import { PRESETS } from "@/lib/engine/presets";
+import { findReference } from "@/lib/engine/reference";
 import { readPlan } from "@/lib/engine/words";
 
 const hits = new Map();
@@ -63,6 +64,7 @@ const SCHEMA = {
           motion: enumOf(MOTIONS),
           traits: { type: "object", properties: { length: unit, legs: unit, bulk: unit, neck: unit, head: unit, ears: unit, tail: unit, fur: unit, feminine: unit, age: unit, ocean: unit, gas: unit, rings: unit } },
           hair: { type: "object", properties: { color: hex, length: enumOf(["none", "short", "medium", "long", "bun"]) } },
+          wiki: { type: "string", description: "English Wikipedia article title for what this subject is" },
           parts: { type: "array", items: PART },
         },
         required: ["id", "label", "kind", "form", "material", "colors", "size"],
@@ -80,8 +82,9 @@ const SCHEMA = {
     palette: { type: "object", properties: { background: hex, ink: hex, colors: { type: "array", items: hex }, accent: hex }, required: ["background", "ink", "colors", "accent"] },
     mood: enumOf(MOODS),
     systems: { type: "array", items: { type: "object", properties: { subject: str, why: str }, required: ["subject", "why"] } },
+    search: { type: "string", description: "3 to 6 word image search for a real photo of the scene" },
   },
-  required: ["title", "read", "style", "subjects", "relations", "view", "world", "lights", "particles", "palette", "mood", "systems"],
+  required: ["title", "read", "style", "subjects", "relations", "view", "world", "lights", "particles", "palette", "mood", "systems", "search"],
 };
 
 const example = (key) => {
@@ -131,6 +134,8 @@ Fields:
 - lights: sources that matter (sun, moon, streetlight, lamp, fire, beam for a lighthouse, glow, window); at = the subject id it belongs to.
 - particles: up to 3 systems (leaves, snow, rain, petals, dust, sparks, fireflies, embers, spray, bubbles) with color, amount 0 to 1 and motion.
 - palette: background (dark for night, space or moody scenes; light for bright daytime studies), ink (a neutral line color that reads on the background), colors (3 to 6), accent.
+- search: 3 to 6 plain words to find a real photograph that shows the scene exactly as described, main subject and action first ("wolf running in snow", "couple kissing under streetlight", "banana on white"). No style words.
+- subjects[].wiki: the English Wikipedia article title for what the subject is ("Golden Retriever", "Red fox", "Banana", "Lighthouse"). Empty for people.
 - systems: one per subject, plus "world" when there is water: subject id and why, one sentence on how its computational system follows from the subject's properties ("fur becomes thousands of filaments that follow the body's flow").
 
 Description: """${text}"""`;
@@ -142,12 +147,18 @@ export async function POST(request) {
   const mode = body.mode === "2d" ? "2d" : "3d";
   const seed = Math.floor(Math.random() * 2 ** 31);
   const ip = (request.headers.get("x-forwarded-for") || "").split(",")[0].trim() || request.headers.get("x-real-ip") || "local";
-  const fallback = () => Response.json({ plan: readPlan(text, mode, seed), source: "words" });
+  const withReference = async (plan) => {
+    const hero = plan.subjects[0];
+    const reference = await Promise.race([findReference(plan, { search: plan.search, wiki: hero?.wiki }), new Promise((r) => setTimeout(() => r(null), 9000))]).catch(() => null);
+    return normalizePlan({ ...plan, reference });
+  };
+  const fallback = async () => Response.json({ plan: await withReference(readPlan(text, mode, seed)), source: "words" });
   if (!text || !process.env.GEMINI_API_KEY || limited(ip)) return fallback();
+  let plan;
   try {
-    const out = await askJSON(prompt(text, mode), SCHEMA, 28000);
-    return Response.json({ plan: normalizePlan({ ...out, text, mode, seed }), source: "ai" });
+    plan = normalizePlan({ ...(await askJSON(prompt(text, mode), SCHEMA, 28000)), text, mode, seed });
   } catch {
     return fallback();
   }
+  return Response.json({ plan: await withReference(plan), source: "ai" });
 }
