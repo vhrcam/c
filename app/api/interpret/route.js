@@ -152,7 +152,7 @@ export async function POST(request) {
     return normalizePlan({ ...plan, reference });
   };
   const fallback = async () => Response.json({ plan: await withReference(readPlan(text, mode, seed)), source: "words" });
-  if (!text || !process.env.GEMINI_API_KEY || limited(ip)) return fallback();
+  if (!text || !process.env.GEMINI_API_KEY || (process.env.NODE_ENV === "production" && limited(ip))) return fallback();
   let plan;
   try {
     plan = normalizePlan({ ...(await askJSON(prompt(text, mode), SCHEMA, 28000)), text, mode, seed });

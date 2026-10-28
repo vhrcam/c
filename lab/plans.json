@@ -1,0 +1,4958 @@
+{
+ "a victorian mansion": {
+  "plan": {
+   "v": 1,
+   "seed": 850222150,
+   "mode": "3d",
+   "text": "a victorian mansion",
+   "title": "victorian mansion",
+   "read": "A grand Victorian mansion stands with ornate architecture and steep gabled roofs.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "mansion1",
+     "label": "victorian mansion",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "wood",
+     "colors": [
+      "#4a5342",
+      "#8c6d53",
+      "#2b2b2b"
+     ],
+     "size": 18,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Victorian architecture",
+     "building": {
+      "style": "mansion",
+      "floors": 3,
+      "width": 15,
+      "roof": "gable",
+      "wings": 2,
+      "towers": 1,
+      "columns": true,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "fall",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff4e0"
+    }
+   ],
+   "particles": [],
+   "palette": {
+    "background": "#f0f4f8",
+    "ink": "#2b2b2b",
+    "colors": [
+     "#4a5342",
+     "#8c6d53",
+     "#2b2b2b",
+     "#c2b280"
+    ],
+    "accent": "#8c6d53"
+   },
+   "mood": "nostalgic",
+   "systems": [
+    {
+     "subject": "mansion1",
+     "language": "structure",
+     "why": "The structure is procedurally constructed using distance fields to define its elaborate gables, towers, and multi-story layout."
+    }
+   ],
+   "search": "victorian mansion exterior architecture",
+   "missing": [],
+   "reference": null,
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793217963432
+ },
+ "a stone castle on a hill": {
+  "plan": {
+   "v": 1,
+   "seed": 1231822202,
+   "mode": "3d",
+   "text": "a stone castle on a hill",
+   "title": "stone castle hill",
+   "read": "A medieval stone castle with tall towers sits on top of a grassy hill.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "castle",
+     "label": "a stone castle",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "stone",
+     "colors": [],
+     "size": 35,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Castle",
+     "building": {
+      "style": "castle",
+      "floors": 4,
+      "width": 30,
+      "roof": "spire",
+      "wings": 2,
+      "towers": 4,
+      "columns": false,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "castle",
+    "look": "up"
+   },
+   "world": {
+    "setting": "mountains",
+    "time": "day",
+    "season": "summer",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff3e0"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#ffffff",
+     "amount": 0.15,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#bcd4e6",
+    "ink": "#2e3436",
+    "colors": [
+     "#808285",
+     "#5c764a",
+     "#4d4e50",
+     "#9e3a3a"
+    ],
+    "accent": "#9e3a3a"
+   },
+   "mood": "epic",
+   "systems": [
+    {
+     "subject": "castle",
+     "language": "structure",
+     "why": "masonry walls and fortified towers branch procedurally across the rocky crest of the hill"
+    }
+   ],
+   "search": "stone castle on green hill",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fcd%2FStone_Castle_-_geograph.org.uk_-_893976.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail_unscaled",
+    "width": 1024,
+    "height": 770,
+    "via": "commons",
+    "credit": {
+     "title": "Stone Castle - geograph.org.uk - 893976",
+     "author": "Ken Brown",
+     "license": "CC BY-SA 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Stone_Castle_-_geograph.org.uk_-_893976.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793217975964
+ },
+ "a red barn in a field": {
+  "plan": {
+   "v": 1,
+   "seed": 798055421,
+   "mode": "3d",
+   "text": "a red barn in a field",
+   "title": "red barn in a field",
+   "read": "A weathered red barn stands quietly in an open field under a clear sky.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "barn",
+     "label": "the red barn",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "wood",
+     "colors": [
+      "#a83232",
+      "#f4f1ea",
+      "#2c2520"
+     ],
+     "size": 14,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Barn",
+     "building": {
+      "style": "barn",
+      "floors": 2,
+      "width": 14,
+      "roof": "gable",
+      "wings": 0,
+      "towers": 0,
+      "columns": false,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "meadow",
+    "time": "day",
+    "season": "summer",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff4d4"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#e8d8b8",
+     "amount": 0.2,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#87ceeb",
+    "ink": "#1a1a1a",
+    "colors": [
+     "#a83232",
+     "#55803c",
+     "#d4b886",
+     "#2c2520"
+    ],
+    "accent": "#d4a373"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "barn",
+     "language": "structure",
+     "why": "Wood planks and structure are procedurally sliced into timber frames and painted panels that weather naturally under the sun."
+    }
+   ],
+   "search": "red barn in a green field",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F4%2F42%2FUnion_Town_Red_Barn_and_green_field_-_Flickr_-_Knowles_Gallery.jpg%2F1280px-Union_Town_Red_Barn_and_green_field_-_Flickr_-_Knowles_Gallery.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 479,
+    "via": "commons",
+    "credit": {
+     "title": "Union Town Red Barn and green field - Flickr - Knowles Gallery",
+     "author": "Charles Knowles from Meridian Idaho, USA",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Union_Town_Red_Barn_and_green_field_-_Flickr_-_Knowles_Gallery.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793217987571
+ },
+ "a japanese pagoda": {
+  "plan": {
+   "v": 1,
+   "seed": 1707253766,
+   "mode": "3d",
+   "text": "a japanese pagoda",
+   "title": "japanese pagoda",
+   "read": "A classic five-story Japanese wooden pagoda with sweeping eaved roofs and vermilion red details.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "pagoda",
+     "label": "a japanese pagoda",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "wood",
+     "colors": [
+      "#a83226",
+      "#2d2724",
+      "#d4af37"
+     ],
+     "size": 28,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Pagoda",
+     "building": {
+      "style": "pagoda",
+      "floors": 5,
+      "width": 8,
+      "roof": "hip",
+      "wings": 0,
+      "towers": 0,
+      "columns": true,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#ffeedd"
+    }
+   ],
+   "particles": [],
+   "palette": {
+    "background": "#181619",
+    "ink": "#383236",
+    "colors": [
+     "#a83226",
+     "#2d2724",
+     "#d4af37",
+     "#8c7a6b"
+    ],
+    "accent": "#a83226"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "pagoda",
+     "language": "structure",
+     "why": "stacked wooden brackets and curved roof eaves grow upward through layered architectural contours."
+    }
+   ],
+   "search": "traditional japanese pagoda five stories",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F11%2FJapanese_pagoda_tidal_basin.jpg%2F1280px-Japanese_pagoda_tidal_basin.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 1365,
+    "via": "commons",
+    "credit": {
+     "title": "Japanese pagoda tidal basin",
+     "author": "Unknown authorUnknown author / Own work",
+     "license": "Public domain",
+     "url": "https://commons.wikimedia.org/wiki/File:Japanese_pagoda_tidal_basin.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218001923
+ },
+ "a glass skyscraper": {
+  "plan": {
+   "v": 1,
+   "seed": 678515908,
+   "mode": "3d",
+   "text": "a glass skyscraper",
+   "title": "glass skyscraper",
+   "read": "A sleek, tall glass skyscraper rising into view.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "skyscraper",
+     "label": "glass skyscraper",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "glass",
+     "colors": [
+      "#4a80a8",
+      "#bce3f7",
+      "#1e2d3b"
+     ],
+     "size": 210,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Skyscraper",
+     "building": {
+      "style": "skyscraper",
+      "floors": 52,
+      "width": 32,
+      "roof": "flat",
+      "wings": 0,
+      "towers": 0,
+      "columns": false,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "low",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#f2f8ff"
+    }
+   ],
+   "particles": [],
+   "palette": {
+    "background": "#0b121d",
+    "ink": "#2a3b4e",
+    "colors": [
+     "#38bdf8",
+     "#7dd3fc",
+     "#0284c7",
+     "#cbd5e1"
+    ],
+    "accent": "#7dd3fc"
+   },
+   "mood": "epic",
+   "systems": [
+    {
+     "subject": "skyscraper",
+     "language": "structure",
+     "why": "A modular curtain wall grid generates reflective glass facets and metallic structural mullions across the facade."
+    }
+   ],
+   "search": "modern glass skyscraper architecture isolated",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F8%2F85%2FCantilevered_glass_skyscraper_56_Leonard_Street_rises_above_Lower_Manhattan.jpg%2F1280px-Cantilevered_glass_skyscraper_56_Leonard_Street_rises_above_Lower_Manhattan.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 1365,
+    "via": "commons",
+    "credit": {
+     "title": "Cantilevered glass skyscraper 56 Leonard Street rises above Lower Manhattan",
+     "author": "Oleg Yunakov",
+     "license": "CC BY-SA 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Cantilevered_glass_skyscraper_56_Leonard_Street_rises_above_Lower_Manhattan.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218015462
+ },
+ "a lighthouse on a cliff at night": {
+  "plan": {
+   "v": 1,
+   "seed": 1296728833,
+   "mode": "3d",
+   "text": "a lighthouse on a cliff at night",
+   "title": "lighthouse at night",
+   "read": "A red and white lighthouse stands on a coastal cliff, projecting a bright light beam over the dark ocean at night.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "lighthouse",
+     "label": "the lighthouse",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "stone",
+     "colors": [],
+     "size": 30,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Lighthouse",
+     "building": {
+      "style": "lighthouse",
+      "floors": 4,
+      "width": 6,
+      "roof": "dome",
+      "wings": 0,
+      "towers": 1,
+      "columns": false,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "low",
+    "from": "",
+    "at": "lighthouse",
+    "look": "up"
+   },
+   "world": {
+    "setting": "ocean",
+    "time": "night",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "cold",
+    "energy": 0.3
+   },
+   "lights": [
+    {
+     "kind": "beam",
+     "at": "lighthouse",
+     "color": "#fff5cc"
+    },
+    {
+     "kind": "moon",
+     "at": "",
+     "color": "#6b82a0"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "spray",
+     "color": "#88a6c1",
+     "amount": 0.3,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#070c16",
+    "ink": "#162335",
+    "colors": [],
+    "accent": "#fff5cc"
+   },
+   "mood": "mysterious",
+   "systems": [
+    {
+     "subject": "lighthouse",
+     "language": "structure",
+     "why": "Distance-field sculpture renders the tapered masonry tower and lantern housing sweeping light across the sky."
+    },
+    {
+     "subject": "world",
+     "language": "waves",
+     "why": "Wave fields simulate dark ocean swells breaking into particle spray against the cliff wall."
+    }
+   ],
+   "search": "lighthouse on cliff ocean night",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fc2%2FPort_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg%2F1280px-Port_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 576,
+    "via": "commons",
+    "credit": {
+     "title": "Port and lighthouse overnight storm with lightning in Port-la-Nouvelle",
+     "author": "Maxime Raynal from France",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Port_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218036656
+ },
+ "a windmill": {
+  "plan": {
+   "v": 1,
+   "seed": 496655601,
+   "mode": "3d",
+   "text": "a windmill",
+   "title": "windmill",
+   "read": "A classic wooden windmill standing alone in clear daylight.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "windmill",
+     "label": "windmill",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "wood",
+     "colors": [
+      "#c2b280",
+      "#4a3b32",
+      "#f4eeda"
+     ],
+     "size": 14,
+     "count": 1,
+     "motion": "spin",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Windmill",
+     "building": {
+      "style": "windmill",
+      "floors": 3,
+      "width": 7,
+      "roof": "mansard",
+      "wings": 0,
+      "towers": 0,
+      "columns": false,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff6e5"
+    }
+   ],
+   "particles": [],
+   "palette": {
+    "background": "#1c1e22",
+    "ink": "#2d3036",
+    "colors": [
+     "#c2b280",
+     "#4a3b32",
+     "#f4eeda",
+     "#8c7b6c"
+    ],
+    "accent": "#d4a359"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "windmill",
+     "language": "structure",
+     "why": "Rotational kinematics drive the continuous sweep of the windmill sails around its axis."
+    }
+   ],
+   "search": "traditional wooden windmill isolated",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F36%2FFormer_windmill%252C_Salasc_01.jpg%2F1280px-Former_windmill%252C_Salasc_01.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 577,
+    "via": "commons",
+    "credit": {
+     "title": "Former windmill, Salasc 01",
+     "author": "Christian Ferrer",
+     "license": "CC BY 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Former_windmill,_Salasc_01.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218049689
+ },
+ "a cabin in the snowy woods": {
+  "plan": {
+   "v": 1,
+   "seed": 1891070784,
+   "mode": "3d",
+   "text": "a cabin in the snowy woods",
+   "title": "cabin in snowy woods",
+   "read": "A cozy wooden cabin stands amidst a serene forest covered in deep winter snow.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "cabin",
+     "label": "the cabin",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "wood",
+     "colors": [
+      "#5c3a21",
+      "#8c6239",
+      "#e5e5e5"
+     ],
+     "size": 8,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Log cabin",
+     "building": {
+      "style": "cabin",
+      "floors": 1,
+      "width": 8,
+      "roof": "gable",
+      "wings": 0,
+      "towers": 0,
+      "columns": false,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    },
+    {
+     "id": "tree",
+     "label": "the snowy tree",
+     "kind": "plant",
+     "form": "tree",
+     "species": "other",
+     "pose": "stand",
+     "material": "foliage",
+     "colors": [
+      "#ffffff",
+      "#3a4f41",
+      "#2d3a31"
+     ],
+     "size": 12,
+     "count": 4,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Pine",
+     "building": null,
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [
+    {
+     "a": "tree",
+     "rel": "near",
+     "b": "cabin"
+    }
+   ],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "cabin",
+    "look": "at"
+   },
+   "world": {
+    "setting": "forest",
+    "time": "day",
+    "season": "winter",
+    "weather": "snow",
+    "temperature": "cold",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#dbeafe"
+    },
+    {
+     "kind": "window",
+     "at": "cabin",
+     "color": "#fbbf24"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "snow",
+     "color": "#ffffff",
+     "amount": 0.8,
+     "motion": "fall"
+    }
+   ],
+   "palette": {
+    "background": "#1e293b",
+    "ink": "#0f172a",
+    "colors": [
+     "#5c3a21",
+     "#3d2b1f",
+     "#ffffff",
+     "#3a4f41",
+     "#fbbf24"
+    ],
+    "accent": "#38bdf8"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "cabin",
+     "language": "structure",
+     "why": "Wooden planks and snow accumulate through distance-field layering to form a rustic refuge."
+    },
+    {
+     "subject": "tree",
+     "language": "branches",
+     "why": "Branches gather soft procedural weight from falling snow particles."
+    }
+   ],
+   "search": "log cabin in snowy woods forest winter",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fe9%2FAudie_Murphy_American_Cotton_Museum_July_2015_49_%2528Wilkins_Log_Cabin%2529.jpg%2F1280px-Audie_Murphy_American_Cotton_Museum_July_2015_49_%2528Wilkins_Log_Cabin%2529.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 683,
+    "via": "commons",
+    "credit": {
+     "title": "Audie Murphy American Cotton Museum July 2015 49 (Wilkins Log Cabin)",
+     "author": "Michael Barera",
+     "license": "CC BY-SA 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Audie_Murphy_American_Cotton_Museum_July_2015_49_(Wilkins_Log_Cabin).jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218065894
+ },
+ "a red sports car at night": {
+  "plan": {
+   "v": 1,
+   "seed": 327918845,
+   "mode": "3d",
+   "text": "a red sports car at night",
+   "title": "red sports car at night",
+   "read": "A sleek red sports car rests on a dark ground under the night sky.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "sports-car",
+     "label": "sports car",
+     "kind": "object",
+     "form": "vehicle",
+     "species": "other",
+     "pose": "stand",
+     "material": "metal",
+     "colors": [
+      "#c92a2a",
+      "#1a1a1a",
+      "#d9d9d9"
+     ],
+     "size": 4.5,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Sports car",
+     "building": null,
+     "vehicle": {
+      "type": "sports",
+      "note": ""
+     },
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "night",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "glow",
+     "at": "sports-car",
+     "color": "#ff5555"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#444455",
+     "amount": 0.2,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#0b0c10",
+    "ink": "#c5c6c7",
+    "colors": [
+     "#c92a2a",
+     "#1f2833",
+     "#c5c6c7",
+     "#66fcf1"
+    ],
+    "accent": "#c92a2a"
+   },
+   "mood": "mysterious",
+   "systems": [
+    {
+     "subject": "sports-car",
+     "language": "machine",
+     "why": "metal surfaces reflect the ambient night light using smooth distance-field curvature."
+    }
+   ],
+   "search": "red sports car at night",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F8%2F8f%2FDriver%252C_Driving_the_open_top_sports_car%252C_Rostov-on-Don%252C_Russia.jpg%2F1280px-Driver%252C_Driving_the_open_top_sports_car%252C_Rostov-on-Don%252C_Russia.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 680,
+    "via": "commons",
+    "credit": {
+     "title": "Driver, Driving the open top sports car, Rostov-on-Don, Russia",
+     "author": "Vyacheslav Argenberg",
+     "license": "CC BY 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Driver,_Driving_the_open_top_sports_car,_Rostov-on-Don,_Russia.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218072084
+ },
+ "a yellow school bus": {
+  "plan": {
+   "v": 1,
+   "seed": 1368457829,
+   "mode": "3d",
+   "text": "a yellow school bus",
+   "title": "yellow school bus",
+   "read": "A bright yellow school bus parked against a neutral background.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "school-bus",
+     "label": "school bus",
+     "kind": "object",
+     "form": "vehicle",
+     "species": "other",
+     "pose": "stand",
+     "material": "metal",
+     "colors": [
+      "#f4c430",
+      "#111111",
+      "#ffffff"
+     ],
+     "size": 9.5,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "School bus",
+     "building": null,
+     "vehicle": {
+      "type": "bus",
+      "note": ""
+     },
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#ffffff"
+    }
+   ],
+   "particles": [],
+   "palette": {
+    "background": "#f0f2f5",
+    "ink": "#222222",
+    "colors": [
+     "#f4c430",
+     "#111111",
+     "#ffffff",
+     "#2c3e50"
+    ],
+    "accent": "#f4c430"
+   },
+   "mood": "playful",
+   "systems": [
+    {
+     "subject": "school-bus",
+     "language": "machine",
+     "why": "The bus geometry is constructed from modular box and cylinder primitives to accurately replicate a classic vehicle silhouette."
+    }
+   ],
+   "search": "yellow school bus profile shot",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F2d%2FSuperior_IHC_Loadstar_school_bus_in_Rodeberg_%2528Be%2529_%25282%2529.jpg%2F1280px-Superior_IHC_Loadstar_school_bus_in_Rodeberg_%2528Be%2529_%25282%2529.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 783,
+    "via": "commons",
+    "credit": {
+     "title": "Superior IHC Loadstar school bus in Rodeberg (Be) (2)",
+     "author": "Pierre André Leclercq",
+     "license": "CC BY 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Superior_IHC_Loadstar_school_bus_in_Rodeberg_(Be)_(2).jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218077744
+ },
+ "a pirate ship on a stormy sea": {
+  "plan": {
+   "v": 1,
+   "seed": 1088806405,
+   "mode": "3d",
+   "text": "a pirate ship on a stormy sea",
+   "title": "pirate ship in storm",
+   "read": "A large wooden galleon battles fierce waves under a dark stormy sky.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "galleon",
+     "label": "the pirate ship",
+     "kind": "object",
+     "form": "vehicle",
+     "species": "other",
+     "pose": "stand",
+     "material": "wood",
+     "colors": [
+      "#5c3a21",
+      "#2b1d12",
+      "#c2a647",
+      "#d1cfcd"
+     ],
+     "size": 45,
+     "count": 1,
+     "motion": "sway",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Galleon",
+     "building": null,
+     "vehicle": {
+      "type": "galleon",
+      "note": ""
+     },
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "ocean",
+    "time": "night",
+    "season": "none",
+    "weather": "storm",
+    "temperature": "cold",
+    "energy": 0.9
+   },
+   "lights": [
+    {
+     "kind": "moon",
+     "at": "",
+     "color": "#9bb5ce"
+    },
+    {
+     "kind": "glow",
+     "at": "galleon",
+     "color": "#e0a843"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "spray",
+     "color": "#d9e2ec",
+     "amount": 0.8,
+     "motion": "swirl"
+    },
+    {
+     "kind": "rain",
+     "color": "#8fa1b3",
+     "amount": 0.9,
+     "motion": "fall"
+    }
+   ],
+   "palette": {
+    "background": "#0b131e",
+    "ink": "#1b2a3f",
+    "colors": [
+     "#5c3a21",
+     "#2b1d12",
+     "#1b2a3f",
+     "#d9e2ec",
+     "#3b4e68"
+    ],
+    "accent": "#e0a843"
+   },
+   "mood": "epic",
+   "systems": [
+    {
+     "subject": "galleon",
+     "language": "machine",
+     "why": "Wood and canvas elements combine into a rigid structure that responds dynamically to wave physics."
+    },
+    {
+     "subject": "world",
+     "language": "waves",
+     "why": "Ocean waves are simulated using wave fields that drive turbulent water motion and spray."
+    }
+   ],
+   "search": "pirate ship in stormy sea",
+   "missing": [],
+   "reference": null,
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218083200
+ },
+ "a vintage car on a country road": {
+  "plan": {
+   "v": 1,
+   "seed": 702464113,
+   "mode": "3d",
+   "text": "a vintage car on a country road",
+   "title": "vintage car, country road",
+   "read": "A classic vintage car positioned along a peaceful country road flanked by open fields.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "car",
+     "label": "a vintage car",
+     "kind": "object",
+     "form": "vehicle",
+     "species": "other",
+     "pose": "stand",
+     "material": "metal",
+     "colors": [
+      "#8b2626",
+      "#d4af37",
+      "#1a1a1a"
+     ],
+     "size": 4.5,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Vintage car",
+     "building": null,
+     "vehicle": {
+      "type": "vintage",
+      "note": ""
+     },
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "car",
+    "look": "at"
+   },
+   "world": {
+    "setting": "meadow",
+    "time": "golden",
+    "season": "summer",
+    "weather": "clear",
+    "temperature": "warm",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "car",
+     "color": "#fef3c7"
+    },
+    {
+     "kind": "glow",
+     "at": "car",
+     "color": "#f59e0b"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#d4b886",
+     "amount": 0.2,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#2a241e",
+    "ink": "#120f0d",
+    "colors": [
+     "#d4af37",
+     "#4a5d3e",
+     "#d4b886",
+     "#fef3c7"
+    ],
+    "accent": "#8b2626"
+   },
+   "mood": "nostalgic",
+   "systems": [
+    {
+     "subject": "car",
+     "language": "machine",
+     "why": "Reflective metallic surfaces and sculpted body panel curves built from parametric distance primitives."
+    }
+   ],
+   "search": "vintage car on country road",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F16%2FVintage_car_on_a_quiet_road_%2528Unsplash%2529.jpg%2F1280px-Vintage_car_on_a_quiet_road_%2528Unsplash%2529.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 1464,
+    "via": "commons",
+    "credit": {
+     "title": "Vintage car on a quiet road (Unsplash)",
+     "author": "Adrian Bonifacio adbonifacio",
+     "license": "CC0",
+     "url": "https://commons.wikimedia.org/wiki/File:Vintage_car_on_a_quiet_road_(Unsplash).jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218097454
+ },
+ "a sailboat at sunset": {
+  "plan": {
+   "v": 1,
+   "seed": 1765263104,
+   "mode": "3d",
+   "text": "a sailboat at sunset",
+   "title": "sailboat at sunset",
+   "read": "A classic wooden sailboat glides peacefully across the calm ocean as the sun sets.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "boat",
+     "label": "sailboat",
+     "kind": "object",
+     "form": "vehicle",
+     "species": "other",
+     "pose": "stand",
+     "material": "wood",
+     "colors": [
+      "#8b4513",
+      "#f5f5dc",
+      "#d2b48c"
+     ],
+     "size": 12,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Sailboat",
+     "building": null,
+     "vehicle": {
+      "type": "sailboat",
+      "note": ""
+     },
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "boat",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "ocean",
+    "time": "dusk",
+    "season": "summer",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#ff4500"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "spray",
+     "color": "#add8e6",
+     "amount": 0.3,
+     "motion": "rise"
+    }
+   ],
+   "palette": {
+    "background": "#1a1020",
+    "ink": "#332244",
+    "colors": [
+     "#ff4500",
+     "#ffa500",
+     "#8b4513",
+     "#f5f5dc",
+     "#1e90ff"
+    ],
+    "accent": "#ffd700"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "boat",
+     "language": "machine",
+     "why": "hull and sails form a rigid distance-field sculpture catching the warm sunset reflection."
+    },
+    {
+     "subject": "world",
+     "language": "waves",
+     "why": "ocean wave fields gently sway the sailboat and create rippling water surfaces."
+    }
+   ],
+   "search": "sailboat sailing on ocean at sunset",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Ff%2Ff6%2FSailboats_on_the_River_-_Flickr_-_Corey_Leopold.jpg%2F1280px-Sailboats_on_the_River_-_Flickr_-_Corey_Leopold.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 683,
+    "via": "commons",
+    "credit": {
+     "title": "Sailboats on the River - Flickr - Corey Leopold",
+     "author": "Corey Leopold",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Sailboats_on_the_River_-_Flickr_-_Corey_Leopold.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218106017
+ },
+ "a semi truck on the highway": {
+  "plan": {
+   "v": 1,
+   "seed": 1630077251,
+   "mode": "3d",
+   "text": "a semi truck on the highway",
+   "title": "semi truck, highway",
+   "read": "A semi truck cruising along an asphalt highway under a clear blue sky.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "semi-truck",
+     "label": "semi truck",
+     "kind": "object",
+     "form": "vehicle",
+     "species": "other",
+     "pose": "stand",
+     "material": "metal",
+     "colors": [
+      "#2b5c8f",
+      "#d0d0d0",
+      "#1a1a1a"
+     ],
+     "size": 18,
+     "count": 1,
+     "motion": "run",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Semi-trailer truck",
+     "building": null,
+     "vehicle": {
+      "type": "truck",
+      "note": ""
+     },
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "semi-truck",
+    "look": "at"
+   },
+   "world": {
+    "setting": "ground",
+    "time": "day",
+    "season": "summer",
+    "weather": "clear",
+    "temperature": "warm",
+    "energy": 0.5
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fffaed"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#cfc6b8",
+     "amount": 0.3,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#8cbcd0",
+    "ink": "#232b38",
+    "colors": [
+     "#2b5c8f",
+     "#d0d0d0",
+     "#3a3a3c",
+     "#708090"
+    ],
+    "accent": "#b23a2e"
+   },
+   "mood": "epic",
+   "systems": [
+    {
+     "subject": "semi-truck",
+     "language": "machine",
+     "why": "Rigid body distance fields assemble the cab frame, trailer box, and rolling wheels into a dynamic articulated vehicle."
+    }
+   ],
+   "search": "semi truck driving on highway",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F8%2F89%2FKenworth_Cabover_Semi_Truck_%2526_Trailer.jpg%2F1280px-Kenworth_Cabover_Semi_Truck_%2526_Trailer.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 681,
+    "via": "commons",
+    "credit": {
+     "title": "Kenworth Cabover Semi Truck & Trailer",
+     "author": "Greg Gjerdingen",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Kenworth_Cabover_Semi_Truck_%26_Trailer.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218119475
+ },
+ "a big oak tree in autumn": {
+  "plan": {
+   "v": 1,
+   "seed": 2139176175,
+   "mode": "3d",
+   "text": "a big oak tree in autumn",
+   "title": "oak in autumn",
+   "read": "A grand oak tree with rich orange and amber autumn foliage standing in a grassy meadow.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "oak-tree",
+     "label": "a big oak tree",
+     "kind": "plant",
+     "form": "tree",
+     "species": "other",
+     "pose": "stand",
+     "material": "foliage",
+     "colors": [
+      "#c85a17",
+      "#d9822b",
+      "#8c3a10",
+      "#4a3222"
+     ],
+     "size": 18,
+     "count": 1,
+     "motion": "sway",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Oak",
+     "building": null,
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "meadow",
+    "time": "day",
+    "season": "fall",
+    "weather": "wind",
+    "temperature": "mild",
+    "energy": 0.3
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff0d4"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "leaves",
+     "color": "#c85a17",
+     "amount": 0.4,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#dbe6ed",
+    "ink": "#2b2119",
+    "colors": [
+     "#c85a17",
+     "#d9822b",
+     "#8c3a10",
+     "#5c4231",
+     "#80916c"
+    ],
+    "accent": "#d9822b"
+   },
+   "mood": "nostalgic",
+   "systems": [
+    {
+     "subject": "oak-tree",
+     "language": "branches",
+     "why": "Branching growth forms a gnarled trunk and spreading canopy, shedding foliage as particle wind."
+    }
+   ],
+   "search": "large oak tree autumn meadow",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd2%2FBig_Oak_Tree_State_Park_Boardwalk.JPG%2F1280px-Big_Oak_Tree_State_Park_Boardwalk.JPG%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 1365,
+    "via": "commons",
+    "credit": {
+     "title": "Big Oak Tree State Park Boardwalk",
+     "author": "Knowledgeum (talk)",
+     "license": "CC BY-SA 3.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Big_Oak_Tree_State_Park_Boardwalk.JPG"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218129752
+ },
+ "a forest in the fog": {
+  "plan": {
+   "v": 1,
+   "seed": 954618956,
+   "mode": "3d",
+   "text": "a forest in the fog",
+   "title": "forest in fog",
+   "read": "tall pine trees fading into a thick layer of morning fog",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "pine-trees",
+     "label": "forest trees",
+     "kind": "plant",
+     "form": "tree",
+     "species": "other",
+     "pose": "stand",
+     "material": "foliage",
+     "colors": [
+      "#2d4338"
+     ],
+     "size": 18,
+     "count": 12,
+     "motion": "sway",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Forest",
+     "building": null,
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "wide",
+    "from": "",
+    "at": "",
+    "look": "ahead"
+   },
+   "world": {
+    "setting": "forest",
+    "time": "dawn",
+    "season": "spring",
+    "weather": "fog",
+    "temperature": "cold",
+    "energy": 0.15
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#e6ecef"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#dce4e8",
+     "amount": 0.5,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#a2b0ac",
+    "ink": "#1a2622",
+    "colors": [
+     "#2d4338",
+     "#475b50",
+     "#6b7f74",
+     "#8f9e95"
+    ],
+    "accent": "#e3dac9"
+   },
+   "mood": "mysterious",
+   "systems": [
+    {
+     "subject": "pine-trees",
+     "language": "branches",
+     "why": "procedural branching algorithms render tall conifer silhouettes fading into atmospheric fog."
+    }
+   ],
+   "search": "pine forest wrapped in dense fog",
+   "missing": [],
+   "reference": null,
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218143916
+ },
+ "a cherry tree in spring": {
+  "plan": {
+   "v": 1,
+   "seed": 1132461576,
+   "mode": "3d",
+   "text": "a cherry tree in spring",
+   "title": "cherry tree, spring",
+   "read": "A flowering cherry tree blooms under a soft spring sky.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "cherry",
+     "label": "a cherry tree",
+     "kind": "plant",
+     "form": "tree",
+     "species": "other",
+     "pose": "stand",
+     "material": "foliage",
+     "colors": [
+      "#e5a8bc",
+      "#6b4f3b"
+     ],
+     "size": 7,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Cherry blossom",
+     "building": null,
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "meadow",
+    "time": "day",
+    "season": "spring",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.3
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff5ea"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "petals",
+     "color": "#fce4ec",
+     "amount": 0.5,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#eef4f8",
+    "ink": "#3a4a52",
+    "colors": [
+     "#e5a8bc",
+     "#6b4f3b",
+     "#8aa27a",
+     "#a2c4c9"
+    ],
+    "accent": "#d47a94"
+   },
+   "mood": "tender",
+   "systems": [
+    {
+     "subject": "cherry",
+     "language": "branches",
+     "why": "Branching growth forms the wooden structure while particle swarms scatter falling pink blossoms."
+    }
+   ],
+   "search": "cherry tree in spring bloom",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F5%2F55%2FCincinnati_-_Spring_Grove_Cemetery_%2526_Arboretum_%2522Everybody_Likes_Cherry_Tree_Blooms%2522_%252851101862879%2529.jpg%2F1280px-Cincinnati_-_Spring_Grove_Cemetery_%2526_Arboretum_%2522Everybody_Likes_Cherry_Tree_Blooms%2522_%252851101862879%2529.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 649,
+    "via": "commons",
+    "credit": {
+     "title": "Cincinnati - Spring Grove Cemetery & Arboretum \"Everybody Likes Cherry Tree Blooms\" (51101862879)",
+     "author": "David Ohmer from Cincinnati, USA",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Cincinnati_-_Spring_Grove_Cemetery_%26_Arboretum_%22Everybody_Likes_Cherry_Tree_Blooms%22_(51101862879).jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218153344
+ },
+ "fireflies in a meadow at dusk": {
+  "plan": {
+   "v": 1,
+   "seed": 513727946,
+   "mode": "3d",
+   "text": "fireflies in a meadow at dusk",
+   "title": "meadow at dusk",
+   "read": "Glowing fireflies drift gracefully across a twilight meadow with a lonely tree in the background.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "tree",
+     "label": "meadow tree",
+     "kind": "plant",
+     "form": "tree",
+     "species": "other",
+     "pose": "stand",
+     "material": "foliage",
+     "colors": [
+      "#283b24",
+      "#4a3222"
+     ],
+     "size": 7.5,
+     "count": 1,
+     "motion": "sway",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Tree",
+     "building": null,
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "meadow",
+    "time": "dusk",
+    "season": "summer",
+    "weather": "clear",
+    "temperature": "warm",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "glow",
+     "at": "",
+     "color": "#d8f870"
+    },
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#cc5a37"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "fireflies",
+     "color": "#d8f870",
+     "amount": 0.6,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#161d2f",
+    "ink": "#0c101c",
+    "colors": [
+     "#161d2f",
+     "#26382b",
+     "#3d5a37",
+     "#6b8e4e",
+     "#d8f870"
+    ],
+    "accent": "#d8f870"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "tree",
+     "language": "branches",
+     "why": "branching growth forms recursive limb structures with leafy clusters that sway gently in the evening air."
+    }
+   ],
+   "search": "fireflies meadow dusk",
+   "missing": [],
+   "reference": null,
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218165817
+ },
+ "a ringed gas giant": {
+  "plan": {
+   "v": 1,
+   "seed": 440943759,
+   "mode": "3d",
+   "text": "a ringed gas giant",
+   "title": "ringed gas giant",
+   "read": "A majestic gas giant with prominent rings floats in deep space.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "planet",
+     "label": "gas giant",
+     "kind": "planet",
+     "form": "planet",
+     "species": "other",
+     "pose": "stand",
+     "material": "smooth",
+     "colors": [
+      "#d4a373",
+      "#faedcd",
+      "#ccd5ae"
+     ],
+     "size": 1,
+     "count": 1,
+     "motion": "orbit",
+     "traits": {
+      "ocean": 0,
+      "gas": 0.9,
+      "rings": 1
+     },
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Gas giant",
+     "building": null,
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "space",
+    "time": "night",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "cold",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#ffffff"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#ffffff",
+     "amount": 0.2,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#050508",
+    "ink": "#ffffff",
+    "colors": [
+     "#d4a373",
+     "#faedcd",
+     "#ccd5ae",
+     "#e9edc9"
+    ],
+    "accent": "#fefae0"
+   },
+   "mood": "mysterious",
+   "systems": [
+    {
+     "subject": "planet",
+     "language": "strata",
+     "why": "Atmospheric bands and swirling particle layers recreate the turbulent weather patterns of a gas giant."
+    }
+   ],
+   "search": "ringed gas giant planet in space",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F20%2FBlue_gas_giant.png%2F1280px-Blue_gas_giant.png%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 1024,
+    "via": "commons",
+    "credit": {
+     "title": "Blue gas giant",
+     "author": "unnamed",
+     "license": "CC0",
+     "url": "https://commons.wikimedia.org/wiki/File:Blue_gas_giant.png"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218171981
+ },
+ "an ocean planet": {
+  "plan": {
+   "v": 1,
+   "seed": 1013946993,
+   "mode": "3d",
+   "text": "an ocean planet",
+   "title": "ocean planet",
+   "read": "A vast blue planet floats silently in the void, its swirling cloud bands catching the distant starlight.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "planet",
+     "label": "the ocean planet",
+     "kind": "planet",
+     "form": "planet",
+     "species": "other",
+     "pose": "stand",
+     "material": "smooth",
+     "colors": [
+      "#1b4965",
+      "#62b6cb",
+      "#cae9ff"
+     ],
+     "size": 1,
+     "count": 1,
+     "motion": "spin",
+     "traits": {
+      "ocean": 1,
+      "gas": 0.3,
+      "rings": 0
+     },
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Planet",
+     "building": null,
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "space",
+    "time": "night",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "cold",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#ffffff"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#ffffff",
+     "amount": 0.2,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#0b090a",
+    "ink": "#161a1d",
+    "colors": [
+     "#1b4965",
+     "#62b6cb",
+     "#cae9ff"
+    ],
+    "accent": "#5fa8d3"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "planet",
+     "language": "strata",
+     "why": "Planet is built as an ellipsoid sphere with dynamic texture sampling for the deep oceans and swirling cloud layers."
+    }
+   ],
+   "search": "ocean planet view from space",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F7e%2FOcean_planet.png%2F1280px-Ocean_planet.png%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 1024,
+    "via": "commons",
+    "credit": {
+     "title": "Ocean planet",
+     "author": "unnamed",
+     "license": "CC0",
+     "url": "https://commons.wikimedia.org/wiki/File:Ocean_planet.png"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218177738
+ },
+ "earth from space": {
+  "plan": {
+   "v": 1,
+   "seed": 1513099000,
+   "mode": "3d",
+   "text": "earth from space",
+   "title": "earth from space",
+   "read": "Planet Earth appears as a brilliant blue and white marble suspended in the dark void of space.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "earth",
+     "label": "Earth",
+     "kind": "planet",
+     "form": "planet",
+     "species": "other",
+     "pose": "stand",
+     "material": "smooth",
+     "colors": [
+      "#1b4965",
+      "#62b6cb",
+      "#bee9e8",
+      "#ffffff"
+     ],
+     "size": 1,
+     "count": 1,
+     "motion": "spin",
+     "traits": {
+      "ocean": 0.71,
+      "gas": 0.2,
+      "rings": 0
+     },
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Earth",
+     "building": null,
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "earth",
+    "look": "at"
+   },
+   "world": {
+    "setting": "space",
+    "time": "night",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "cold",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff8e7"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#ffffff",
+     "amount": 0.2,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#020408",
+    "ink": "#0a1118",
+    "colors": [
+     "#0b2545",
+     "#134074",
+     "#8da9c4",
+     "#ee6c4d"
+    ],
+    "accent": "#62b6cb"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "earth",
+     "language": "strata",
+     "why": "Rotational vector field dynamics animate swirling atmospheric cloud bands and oceanic light reflections across the sphere."
+    }
+   ],
+   "search": "earth from space blue marble",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F97%2FThe_Earth_seen_from_Apollo_17.jpg%2F1280px-The_Earth_seen_from_Apollo_17.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 1025,
+    "via": "commons",
+    "credit": {
+     "title": "The Blue Marble label QS:Lar,\"الگُلَّة (البلية) الزرقاء\"label QS:Len,\"The Blue Marble\"",
+     "author": "NASA/Apollo 17 crew; taken by either Harrison Schmitt or Ron Evans",
+     "license": "Public domain",
+     "url": "https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218187601
+ },
+ "a banana": {
+  "plan": {
+   "v": 1,
+   "seed": 1880508460,
+   "mode": "3d",
+   "text": "a banana",
+   "title": "a banana",
+   "read": "A single bright yellow banana rests in the center of the frame.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "banana-1",
+     "label": "a banana",
+     "kind": "plant",
+     "form": "parts",
+     "species": "other",
+     "pose": "stand",
+     "material": "smooth",
+     "colors": [
+      "#e8c547",
+      "#8a6a2c",
+      "#3f2c17"
+     ],
+     "size": 0.2,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Banana",
+     "building": null,
+     "vehicle": null,
+     "parts": [
+      {
+       "name": "fruit",
+       "shape": "sweep",
+       "a": [
+        0,
+        0,
+        0
+       ],
+       "b": [
+        0.1,
+        0.1,
+        0.1
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [
+        [
+         -0.095,
+         0.05,
+         0
+        ],
+        [
+         -0.05,
+         0.026,
+         0
+        ],
+        [
+         0,
+         0.02,
+         0
+        ],
+        [
+         0.05,
+         0.027,
+         0
+        ],
+        [
+         0.09,
+         0.052,
+         0
+        ]
+       ],
+       "radii": [
+        0.007,
+        0.016,
+        0.019,
+        0.016,
+        0.006
+       ],
+       "profile": [],
+       "color": "#e8c547",
+       "blend": 0,
+       "cut": false
+      },
+      {
+       "name": "stem",
+       "shape": "capsule",
+       "a": [
+        0.088,
+        0.05,
+        0
+       ],
+       "b": [
+        0.108,
+        0.066,
+        0
+       ],
+       "r": [
+        0.0055,
+        0.0045
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#8a6a2c",
+       "blend": 0.004,
+       "cut": false
+      },
+      {
+       "name": "tip",
+       "shape": "ellipsoid",
+       "a": [
+        -0.098,
+        0.052,
+        0
+       ],
+       "b": [
+        0.005,
+        0.005,
+        0.005
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#3f2c17",
+       "blend": 0.003,
+       "cut": false
+      }
+     ]
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "close",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff6e0"
+    }
+   ],
+   "particles": [],
+   "palette": {
+    "background": "#f7f7f5",
+    "ink": "#2a2a2a",
+    "colors": [
+     "#e8c547",
+     "#8a6a2c",
+     "#3f2c17",
+     "#c2a035"
+    ],
+    "accent": "#e8c547"
+   },
+   "mood": "calm",
+   "systems": [
+    {
+     "subject": "banana-1",
+     "language": "contours",
+     "why": "Distance-field sculpture builds the curved form with smooth blended surfaces."
+    }
+   ],
+   "search": "banana on white background",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F69%2FBanana_%2528white_background%2529.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail_unscaled",
+    "width": 1024,
+    "height": 683,
+    "via": "commons",
+    "credit": {
+     "title": "Banana (white background)",
+     "author": "Justus Blümer from Deutschland",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Banana_(white_background).jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218192234
+ },
+ "a mug of coffee": {
+  "plan": {
+   "v": 1,
+   "seed": 1947361468,
+   "mode": "3d",
+   "text": "a mug of coffee",
+   "title": "coffee mug",
+   "read": "A steaming ceramic mug of dark coffee sits on a table.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "mug",
+     "label": "mug of coffee",
+     "kind": "object",
+     "form": "parts",
+     "species": "other",
+     "pose": "stand",
+     "material": "smooth",
+     "colors": [
+      "#d2b48c",
+      "#3b2219",
+      "#ffffff"
+     ],
+     "size": 0.12,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Mug",
+     "building": null,
+     "vehicle": null,
+     "parts": [
+      {
+       "name": "cup",
+       "shape": "cylinder",
+       "a": [
+        0,
+        0,
+        0
+       ],
+       "b": [
+        0,
+        0.1,
+        0
+       ],
+       "r": [
+        0.042,
+        0.042
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#e7e2d8",
+       "blend": 0,
+       "cut": false
+      },
+      {
+       "name": "hollow",
+       "shape": "cylinder",
+       "a": [
+        0,
+        0.008,
+        0
+       ],
+       "b": [
+        0,
+        0.12,
+        0
+       ],
+       "r": [
+        0.036,
+        0.036
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#e7e2d8",
+       "blend": 0.002,
+       "cut": true
+      },
+      {
+       "name": "handle",
+       "shape": "torus",
+       "a": [
+        0.064,
+        0.052,
+        0
+       ],
+       "b": [
+        0,
+        0,
+        1
+       ],
+       "r": [
+        0.022,
+        0.006
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#e7e2d8",
+       "blend": 0.004,
+       "cut": false
+      }
+     ]
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "close",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "lamp",
+     "at": "",
+     "color": "#fff8e7"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#ffffff",
+     "amount": 0.1,
+     "motion": "rise"
+    }
+   ],
+   "palette": {
+    "background": "#2c2a29",
+    "ink": "#111111",
+    "colors": [
+     "#d2b48c",
+     "#3b2219",
+     "#ffffff"
+    ],
+    "accent": "#d2b48c"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "mug",
+     "language": "contours",
+     "why": "Ceramic and liquid surfaces use distance-field sculpture to form smooth contours."
+    }
+   ],
+   "search": "ceramic coffee mug on table",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fda%2FMug_of_coffee_HM_%25289232444679%2529.jpg%2F1280px-Mug_of_coffee_HM_%25289232444679%2529.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 685,
+    "via": "commons",
+    "credit": {
+     "title": "Mug of coffee HM (9232444679)",
+     "author": "vastateparksstaff",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Mug_of_coffee_HM_(9232444679).jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218197515
+ },
+ "a red apple": {
+  "plan": {
+   "v": 1,
+   "seed": 1221573017,
+   "mode": "3d",
+   "text": "a red apple",
+   "title": "red apple",
+   "read": "A bright red apple sits quietly.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "apple",
+     "label": "apple",
+     "kind": "plant",
+     "form": "parts",
+     "species": "other",
+     "pose": "stand",
+     "material": "smooth",
+     "colors": [
+      "#c72c2c",
+      "#8a1b1b",
+      "#4e6129"
+     ],
+     "size": 0.08,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Apple",
+     "building": null,
+     "vehicle": null,
+     "parts": [
+      {
+       "name": "fruit",
+       "shape": "lathe",
+       "a": [
+        0,
+        0,
+        0
+       ],
+       "b": [
+        0,
+        1,
+        0
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [
+        [
+         0.012,
+         0.004
+        ],
+        [
+         0.032,
+         0.012
+        ],
+        [
+         0.044,
+         0.032
+        ],
+        [
+         0.045,
+         0.05
+        ],
+        [
+         0.038,
+         0.072
+        ],
+        [
+         0.016,
+         0.08
+        ],
+        [
+         0.006,
+         0.074
+        ]
+       ],
+       "color": "#b8322a",
+       "blend": 0,
+       "cut": false
+      },
+      {
+       "name": "stem",
+       "shape": "capsule",
+       "a": [
+        0,
+        0.07,
+        0
+       ],
+       "b": [
+        0.004,
+        0.092,
+        0
+       ],
+       "r": [
+        0.0022,
+        0.0016
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#5a3d22",
+       "blend": 0.002,
+       "cut": false
+      },
+      {
+       "name": "leaf",
+       "shape": "ellipsoid",
+       "a": [
+        0.012,
+        0.088,
+        0
+       ],
+       "b": [
+        0.012,
+        0.0015,
+        0.006
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        25
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#4c7a33",
+       "blend": 0.001,
+       "cut": false
+      }
+     ]
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "close",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#ffffff"
+    }
+   ],
+   "particles": [],
+   "palette": {
+    "background": "#f5f5f5",
+    "ink": "#2b2b2b",
+    "colors": [
+     "#c72c2c",
+     "#8a1b1b",
+     "#4e6129",
+     "#e0e0e0"
+    ],
+    "accent": "#c72c2c"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "apple",
+     "language": "contours",
+     "why": "distance-field sculpture builds the smooth organic curves and indentation of the fruit."
+    }
+   ],
+   "search": "red apple on white background",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F15%2FRed_Apple.jpg%2F1280px-Red_Apple.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 928,
+    "via": "commons",
+    "credit": {
+     "title": "Red Apple",
+     "author": "Abhijit Tembhekar from Mumbai, India",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Red_Apple.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218201580
+ },
+ "a streetlight in the rain": {
+  "plan": {
+   "v": 1,
+   "seed": 351397456,
+   "mode": "3d",
+   "text": "a streetlight in the rain",
+   "title": "streetlight in the rain",
+   "read": "A lone streetlight casts a warm yellow glow down through the falling rain.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "lamp",
+     "label": "the streetlight",
+     "kind": "object",
+     "form": "parts",
+     "species": "other",
+     "pose": "stand",
+     "material": "metal",
+     "colors": [
+      "#2d2c2a",
+      "#f2c879"
+     ],
+     "size": 4.14,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Streetlight",
+     "building": null,
+     "vehicle": null,
+     "parts": [
+      {
+       "name": "foot",
+       "shape": "cone",
+       "a": [
+        0,
+        0,
+        0
+       ],
+       "b": [
+        0,
+        0.6,
+        0
+       ],
+       "r": [
+        0.16,
+        0.07
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0.02,
+       "cut": false
+      },
+      {
+       "name": "pole",
+       "shape": "cylinder",
+       "a": [
+        0,
+        0.5,
+        0
+       ],
+       "b": [
+        0,
+        3.9,
+        0
+       ],
+       "r": [
+        0.055,
+        0.055
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0.02,
+       "cut": false
+      },
+      {
+       "name": "neck",
+       "shape": "sweep",
+       "a": [
+        0,
+        0,
+        0
+       ],
+       "b": [
+        0.1,
+        0.1,
+        0.1
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [
+        [
+         0,
+         3.85,
+         0
+        ],
+        [
+         0.05,
+         4.05,
+         0
+        ],
+        [
+         0.22,
+         4.12,
+         0
+        ],
+        [
+         0.38,
+         4.06,
+         0
+        ]
+       ],
+       "radii": [
+        0.045,
+        0.04,
+        0.035,
+        0.035
+       ],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0.01,
+       "cut": false
+      },
+      {
+       "name": "hood",
+       "shape": "cone",
+       "a": [
+        0.4,
+        3.92,
+        0
+       ],
+       "b": [
+        0.4,
+        4.14,
+        0
+       ],
+       "r": [
+        0.24,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0,
+       "cut": false
+      },
+      {
+       "name": "lamp",
+       "shape": "ellipsoid",
+       "a": [
+        0.4,
+        3.9,
+        0
+       ],
+       "b": [
+        0.13,
+        0.08,
+        0.13
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#f2c879",
+       "blend": 0,
+       "cut": false
+      }
+     ]
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "ground",
+    "time": "night",
+    "season": "none",
+    "weather": "rain",
+    "temperature": "cold",
+    "energy": 0.4
+   },
+   "lights": [
+    {
+     "kind": "streetlight",
+     "at": "lamp",
+     "color": "#f2c879"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "rain",
+     "color": "#8fa3be",
+     "amount": 0.8,
+     "motion": "fall"
+    }
+   ],
+   "palette": {
+    "background": "#0b0f19",
+    "ink": "#8fa3be",
+    "colors": [
+     "#151d2a",
+     "#2d2c2a",
+     "#f2c879",
+     "#8fa3be"
+    ],
+    "accent": "#f2c879"
+   },
+   "mood": "melancholy",
+   "systems": [
+    {
+     "subject": "lamp",
+     "language": "slices",
+     "why": "the metal body is built from distance-field sculpture parts while the lamp emits a warm volumetric glow casting light into the rain."
+    }
+   ],
+   "search": "streetlight in the rain at night",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fb0%2FDFC_2487_Quiet_urban_street_at_night_dimly_lit_by_streetlights_with_parked_cars_along_one_side_and_a_small_building_glowing_in_the_distance.jpg%2F1280px-DFC_2487_Quiet_urban_street_at_night_dimly_lit_by_streetlights_with_parked_cars_along_one_side_and_a_small_building_glowing_in_the_distance.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 683,
+    "via": "commons",
+    "credit": {
+     "title": "DFC 2487 Quiet urban street at night dimly lit by streetlights with parked cars along one side and a small building glow",
+     "author": "PattayaPatrol",
+     "license": "CC BY-SA 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:DFC_2487_Quiet_urban_street_at_night_dimly_lit_by_streetlights_with_parked_cars_along_one_side_and_a_small_building_glowing_in_the_distance.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218205880
+ },
+ "a calm ocean at dawn": {
+  "plan": {
+   "v": 1,
+   "seed": 639994868,
+   "mode": "3d",
+   "text": "a calm ocean at dawn",
+   "title": "calm ocean dawn",
+   "read": "A peaceful ocean stretching to the horizon under a gentle dawn sky.",
+   "style": "auto",
+   "subjects": [],
+   "relations": [],
+   "view": {
+    "kind": "wide",
+    "from": "",
+    "at": "",
+    "look": "ahead"
+   },
+   "world": {
+    "setting": "ocean",
+    "time": "dawn",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#ffb088"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "spray",
+     "color": "#e0f0ff",
+     "amount": 0.2,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#1b2a4a",
+    "ink": "#0d1626",
+    "colors": [
+     "#2e4a6d",
+     "#4a759c",
+     "#739bb8",
+     "#b3cdd6",
+     "#ffb088"
+    ],
+    "accent": "#ff9e7d"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "world",
+     "language": "waves",
+     "why": "ocean waves become a wave field simulation reacting to gentle morning energy."
+    }
+   ],
+   "search": "calm ocean dawn sunrise water",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F4%2F40%2FSunset_sky_water.jpg%2F1280px-Sunset_sky_water.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 678,
+    "via": "commons",
+    "credit": {
+     "title": "Sunset sky water",
+     "author": "Unknown authorUnknown author",
+     "license": "CC0",
+     "url": "https://commons.wikimedia.org/wiki/File:Sunset_sky_water.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218209116
+ },
+ "a desert at golden hour": {
+  "plan": {
+   "v": 1,
+   "seed": 44699488,
+   "mode": "3d",
+   "text": "a desert at golden hour",
+   "title": "golden desert dust",
+   "read": "A vast expanse of rolling sand dunes under the warm glow of the setting sun.",
+   "style": "auto",
+   "subjects": [],
+   "relations": [],
+   "view": {
+    "kind": "wide",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "desert",
+    "time": "golden",
+    "season": "none",
+    "weather": "wind",
+    "temperature": "warm",
+    "energy": 0.3
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#f29c38"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#e0a96d",
+     "amount": 0.6,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#1a0f02",
+    "ink": "#f2dfce",
+    "colors": [
+     "#d9822b",
+     "#f2b863",
+     "#8c4714",
+     "#f2d49b"
+    ],
+    "accent": "#f29c38"
+   },
+   "mood": "serene",
+   "systems": [],
+   "search": "desert dunes golden hour",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F48%2FNamibDesert01.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail_unscaled",
+    "width": 1024,
+    "height": 653,
+    "via": "commons",
+    "credit": {
+     "title": "NamibDesert01",
+     "author": "Marco w at English Wikipedia",
+     "license": "Public domain",
+     "url": "https://commons.wikimedia.org/wiki/File:NamibDesert01.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218212161
+ },
+ "snowy mountains": {
+  "plan": {
+   "v": 1,
+   "seed": 241574485,
+   "mode": "3d",
+   "text": "snowy mountains",
+   "title": "snowy mountains",
+   "read": "A vast, silent range of snow-covered mountains rises against a cold winter sky.",
+   "style": "auto",
+   "subjects": [],
+   "relations": [],
+   "view": {
+    "kind": "wide",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "mountains",
+    "time": "day",
+    "season": "winter",
+    "weather": "snow",
+    "temperature": "cold",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#e2ecf5"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "snow",
+     "color": "#ffffff",
+     "amount": 0.6,
+     "motion": "fall"
+    }
+   ],
+   "palette": {
+    "background": "#1e293b",
+    "ink": "#cbd5e1",
+    "colors": [
+     "#334155",
+     "#475569",
+     "#94a3b8",
+     "#e2ecf5"
+    ],
+    "accent": "#93c5fd"
+   },
+   "mood": "serene",
+   "systems": [],
+   "search": "snowy mountain peaks winter landscape",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F31%2FAerial_view_of_snowy_mountain_peaks_winter.jpg%2F1280px-Aerial_view_of_snowy_mountain_peaks_winter.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 686,
+    "via": "commons",
+    "credit": {
+     "title": "Aerial view of snowy mountain peaks winter",
+     "author": "Goldmann Jo, U.S. Fish and Wildlife Service",
+     "license": "Public domain",
+     "url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_snowy_mountain_peaks_winter.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218215598
+ },
+ "a thunderstorm over the city": {
+  "plan": {
+   "v": 1,
+   "seed": 1347194398,
+   "mode": "3d",
+   "text": "a thunderstorm over the city",
+   "title": "storm over the city",
+   "read": "A towering skyscraper stands beneath a dark, lightning-charged sky.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "skyscraper-1",
+     "label": "the skyscraper",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "metal",
+     "colors": [
+      "#2c3038",
+      "#1a1c23",
+      "#4a5260"
+     ],
+     "size": 60,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Skyscraper",
+     "building": {
+      "style": "skyscraper",
+      "floors": 40,
+      "width": 18,
+      "roof": "flat",
+      "wings": 0,
+      "towers": 0,
+      "columns": false,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "low",
+    "from": "skyscraper-1",
+    "at": "",
+    "look": "up"
+   },
+   "world": {
+    "setting": "city",
+    "time": "night",
+    "season": "none",
+    "weather": "storm",
+    "temperature": "mild",
+    "energy": 0.9
+   },
+   "lights": [
+    {
+     "kind": "moon",
+     "at": "",
+     "color": "#485268"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "rain",
+     "color": "#7a92b2",
+     "amount": 0.9,
+     "motion": "fall"
+    },
+    {
+     "kind": "sparks",
+     "color": "#ffffff",
+     "amount": 0.4,
+     "motion": "swirl"
+    }
+   ],
+   "palette": {
+    "background": "#0b0e14",
+    "ink": "#1a2130",
+    "colors": [
+     "#1a1c23",
+     "#2c3038",
+     "#4a5260",
+     "#7a92b2",
+     "#e2e8f0"
+    ],
+    "accent": "#90b4e8"
+   },
+   "mood": "epic",
+   "systems": [
+    {
+     "subject": "skyscraper-1",
+     "language": "structure",
+     "why": "The structure forms a towering rigid silhouette that anchors the stormy vertical grid of the city."
+    }
+   ],
+   "search": "thunderstorm over city skyscraper night lightning",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F8%2F8d%2FHong_Kong_skyscrapers_in_a_night_of_typhoon.jpg%2F1280px-Hong_Kong_skyscrapers_in_a_night_of_typhoon.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 680,
+    "via": "commons",
+    "credit": {
+     "title": "Hong Kong skyscrapers in a night of typhoon",
+     "author": "Wilfredor",
+     "license": "CC0",
+     "url": "https://commons.wikimedia.org/wiki/File:Hong_Kong_skyscrapers_in_a_night_of_typhoon.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218221074
+ },
+ "my childhood home in winter": {
+  "plan": {
+   "v": 1,
+   "seed": 522342663,
+   "mode": "3d",
+   "text": "my childhood home in winter",
+   "title": "childhood home, winter",
+   "read": "A cozy cottage sits in a quiet snowfield under a pale winter sky.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "cottage",
+     "label": "my childhood home",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "wood",
+     "colors": [
+      "#c25e42",
+      "#f4f1ea",
+      "#3d322c"
+     ],
+     "size": 8,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Cottage",
+     "building": {
+      "style": "cottage",
+      "floors": 1,
+      "width": 8,
+      "roof": "gable",
+      "wings": 0,
+      "towers": 0,
+      "columns": false,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "ahead"
+   },
+   "world": {
+    "setting": "snowfield",
+    "time": "day",
+    "season": "winter",
+    "weather": "snow",
+    "temperature": "cold",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#f2f5f8"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "snow",
+     "color": "#ffffff",
+     "amount": 0.6,
+     "motion": "fall"
+    }
+   ],
+   "palette": {
+    "background": "#d6e0ec",
+    "ink": "#2b3b4c",
+    "colors": [
+     "#c25e42",
+     "#f4f1ea",
+     "#3d322c",
+     "#8ba2b4"
+    ],
+    "accent": "#e07a5f"
+   },
+   "mood": "nostalgic",
+   "systems": [
+    {
+     "subject": "cottage",
+     "language": "structure",
+     "why": "The structure is built from volumetric blocks combined into a cozy, snow-dusted family home."
+    }
+   ],
+   "search": "cottage in winter snow",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F64%2FPope_Leo_XIV_Childhood_home%252C_Dolton%252C_IL.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail_unscaled",
+    "width": 1024,
+    "height": 1365,
+    "via": "commons",
+    "credit": {
+     "title": "Pope Leo XIV Childhood home, Dolton, IL",
+     "author": "Jumpy542",
+     "license": "CC0",
+     "url": "https://commons.wikimedia.org/wiki/File:Pope_Leo_XIV_Childhood_home,_Dolton,_IL.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218225892
+ },
+ "the first day of summer": {
+  "plan": {
+   "v": 1,
+   "seed": 1530822440,
+   "mode": "3d",
+   "text": "the first day of summer",
+   "title": "the first day of summer",
+   "read": "A bright meadow under the warm summer sun with blooming flowers and tall green grass.",
+   "style": "auto",
+   "subjects": [],
+   "relations": [],
+   "view": {
+    "kind": "wide",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "meadow",
+    "time": "day",
+    "season": "summer",
+    "weather": "clear",
+    "temperature": "warm",
+    "energy": 0.3
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff4d1"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "petals",
+     "color": "#ffd1dc",
+     "amount": 0.4,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#e2f0d9",
+    "ink": "#2d4a22",
+    "colors": [
+     "#5c8a42",
+     "#85b567",
+     "#ffeb60",
+     "#ff9999"
+    ],
+    "accent": "#ff6b6b"
+   },
+   "mood": "joyful",
+   "systems": [],
+   "search": "sunny meadow summer day flowers grass",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Fa6%2FVegetation_Grown_At_The_Sides_Of_A_Route_%2528253944837%2529.jpeg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail_unscaled",
+    "width": 1024,
+    "height": 683,
+    "via": "commons",
+    "credit": {
+     "title": "Vegetation Grown At The Sides Of A Route",
+     "author": "Maximiliano Cordoba Halogenn",
+     "license": "CC BY 3.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Vegetation_Grown_At_The_Sides_Of_A_Route_(253944837).jpeg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218228964
+ },
+ "loneliness": {
+  "plan": {
+   "v": 1,
+   "seed": 1970350946,
+   "mode": "3d",
+   "text": "loneliness",
+   "title": "loneliness",
+   "read": "A single towering streetlight glows faintly in the empty darkness.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "lamp",
+     "label": "the streetlight",
+     "kind": "structure",
+     "form": "parts",
+     "species": "other",
+     "pose": "stand",
+     "material": "metal",
+     "colors": [
+      "#2d2c2a",
+      "#f2c879"
+     ],
+     "size": 4.15,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Streetlight",
+     "building": null,
+     "vehicle": null,
+     "parts": [
+      {
+       "name": "foot",
+       "shape": "cone",
+       "a": [
+        0,
+        0,
+        0
+       ],
+       "b": [
+        0,
+        0.6,
+        0
+       ],
+       "r": [
+        0.16,
+        0.07
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0.02,
+       "cut": false
+      },
+      {
+       "name": "pole",
+       "shape": "cylinder",
+       "a": [
+        0,
+        0.5,
+        0
+       ],
+       "b": [
+        0,
+        3.9,
+        0
+       ],
+       "r": [
+        0.055,
+        0.055
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0.02,
+       "cut": false
+      },
+      {
+       "name": "neck",
+       "shape": "sweep",
+       "a": [
+        0,
+        0,
+        0
+       ],
+       "b": [
+        0.1,
+        0.1,
+        0.1
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [
+        [
+         0,
+         3.85,
+         0
+        ],
+        [
+         0.05,
+         4.05,
+         0
+        ],
+        [
+         0.22,
+         4.12,
+         0
+        ],
+        [
+         0.38,
+         4.06,
+         0
+        ]
+       ],
+       "radii": [
+        0.045,
+        0.04,
+        0.035,
+        0.035
+       ],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0.01,
+       "cut": false
+      },
+      {
+       "name": "hood",
+       "shape": "cone",
+       "a": [
+        0.4,
+        3.92,
+        0
+       ],
+       "b": [
+        0.4,
+        4.14,
+        0
+       ],
+       "r": [
+        0.24,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0,
+       "cut": false
+      },
+      {
+       "name": "lamp",
+       "shape": "ellipsoid",
+       "a": [
+        0.4,
+        3.9,
+        0
+       ],
+       "b": [
+        0.13,
+        0.08,
+        0.13
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#f2c879",
+       "blend": 0,
+       "cut": false
+      }
+     ]
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "night",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "cold",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "streetlight",
+     "at": "lamp",
+     "color": "#f2c879"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#4a4a52",
+     "amount": 0.2,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#0b0c10",
+    "ink": "#c5c6c7",
+    "colors": [
+     "#1f2833",
+     "#c5c6c7",
+     "#66fcf1",
+     "#45a29e"
+    ],
+    "accent": "#f2c879"
+   },
+   "mood": "melancholy",
+   "systems": [
+    {
+     "subject": "lamp",
+     "language": "slices",
+     "why": "the metal structure stands motionless while light glows softly into the empty void."
+    }
+   ],
+   "search": "lonely streetlight at night",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F0%2F03%2FYes%252C_I_did_see_the_northern_lights%2521_Taking_a_scenic_route_through_Maritime_Heritage_Park_where_it_was_darker_beyond_these_foreground_streetlights._%252853719608026%2529.jpg%2F1280px-thumbnail.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 768,
+    "via": "commons",
+    "credit": {
+     "title": "Yes, I did see the northern lights! Taking a scenic route through Maritime Heritage Park where it was darker beyond thes",
+     "author": "Robert Ashworth from Bellingham, WA., USA",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Yes,_I_did_see_the_northern_lights!_Taking_a_scenic_route_through_Maritime_Heritage_Park_where_it_was_darker_beyond_these_foreground_streetlights._(53719608026).jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218232510
+ },
+ "walking home late in a quiet city": {
+  "plan": {
+   "v": 1,
+   "seed": 1525799657,
+   "mode": "3d",
+   "text": "walking home late in a quiet city",
+   "title": "walking home late",
+   "read": "a lone figure walks down a quiet city street under the warm glow of a streetlight.",
+   "style": "auto",
+   "subjects": [
+    {
+     "id": "lamp",
+     "label": "the streetlight",
+     "kind": "object",
+     "form": "parts",
+     "species": "other",
+     "pose": "stand",
+     "material": "metal",
+     "colors": [
+      "#2d2c2a",
+      "#f2c879"
+     ],
+     "size": 4.2,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Streetlight",
+     "building": null,
+     "vehicle": null,
+     "parts": [
+      {
+       "name": "foot",
+       "shape": "cone",
+       "a": [
+        0,
+        0,
+        0
+       ],
+       "b": [
+        0,
+        0.6,
+        0
+       ],
+       "r": [
+        0.16,
+        0.07
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0.02,
+       "cut": false
+      },
+      {
+       "name": "pole",
+       "shape": "cylinder",
+       "a": [
+        0,
+        0.5,
+        0
+       ],
+       "b": [
+        0,
+        3.9,
+        0
+       ],
+       "r": [
+        0.055,
+        0.055
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0.02,
+       "cut": false
+      },
+      {
+       "name": "neck",
+       "shape": "sweep",
+       "a": [
+        0,
+        0,
+        0
+       ],
+       "b": [
+        0.1,
+        0.1,
+        0.1
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [
+        [
+         0,
+         3.85,
+         0
+        ],
+        [
+         0.05,
+         4.05,
+         0
+        ],
+        [
+         0.22,
+         4.12,
+         0
+        ],
+        [
+         0.38,
+         4.06,
+         0
+        ]
+       ],
+       "radii": [
+        0.045,
+        0.04,
+        0.035,
+        0.035
+       ],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0.01,
+       "cut": false
+      },
+      {
+       "name": "hood",
+       "shape": "cone",
+       "a": [
+        0.4,
+        3.92,
+        0
+       ],
+       "b": [
+        0.4,
+        4.14,
+        0
+       ],
+       "r": [
+        0.24,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#2d2c2a",
+       "blend": 0,
+       "cut": false
+      },
+      {
+       "name": "lamp",
+       "shape": "ellipsoid",
+       "a": [
+        0.4,
+        3.9,
+        0
+       ],
+       "b": [
+        0.13,
+        0.08,
+        0.13
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#f2c879",
+       "blend": 0,
+       "cut": false
+      }
+     ]
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "wide",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "city",
+    "time": "night",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "cold",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "streetlight",
+     "at": "lamp",
+     "color": "#f2c879"
+    },
+    {
+     "kind": "moon",
+     "at": "",
+     "color": "#8fa1b3"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#e0e6ed",
+     "amount": 0.3,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#111622",
+    "ink": "#8fa1b3",
+    "colors": [
+     "#2d2c2a",
+     "#f2c879",
+     "#3b4a6b",
+     "#1a2233"
+    ],
+    "accent": "#f2c879"
+   },
+   "mood": "nostalgic",
+   "systems": [
+    {
+     "subject": "lamp",
+     "language": "slices",
+     "why": "metal casting forms a rigid standard topped with an electric glow that illuminates the dark street."
+    }
+   ],
+   "search": "walking alone down quiet city street at night",
+   "missing": [
+    "me"
+   ],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F2c%2F20260415_Streetlight_palace_Sch%25C3%25B6nbrunn.jpg%2F1280px-20260415_Streetlight_palace_Sch%25C3%25B6nbrunn.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 1024,
+    "via": "commons",
+    "credit": {
+     "title": "20260415 Streetlight palace Schönbrunn",
+     "author": "Flocci Nivis",
+     "license": "CC BY 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:20260415_Streetlight_palace_Sch%C3%B6nbrunn.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218238283
+ },
+ "a banana in 8-bit style": {
+  "plan": {
+   "v": 1,
+   "seed": 1690154134,
+   "mode": "3d",
+   "text": "a banana in 8-bit style",
+   "title": "pixel banana",
+   "read": "A crisp yellow banana sits in a minimal 8-bit art style.",
+   "style": "pixel",
+   "subjects": [
+    {
+     "id": "banana-1",
+     "label": "a banana",
+     "kind": "plant",
+     "form": "parts",
+     "species": "other",
+     "pose": "stand",
+     "material": "smooth",
+     "colors": [
+      "#e8c547",
+      "#8a6a2c",
+      "#3f2c17"
+     ],
+     "size": 0.2,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Banana",
+     "building": null,
+     "vehicle": null,
+     "parts": [
+      {
+       "name": "fruit",
+       "shape": "sweep",
+       "a": [
+        0,
+        0,
+        0
+       ],
+       "b": [
+        0.1,
+        0.1,
+        0.1
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [
+        [
+         -0.095,
+         0.05,
+         0
+        ],
+        [
+         -0.05,
+         0.026,
+         0
+        ],
+        [
+         0,
+         0.02,
+         0
+        ],
+        [
+         0.05,
+         0.027,
+         0
+        ],
+        [
+         0.09,
+         0.052,
+         0
+        ]
+       ],
+       "radii": [
+        0.007,
+        0.016,
+        0.019,
+        0.016,
+        0.006
+       ],
+       "profile": [],
+       "color": "#e8c547",
+       "blend": 0,
+       "cut": false
+      },
+      {
+       "name": "stem",
+       "shape": "capsule",
+       "a": [
+        0.088,
+        0.05,
+        0
+       ],
+       "b": [
+        0.108,
+        0.066,
+        0
+       ],
+       "r": [
+        0.0055,
+        0.0045
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#8a6a2c",
+       "blend": 0.004,
+       "cut": false
+      },
+      {
+       "name": "tip",
+       "shape": "ellipsoid",
+       "a": [
+        -0.098,
+        0.052,
+        0
+       ],
+       "b": [
+        0.005,
+        0.005,
+        0.005
+       ],
+       "r": [
+        0.05,
+        0.05
+       ],
+       "rot": [
+        0,
+        0,
+        0
+       ],
+       "path": [],
+       "radii": [],
+       "profile": [],
+       "color": "#3f2c17",
+       "blend": 0.003,
+       "cut": false
+      }
+     ]
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff6d6"
+    }
+   ],
+   "particles": [],
+   "palette": {
+    "background": "#f4f4f4",
+    "ink": "#2b2b2b",
+    "colors": [
+     "#e8c547",
+     "#8a6a2c",
+     "#3f2c17"
+    ],
+    "accent": "#e8c547"
+   },
+   "mood": "playful",
+   "systems": [
+    {
+     "subject": "banana-1",
+     "language": "contours",
+     "why": "pixel art grids map the banana curves into discrete retro color steps."
+    }
+   ],
+   "search": "banana on white background",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F69%2FBanana_%2528white_background%2529.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail_unscaled",
+    "width": 1024,
+    "height": 683,
+    "via": "commons",
+    "credit": {
+     "title": "Banana (white background)",
+     "author": "Justus Blümer from Deutschland",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Banana_(white_background).jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218241952
+ },
+ "a castle as a line drawing": {
+  "plan": {
+   "v": 1,
+   "seed": 2086411396,
+   "mode": "3d",
+   "text": "a castle as a line drawing",
+   "title": "castle line drawing",
+   "read": "A majestic castle rendered as a clean architectural line drawing.",
+   "style": "line",
+   "subjects": [
+    {
+     "id": "castle",
+     "label": "the castle",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "stone",
+     "colors": [
+      "#1c1c1c",
+      "#4a4a4a"
+     ],
+     "size": 25,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Castle",
+     "building": {
+      "style": "castle",
+      "floors": 3,
+      "width": 15,
+      "roof": "spire",
+      "wings": 2,
+      "towers": 4,
+      "columns": true,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.1
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#ffffff"
+    }
+   ],
+   "particles": [],
+   "palette": {
+    "background": "#fcfcfc",
+    "ink": "#1c1c1c",
+    "colors": [
+     "#1c1c1c",
+     "#4a4a4a",
+     "#888888"
+    ],
+    "accent": "#1c1c1c"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "castle",
+     "language": "structure",
+     "why": "stone structure relies on contour slices and clean line vectors to define its architectural silhouette."
+    }
+   ],
+   "search": "castle architectural line drawing minimalist",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F5%2F53%2FBrzeg_Castle_03.jpg%2F1280px-Brzeg_Castle_03.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 756,
+    "via": "commons",
+    "credit": {
+     "title": "Brzeg Castle 03",
+     "author": "Scotch Mist",
+     "license": "CC BY-SA 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Brzeg_Castle_03.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218247939
+ },
+ "a lighthouse in stained glass": {
+  "plan": {
+   "v": 1,
+   "seed": 1511384965,
+   "mode": "3d",
+   "text": "a lighthouse in stained glass",
+   "title": "lighthouse in stained glass",
+   "read": "A coastal lighthouse rendered in shimmering stained glass panels.",
+   "style": "cells",
+   "subjects": [
+    {
+     "id": "lighthouse",
+     "label": "lighthouse",
+     "kind": "structure",
+     "form": "building",
+     "species": "other",
+     "pose": "stand",
+     "material": "glass",
+     "colors": [
+      "#b23a2e",
+      "#ece6da",
+      "#2b2b2e",
+      "#f3e3b0"
+     ],
+     "size": 30,
+     "count": 1,
+     "motion": "still",
+     "traits": {},
+     "hair": {
+      "color": "",
+      "length": ""
+     },
+     "wiki": "Lighthouse",
+     "building": {
+      "style": "lighthouse",
+      "floors": 6,
+      "width": 6.6,
+      "roof": "spire",
+      "wings": 0,
+      "towers": 0,
+      "columns": false,
+      "rails": false,
+      "note": ""
+     },
+     "vehicle": null,
+     "parts": []
+    }
+   ],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "day",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fef08a"
+    }
+   ],
+   "particles": [],
+   "palette": {
+    "background": "#1e293b",
+    "ink": "#0f172a",
+    "colors": [
+     "#b23a2e",
+     "#ece6da",
+     "#f3e3b0",
+     "#38bdf8",
+     "#fbbf24"
+    ],
+    "accent": "#38bdf8"
+   },
+   "mood": "serene",
+   "systems": [
+    {
+     "subject": "lighthouse",
+     "language": "structure",
+     "why": "Stained glass cells form a faceted mosaic surface that refracts light across the structure."
+    }
+   ],
+   "search": "lighthouse stained glass window art",
+   "missing": [],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fcd%2FThe_Lighthouse._Stained-glass_window_at_Church_of_Our_Savior%252C_MCC_%2528Metropolitan_Community_Church%2529%252C_2011_South_Federal_Hwy%252C_Boynton_Beach%252C_Florida.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail_unscaled",
+    "width": 1024,
+    "height": 786,
+    "via": "commons",
+    "credit": {
+     "title": "The Lighthouse. Stained-glass window at Church of Our Savior, MCC (Metropolitan Community Church), 2011 South Federal Hw",
+     "author": "Deisenbe",
+     "license": "CC BY-SA 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:The_Lighthouse._Stained-glass_window_at_Church_of_Our_Savior,_MCC_(Metropolitan_Community_Church),_2011_South_Federal_Hwy,_Boynton_Beach,_Florida.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218252665
+ },
+ "a golden retriever running on the beach": {
+  "plan": {
+   "v": 1,
+   "seed": 785372689,
+   "mode": "3d",
+   "text": "a golden retriever running on the beach",
+   "title": "golden retriever on the beach",
+   "read": "A golden retriever running joyfully along a sandy beach.",
+   "style": "auto",
+   "subjects": [],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "ocean",
+    "time": "day",
+    "season": "summer",
+    "weather": "clear",
+    "temperature": "warm",
+    "energy": 0.8
+   },
+   "lights": [
+    {
+     "kind": "sun",
+     "at": "",
+     "color": "#fff4d4"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "spray",
+     "color": "#ffffff",
+     "amount": 0.3,
+     "motion": "rise"
+    },
+    {
+     "kind": "dust",
+     "color": "#e8d0a9",
+     "amount": 0.2,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#3486eb",
+    "ink": "#1b4278",
+    "colors": [
+     "#d49b45",
+     "#e8d0a9",
+     "#3486eb",
+     "#ffffff"
+    ],
+    "accent": "#f2cb80"
+   },
+   "mood": "joyful",
+   "systems": [
+    {
+     "subject": "world",
+     "language": "waves",
+     "why": "Ocean waves are simulated as a dynamic wave field crashing gently onto the shore."
+    }
+   ],
+   "search": "golden retriever running on the beach",
+   "missing": [
+    "golden retriever"
+   ],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F8%2F8a%2FA_golden_retriever_on_the_beach.jpg%2F1280px-A_golden_retriever_on_the_beach.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 683,
+    "via": "commons",
+    "credit": {
+     "title": "A golden retriever on the beach",
+     "author": "Bruce Emmerling",
+     "license": "CC BY-SA 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:A_golden_retriever_on_the_beach.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218256434
+ },
+ "a dragon": {
+  "plan": {
+   "v": 1,
+   "seed": 1272713342,
+   "mode": "3d",
+   "text": "a dragon",
+   "title": "the dragon",
+   "read": "A mystical dragon looms large.",
+   "style": "auto",
+   "subjects": [],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "void",
+    "time": "night",
+    "season": "none",
+    "weather": "clear",
+    "temperature": "mild",
+    "energy": 0.5
+   },
+   "lights": [],
+   "particles": [],
+   "palette": {
+    "background": "#0b0c10",
+    "ink": "#1f2833",
+    "colors": [
+     "#c5c6c7",
+     "#66fcf1",
+     "#45a29e"
+    ],
+    "accent": "#66fcf1"
+   },
+   "mood": "mysterious",
+   "systems": [],
+   "search": "dragon fantasy creature",
+   "missing": [
+    "dragon"
+   ],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fe9%2FDragon_on_the_Dragon_Bridge%252C_Ljubljana%252C_20240502_1822_7813.jpg%2F1280px-Dragon_on_the_Dragon_Bridge%252C_Ljubljana%252C_20240502_1822_7813.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 909,
+    "via": "commons",
+    "credit": {
+     "title": "Dragon on the Dragon Bridge, Ljubljana, 20240502 1822 7813",
+     "author": "Jakub Hałun",
+     "license": "CC BY 4.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Dragon_on_the_Dragon_Bridge,_Ljubljana,_20240502_1822_7813.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218258853
+ },
+ "a person reading in a cafe": {
+  "plan": {
+   "v": 1,
+   "seed": 1311166038,
+   "mode": "3d",
+   "text": "a person reading in a cafe",
+   "title": "reading in a cafe",
+   "read": "A cozy cafe interior where a customer is seated and reading under soft warm lights.",
+   "style": "auto",
+   "subjects": [],
+   "relations": [],
+   "view": {
+    "kind": "outside",
+    "from": "",
+    "at": "",
+    "look": "at"
+   },
+   "world": {
+    "setting": "city",
+    "time": "night",
+    "season": "winter",
+    "weather": "clear",
+    "temperature": "warm",
+    "energy": 0.2
+   },
+   "lights": [
+    {
+     "kind": "lamp",
+     "at": "",
+     "color": "#fcd34d"
+    }
+   ],
+   "particles": [
+    {
+     "kind": "dust",
+     "color": "#fef3c7",
+     "amount": 0.2,
+     "motion": "drift"
+    }
+   ],
+   "palette": {
+    "background": "#1c1917",
+    "ink": "#a8a29e",
+    "colors": [
+     "#451a03",
+     "#78350f",
+     "#b45309",
+     "#d97706",
+     "#f59e0b"
+    ],
+    "accent": "#fef3c7"
+   },
+   "mood": "calm",
+   "systems": [],
+   "search": "person reading in a cozy cafe",
+   "missing": [
+    "person",
+    "cafe"
+   ],
+   "reference": {
+    "src": "/api/image?u=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fcb%2FA_person_relaxes_at_home_in_cozy_pajamas.jpg%2F1280px-A_person_relaxes_at_home_in_cozy_pajamas.jpg%3Futm_source%3Dcommons.wikimedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Dthumbnail",
+    "width": 1024,
+    "height": 1534,
+    "via": "commons",
+    "credit": {
+     "title": "A person relaxes at home in cozy pajamas",
+     "author": "Shixart1985",
+     "license": "CC BY 2.0",
+     "url": "https://commons.wikimedia.org/wiki/File:A_person_relaxes_at_home_in_cozy_pajamas.jpg"
+    }
+   },
+   "source": "ai"
+  },
+  "verdict": "",
+  "at": 1793218261737
+ }
+}
