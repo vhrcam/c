@@ -76,6 +76,15 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
   }, [plan, ready]);
 
   useEffect(() => {
+    if (!plan) return;
+    const before = document.title;
+    document.title = `${plan.title} · c`;
+    return () => {
+      document.title = before;
+    };
+  }, [plan]);
+
+  useEffect(() => {
     if (!live || done) return;
     let frame;
     const tick = () => {
