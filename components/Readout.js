@@ -48,7 +48,7 @@ function Clock({ since }) {
 
 const count = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
 
-export default function Readout({ run, phases, step, ready, done, error, onRetry, onEdit }) {
+export default function Readout({ run, reference, phases, step, ready, done, error, onRetry, onEdit }) {
   const plan = run.plan;
 
   if (done && plan)
@@ -56,9 +56,9 @@ export default function Readout({ run, phases, step, ready, done, error, onRetry
       <div className="rise max-w-[460px]">
         <p className="text-[15px] leading-snug text-fg">{plan.title}</p>
         {plan.read && <p className="mt-1 font-mono text-[11px] leading-relaxed text-fg/65 sm:text-[11.5px]">{plan.read}</p>}
-        {refName(plan.reference) && (
+        {refName(reference) && (
           <p className="mt-1.5 font-mono text-[10.5px] leading-relaxed text-fg/40">
-            <Credit reference={plan.reference} />
+            <Credit reference={reference} />
           </p>
         )}
       </div>
@@ -117,7 +117,7 @@ export default function Readout({ run, phases, step, ready, done, error, onRetry
       ) : (
         <>
           <Line label="reads" text={plan.read || plan.title} />
-          {refName(plan.reference) && <Line label="ref" text={`${refName(plan.reference)}${plan.reference.credit.license ? ` · ${plan.reference.credit.license}` : ""}`} delay={500} />}
+          {refName(reference) && <Line label="ref" text={`${refName(reference)}${reference.credit.license ? ` · ${reference.credit.license}` : ""}`} delay={500} />}
           {past("structure", 1) && plan.relations.slice(0, 4).map((r, i) => <Line key={`r${i}`} label={i ? "" : "sees"} text={`${name(r.a)} → ${r.rel} → ${name(r.b)}`} delay={i * 280} wide={i > 1} />)}
           {past("form", 2) && plan.systems.slice(0, 4).map((s, i) => <Line key={`s${i}`} label={i ? "" : "builds"} text={s.why} delay={i * 450} wide={i > 2} />)}
           {past("light", 4) && <Line label="light" text={plan.lights.map((l) => l.kind).join(", ")} />}

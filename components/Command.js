@@ -40,7 +40,7 @@ export function understand(words, plan) {
   return { subjects, extras, links };
 }
 
-export default function Command({ text, plan }) {
+export default function Command({ text, plan, reference }) {
   const [tick, setTick] = useState(0);
   const box = useRef(null);
   const spans = useRef([]);
@@ -121,14 +121,14 @@ export default function Command({ text, plan }) {
           ))}
         </svg>
       )}
-      {read && refName(plan.reference) && (
+      {read && refName(reference) && (
         <span className="rise absolute left-1/2 top-full mt-8 flex -translate-x-1/2 flex-col items-center gap-2 [animation-delay:400ms]">
           <span
             aria-hidden
             className="block h-[92px] rounded-[2px] bg-cover bg-center opacity-75 ring-1 ring-fg/10 grayscale"
-            style={{ backgroundImage: `url(${plan.reference.src})`, aspectRatio: `${plan.reference.width || 4} / ${plan.reference.height || 3}` }}
+            style={{ backgroundImage: `url(${reference.src})`, aspectRatio: `${reference.width || 4} / ${reference.height || 3}` }}
           />
-          <span className="whitespace-nowrap font-mono text-[10px] leading-none text-fg/40">looked at {refName(plan.reference)}</span>
+          <span className="whitespace-nowrap font-mono text-[10px] leading-none text-fg/40">looked at {refName(reference)}</span>
         </span>
       )}
     </p>

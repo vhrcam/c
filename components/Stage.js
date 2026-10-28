@@ -32,6 +32,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
   const [phases, setPhases] = useState([]);
   const [phase, setPhase] = useState("");
   const [ready, setReady] = useState(Boolean(run.plan) && !run.start);
+  const [reference, setReference] = useState(null);
   const [live, setLive] = useState(false);
   const [done, setDone] = useState(false);
   const [broken, setBroken] = useState(false);
@@ -41,6 +42,15 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
   const plan = run.plan;
   const step = phases.findIndex((p) => p.id === phase);
   const tone = useEffectEvent((hex) => onTone(hex));
+
+  useEffect(() => {
+    if (!plan?.reference) return;
+    let gone = false;
+    import("@/lib/engine").then((m) => !gone && m.REFERENCE && setReference(plan.reference));
+    return () => {
+      gone = true;
+    };
+  }, [plan]);
 
   useEffect(() => {
     if (!plan || ready) return;
@@ -63,6 +73,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
           return setBroken(true);
         }
         art.current = made;
+        if ("reference" in made) setReference(made.reference || null);
         setPhases(made.phases);
         setLive(true);
         tone(made.background);
@@ -176,7 +187,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
       />
       {!ready && !error && (
         <div className="pointer-events-none absolute inset-0 grid place-items-center px-6 pb-10">
-          <Command text={run.text} plan={plan} />
+          <Command text={run.text} plan={plan} reference={reference} />
         </div>
       )}
       <div className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ${hide ? "opacity-0" : ""}`} style={{ textShadow: "0 0 14px var(--bg), 0 0 3px var(--bg)" }}>
@@ -192,7 +203,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
         </button>
         {!done && !error && <Phases phases={phases} current={live ? step + 1 : 0} />}
         <div className="absolute inset-x-5 bottom-[calc(env(safe-area-inset-bottom)+76px)] sm:inset-x-auto sm:bottom-7 sm:left-7">
-          <Readout run={run} phases={phases} step={step} ready={ready} done={done} error={error} onRetry={run.failed ? onRetry : null} onEdit={onEdit} />
+          <Readout run={run} reference={reference} phases={phases} step={step} ready={ready} done={done} error={error} onRetry={run.failed ? onRetry : null} onEdit={onEdit} />
         </div>
         {plan && live && (
           <div className="absolute inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+16px)] flex justify-center sm:inset-x-auto sm:bottom-6 sm:right-6">
