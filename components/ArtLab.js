@@ -2,19 +2,28 @@
 
 import { useEffect, useState } from "react";
 
-const MEMORY = { text: "me and her watching the sunset" };
-const ROWS = ["expressive", "geometric", "organic", "lines"];
-const SEEDS = [11, 2024, 7];
+const MEMORIES = [
+  "me and her watching the sunset",
+  "the lake behind my grandparents' cabin where we spent every summer",
+  "racing down the beach at sunrise",
+  "walking home together in the rain through the city at night",
+];
+const SEEDS = [11, 2024, 7, 314];
 
-async function render(row, seed, scale) {
-  if (row === "lines") {
-    const { still } = await import("@/lib/art");
-    const c = await still(MEMORY, seed, scale);
-    return { src: c.toDataURL("image/jpeg", 0.9), meta: c.picture.choice.shot.system };
-  }
+const plans = new Map();
+
+async function planFor(text) {
+  if (!plans.has(text)) plans.set(text, fetch("/api/art", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text }) }).then((r) => r.json()).then((j) => j.plan));
+  return plans.get(text);
+}
+
+async function render(text, seed, scale) {
+  const { normalizePlan } = await import("@/lib/art/plan");
   const { paint } = await import("@/lib/art/directions");
-  const c = await paint(row, seed, scale);
-  return { src: c.toDataURL("image/jpeg", 0.9), meta: c.meta.shot };
+  const plan = normalizePlan(await planFor(text));
+  const c = await paint(plan, seed, { scale });
+  const m = c.meta;
+  return { src: c.toDataURL("image/jpeg", 0.9), meta: `${m.direction} · ${m.framing} · ${m.place} · ${m.time} · ${m.pose}` };
 }
 
 export default function ArtLab() {
@@ -25,13 +34,17 @@ export default function ArtLab() {
   useEffect(() => {
     let gone = false;
     (async () => {
-      for (const row of ROWS)
+      for (const text of MEMORIES)
         for (const seed of SEEDS) {
           await new Promise((r) => setTimeout(r, 0));
           if (gone) return;
           const t = performance.now();
-          const out = await render(row, seed, 0.5);
-          setThumbs((s) => ({ ...s, [`${row}-${seed}`]: { ...out, ms: Math.round(performance.now() - t) } }));
+          try {
+            const out = await render(text, seed, 0.5);
+            if (!gone) setThumbs((s) => ({ ...s, [`${text}-${seed}`]: { ...out, ms: Math.round(performance.now() - t) } }));
+          } catch (e) {
+            if (!gone) setThumbs((s) => ({ ...s, [`${text}-${seed}`]: { error: String(e.message || e) } }));
+          }
         }
     })();
     return () => {
@@ -42,7 +55,7 @@ export default function ArtLab() {
   useEffect(() => {
     if (!open) return;
     let gone = false;
-    render(open.row, open.seed, 1).then((out) => !gone && setBig(out.src));
+    render(open.text, open.seed, 1).then((out) => !gone && setBig(out.src));
     return () => {
       gone = true;
       setBig(null);
@@ -51,24 +64,19 @@ export default function ArtLab() {
 
   return (
     <main className="min-h-dvh px-5 pb-20 pt-6 sm:px-8">
-      <header className="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[12px] text-fg/60">
-        <h1 className="text-fg/90">c art lab</h1>
-        <span className="text-fg/40">“{MEMORY.text}”</span>
-      </header>
-      {ROWS.map((row) => (
-        <section key={row} className="mt-7">
-          <h2 className="font-mono text-[11px] text-fg/40">{row}</h2>
-          <ul className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <h1 className="font-mono text-[12px] text-fg/90">c art lab</h1>
+      {MEMORIES.map((text) => (
+        <section key={text} className="mt-7">
+          <h2 className="font-mono text-[11px] text-fg/50">“{text}”</h2>
+          <ul className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
             {SEEDS.map((seed) => {
-              const t = thumbs[`${row}-${seed}`];
+              const t = thumbs[`${text}-${seed}`];
               return (
                 <li key={seed}>
-                  <button type="button" onClick={() => setOpen({ row, seed })} className="block w-full">
-                    <span className="grid aspect-[3/2] place-items-center overflow-hidden rounded-[3px] bg-fg/5 font-mono text-[11px] text-fg/30">{t ? <img src={t.src} alt="" className="size-full object-cover" /> : "painting"}</span>
+                  <button type="button" onClick={() => setOpen({ text, seed })} className="block w-full">
+                    <span className="grid aspect-[3/2] place-items-center overflow-hidden rounded-[3px] bg-fg/5 font-mono text-[11px] text-fg/30">{t?.src ? <img src={t.src} alt="" className="size-full object-cover" /> : t?.error ? <span className="err px-2 text-rose-300/80">{t.error}</span> : "painting"}</span>
                   </button>
-                  <span className="mt-1 block font-mono text-[11px] text-fg/35">
-                    seed {seed} {t && `· ${t.meta} · ${t.ms} ms`}
-                  </span>
+                  <span className="mt-1 block font-mono text-[10px] leading-snug text-fg/35">{t?.meta && `${seed} · ${t.meta} · ${t.ms} ms`}</span>
                 </li>
               );
             })}
