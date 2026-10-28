@@ -1,7 +1,6 @@
 "use client";
 
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { refName } from "./Credit";
 
 const STOP = new Set(["a", "an", "the", "of", "in", "on", "at", "to", "and", "with", "my", "our", "your", "from", "into", "is", "are", "was", "for", "by", "it", "its", "this", "that"]);
 const PEOPLE = "people person man men woman women girl boy guy lady me i im we us couple friend girlfriend boyfriend wife husband mom mum dad mother father grandma grandpa grandmother grandfather kid child baby sister brother figure".split(" ");
@@ -40,7 +39,7 @@ export function understand(words, plan) {
   return { subjects, extras, links };
 }
 
-export default function Command({ text, plan, reference }) {
+export default function Command({ text, plan }) {
   const [tick, setTick] = useState(0);
   const box = useRef(null);
   const spans = useRef([]);
@@ -120,16 +119,6 @@ export default function Command({ text, plan, reference }) {
             </g>
           ))}
         </svg>
-      )}
-      {read && refName(reference) && (
-        <span className="rise absolute left-1/2 top-full mt-8 flex -translate-x-1/2 flex-col items-center gap-2 [animation-delay:400ms]">
-          <span
-            aria-hidden
-            className="block h-[92px] rounded-[2px] bg-cover bg-center opacity-75 ring-1 ring-fg/10 grayscale"
-            style={{ backgroundImage: `url(${reference.src})`, aspectRatio: `${reference.width || 4} / ${reference.height || 3}` }}
-          />
-          <span className="whitespace-nowrap font-mono text-[10px] leading-none text-fg/40">looked at {refName(reference)}</span>
-        </span>
       )}
     </p>
   );

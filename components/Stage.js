@@ -187,7 +187,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
       />
       {!ready && !error && (
         <div className="pointer-events-none absolute inset-0 grid place-items-center px-6 pb-10">
-          <Command text={run.text} plan={plan} reference={reference} />
+          <Command text={run.text} plan={plan} />
         </div>
       )}
       <div className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ${hide ? "opacity-0" : ""}`} style={{ textShadow: "0 0 14px var(--bg), 0 0 3px var(--bg)" }}>
