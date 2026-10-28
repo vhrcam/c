@@ -47,15 +47,19 @@ function Clock({ since }) {
 }
 
 const count = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
+const bare = (name) => name.replace(/^(a|an|the|some|my|your)\s+/i, "");
+const either = (names) => (names.length > 1 ? `${names.slice(0, -1).join(", ")} or ${names.at(-1)}` : names[0]);
 
 export default function Readout({ run, reference, phases, step, ready, done, error, onRetry, onEdit }) {
   const plan = run.plan;
+  const missing = (plan?.missing || []).map(bare).filter(Boolean);
 
   if (done && plan)
     return (
       <div className="rise max-w-[460px]">
         <p className="text-[15px] leading-snug text-fg">{plan.title}</p>
         {plan.read && <p className="mt-1 font-mono text-[11px] leading-relaxed text-fg/65 sm:text-[11.5px]">{plan.read}</p>}
+        {missing.length > 0 && <p className="mt-1.5 font-mono text-[10px] leading-relaxed text-fg/40">c can’t build {either(missing.map((m) => `the ${m}`))} yet</p>}
         <Credit reference={reference} />
       </div>
     );
@@ -115,6 +119,7 @@ export default function Readout({ run, reference, phases, step, ready, done, err
       ) : (
         <>
           <Line label="reads" text={plan.read || plan.title} />
+          {missing.length > 0 && <Line label="skips" text={missing.join(", ")} />}
           {past("structure", 1) && plan.relations.slice(0, 4).map((r, i) => <Line key={`r${i}`} label={i ? "" : "sees"} text={`${name(r.a)} → ${r.rel} → ${name(r.b)}`} delay={i * 280} wide={i > 1} />)}
           {past("form", 2) && plan.systems.slice(0, 4).map((s, i) => <Line key={`s${i}`} label={i ? "" : "builds"} text={s.why} delay={i * 450} wide={i > 2} />)}
           {past("light", 4) && <Line label="light" text={plan.lights.map((l) => l.kind).join(", ")} />}
