@@ -5,7 +5,7 @@ const sans = Geist({ variable: "--font-geist", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 const site = process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000";
-const description = "Describe anything. c reads it, then a computational system builds it into a living artwork, in 2D or 3D, while you watch.";
+const description = "Describe anything. c reads it, then a computational system builds it into a living artwork while you watch.";
 
 export const metadata = {
   metadataBase: new URL(site),
