@@ -8,7 +8,7 @@
 
 <p align="center">
   Describe any idea. c reads it, chooses a system for every part of it,<br />
-  and builds it into a living artwork in 2D or 3D while you watch.
+  and builds it into a living 3D artwork while you watch.
 </p>
 
 ---
@@ -17,16 +17,16 @@
 
 ## How it works
 
-1. **Describe anything.** A memory, a person, an animal, a place, a planet, an object, or something that never existed. Type it the way you'd say it: *"my dog running through autumn leaves at golden hour."* Then pick 2D or 3D.
+1. **Describe anything.** A memory, a person, an animal, a place, a planet, an object, or something that never existed. Type it the way you'd say it: *"my dog running through autumn leaves at golden hour."*
 2. **c reads it.** Gemini turns your words into a plan: the subjects, how they relate (*dog → through → leaves*), the world around them, the light, and the system that should build each part. While it reads, your words sit in the middle of the screen like a command waiting to run. When it understands them, the subjects light up and their relations draw between them.
 3. **The artwork builds itself.** First a seed, then structure, form, detail, light and the world around it. A log types out what c understood and why it chose each system.
 4. **It stays alive.** The finished piece keeps moving. In 3D you can orbit and zoom around it.
 
 ## The interface
 
-- **One input.** A single line, a 2D/3D switch and generate. No tags, no settings.
+- **One input.** A single line and generate. No tags, no settings.
 - **The stage** fills the screen. The build phases tick by in one corner while c's reading types out in another. Pause, skip to the end or go fullscreen (**Space** and **F** work too).
-- **When it's done**, save it, download a PNG, copy a share link, regenerate it with a new seed, rebuild the same plan in the other mode, or start a new one.
+- **When it's done**, save it, download a PNG, copy a share link, regenerate it with a new seed, or start a new one.
 - **Share links** carry the whole plan, so whoever opens one watches the same artwork build.
 - **Gallery:** saved works stay in your browser. No account needed.
 
