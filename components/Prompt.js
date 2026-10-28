@@ -10,6 +10,7 @@ const HINTS = [
   "a skyscraper in a crowded city at night",
   "a steam train crossing a stone bridge in the fog",
   "a log cabin in the mountains in winter",
+  "a red vintage car on a country road at golden hour",
   "a lighthouse on the coast at dusk",
   "an old windmill in a wheat field",
 ];
