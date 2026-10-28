@@ -55,7 +55,7 @@ export default function App() {
     setTone("");
     morph(() => {
       setView("stage");
-      setRun({ id, text, mode, start, plan: null });
+      setRun((r) => (r?.id === id ? r : { id, text, mode, start, plan: null }));
     });
     try {
       const [{ plan, source }, { normalizePlan }] = await Promise.all([interpret(text, mode), engine()]);

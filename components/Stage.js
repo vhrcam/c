@@ -31,7 +31,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
   const sleep = useRef(0);
   const [phases, setPhases] = useState([]);
   const [phase, setPhase] = useState("");
-  const [ready, setReady] = useState(Boolean(run.plan));
+  const [ready, setReady] = useState(Boolean(run.plan) && !run.start);
   const [live, setLive] = useState(false);
   const [done, setDone] = useState(false);
   const [broken, setBroken] = useState(false);
