@@ -2,8 +2,10 @@
 
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { download, thumb } from "@/lib/thumbs";
+import Command from "./Command";
 import Dock from "./Dock";
 import Mark from "./Mark";
+import { morph } from "./morph";
 import Readout from "./Readout";
 
 const READ = { id: "read", label: "read" };
@@ -29,6 +31,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
   const sleep = useRef(0);
   const [phases, setPhases] = useState([]);
   const [phase, setPhase] = useState("");
+  const [ready, setReady] = useState(Boolean(run.plan));
   const [live, setLive] = useState(false);
   const [done, setDone] = useState(false);
   const [broken, setBroken] = useState(false);
@@ -40,7 +43,13 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
   const tone = useEffectEvent((hex) => onTone(hex));
 
   useEffect(() => {
-    if (!plan) return;
+    if (!plan || ready) return;
+    const timer = setTimeout(() => morph(() => setReady(true)), 2400);
+    return () => clearTimeout(timer);
+  }, [plan, ready]);
+
+  useEffect(() => {
+    if (!plan || !ready) return;
     let gone = false;
     let made = null;
     const frame = requestAnimationFrame(() =>
@@ -64,7 +73,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
       made?.dispose();
       art.current = null;
     };
-  }, [plan]);
+  }, [plan, ready]);
 
   useEffect(() => {
     if (!live || done) return;
@@ -148,13 +157,18 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
   const error = run.failed ? "c couldn’t read that just now." : broken ? "This browser couldn’t start the engine." : "";
   return (
     <div className={`fixed inset-0 overflow-hidden ${hide ? "cursor-none" : ""}`}>
-      {plan && <canvas ref={canvas} role="img" aria-label={plan.title} className="absolute inset-0 block size-full touch-none" />}
+      {plan && ready && <canvas ref={canvas} role="img" aria-label={plan.title} className="absolute inset-0 block size-full touch-none" />}
       <span
         aria-hidden
         data-state="think"
-        className={`mark-cursor pointer-events-none absolute left-1/2 top-1/2 -ml-[6px] -mt-[17px] h-[34px] w-[12px] bg-fg transition-opacity duration-700 ${live || error ? "opacity-0" : ""}`}
-        style={{ viewTransitionName: live || error ? undefined : "cursor" }}
+        className={`mark-cursor pointer-events-none absolute left-1/2 top-1/2 -ml-[6px] -mt-[17px] h-[34px] w-[12px] bg-fg transition-opacity duration-700 ${ready && !live && !error ? "" : "opacity-0"}`}
+        style={{ viewTransitionName: ready && !live && !error ? "cursor" : undefined }}
       />
+      {!ready && !error && (
+        <div className="pointer-events-none absolute inset-0 grid place-items-center px-6 pb-10">
+          <Command text={run.text} plan={plan} />
+        </div>
+      )}
       <div className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ${hide ? "opacity-0" : ""}`}>
         <button
           type="button"
@@ -168,7 +182,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
         </button>
         {!done && !error && <Phases phases={phases} current={live ? step + 1 : 0} />}
         <div className="absolute inset-x-5 bottom-[calc(env(safe-area-inset-bottom)+76px)] sm:inset-x-auto sm:bottom-7 sm:left-7">
-          <Readout run={run} phases={phases} step={step} done={done} error={error} onRetry={run.failed ? onRetry : null} onEdit={onEdit} />
+          <Readout run={run} phases={phases} step={step} ready={ready} done={done} error={error} onRetry={run.failed ? onRetry : null} onEdit={onEdit} />
         </div>
         {plan && live && (
           <div className="absolute inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+16px)] flex justify-center sm:inset-x-auto sm:bottom-6 sm:right-6">

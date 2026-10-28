@@ -34,35 +34,20 @@ function Line({ label, text, delay = 0, wide = false }) {
   );
 }
 
-function Reading({ text }) {
-  const [t, setT] = useState(0);
-  const words = text.split(/\s+/);
+function Clock({ since }) {
+  const [now, setNow] = useState(since);
 
   useEffect(() => {
-    const start = performance.now();
-    const id = setInterval(() => setT(performance.now() - start), 100);
+    const id = setInterval(() => setNow(performance.now()), 100);
     return () => clearInterval(id);
   }, []);
 
-  const at = Math.floor(t / 170) % (words.length + 6);
-  return (
-    <>
-      <p className="mb-1.5 line-clamp-2 text-fg/45" style={{ viewTransitionName: "prompt" }}>
-        <span className="text-fg/25">› </span>
-        {words.map((w, i) => (
-          <span key={i} className={`transition-colors duration-300 ${i === at ? "text-fg" : ""}`}>
-            {w}{" "}
-          </span>
-        ))}
-      </p>
-      <p className="text-fg/40">
-        reading <span className="tabular-nums text-fg/25">{(t / 1000).toFixed(1)}s</span>
-      </p>
-    </>
-  );
+  return <span className="tabular-nums text-fg/25">{(Math.max(0, now - since) / 1000).toFixed(1)}s</span>;
 }
 
-export default function Readout({ run, phases, step, done, error, onRetry, onEdit }) {
+const count = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
+
+export default function Readout({ run, phases, step, ready, done, error, onRetry, onEdit }) {
   const plan = run.plan;
 
   if (done && plan)
@@ -73,11 +58,24 @@ export default function Readout({ run, phases, step, done, error, onRetry, onEdi
       </div>
     );
 
-  if (!plan && !error)
+  if (!error && !ready)
     return (
-      <div className="max-w-[560px] font-mono text-[11px] leading-[1.75] sm:text-[12px]">
-        <Reading text={run.text} />
-      </div>
+      <p className="font-mono text-[11px] text-fg/40 sm:text-[12px]">
+        {plan ? (
+          <>
+            read in <span className="tabular-nums text-fg/60">{(run.took / 1000).toFixed(1)}s</span>
+            <span className="text-fg/25">
+              {" "}
+              · {count(plan.subjects.length, "subject")} · {count(plan.relations.length, "relation")}
+              {run.source === "words" && " · offline"}
+            </span>
+          </>
+        ) : (
+          <>
+            reading <Clock since={run.start} />
+          </>
+        )}
+      </p>
     );
 
   const name = (id) => plan?.subjects.find((s) => s.id === id)?.label || id;

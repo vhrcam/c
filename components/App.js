@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useEffectEvent, useRef, useState } from "react";
-import { flushSync } from "react-dom";
 import { luma } from "@/lib/color";
 import { list, remove, save } from "@/lib/gallery";
 import { decode, encode } from "@/lib/share";
+import { morph } from "./morph";
 import Notice from "./Notice";
 import Prompt from "./Prompt";
 import Stage from "./Stage";
@@ -12,11 +12,6 @@ import Works from "./Works";
 
 const engine = () => import("@/lib/engine");
 const newSeed = () => Math.floor(Math.random() * 2 ** 31);
-
-function morph(update) {
-  if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) return update();
-  document.startViewTransition(() => flushSync(update));
-}
 
 async function interpret(text, mode) {
   const res = await fetch("/api/interpret", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text, mode }), signal: AbortSignal.timeout(65000) });
@@ -54,18 +49,19 @@ export default function App() {
 
   const generate = async ({ text, mode }) => {
     const id = ++ticket.current;
+    const start = performance.now();
     setIntro(false);
     setDraft(text);
     setTone("");
     morph(() => {
       setView("stage");
-      setRun({ id, text, mode, plan: null });
+      setRun({ id, text, mode, start, plan: null });
     });
     try {
       const [{ plan, source }, { normalizePlan }] = await Promise.all([interpret(text, mode), engine()]);
-      if (id === ticket.current) setRun({ id, text, mode, source, plan: normalizePlan({ ...plan, text: plan?.text || text, mode }) });
+      if (id === ticket.current) setRun({ id, text, mode, start, took: performance.now() - start, source, plan: normalizePlan({ ...plan, text: plan?.text || text, mode }) });
     } catch {
-      if (id === ticket.current) setRun({ id, text, mode, plan: null, failed: true });
+      if (id === ticket.current) setRun({ id, text, mode, start, plan: null, failed: true });
     }
   };
 
