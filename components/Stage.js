@@ -2,7 +2,7 @@
 
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { download, thumb } from "@/lib/thumbs";
-import Command from "./Command";
+import Command, { understand } from "./Command";
 import Dock from "./Dock";
 import Mark from "./Mark";
 import { morph } from "./morph";
@@ -44,9 +44,10 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
 
   useEffect(() => {
     if (!plan || ready) return;
-    const timer = setTimeout(() => morph(() => setReady(true)), 2400);
+    const found = understand(run.text.split(/\s+/).filter(Boolean), plan).subjects.size > 0;
+    const timer = setTimeout(() => morph(() => setReady(true)), found ? 2400 : 1000);
     return () => clearTimeout(timer);
-  }, [plan, ready]);
+  }, [plan, ready, run.text]);
 
   useEffect(() => {
     if (!plan || !ready) return;

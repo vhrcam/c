@@ -7,7 +7,7 @@ const PEOPLE = "people person man men woman women girl boy guy lady me i im we u
 const norm = (w) => (w || "").toLowerCase().replace(/[^a-z0-9]/g, "").replace(/(?<=...)s$/, "");
 const like = (a, b) => a === b || (a.length > 3 && b.length > 3 && (a.startsWith(b) || b.startsWith(a)));
 
-function understand(words, plan) {
+export function understand(words, plan) {
   const keys = words.map(norm);
   const find = (tokens) => {
     for (const t of tokens) {
@@ -95,7 +95,7 @@ export default function Command({ text, plan }) {
               spans.current[i] = el;
             }}
             className={`transition-colors duration-500 ${
-              named?.has(i) ? "text-fg underline decoration-fg/35 decoration-1 underline-offset-[7px]" : read?.extras.has(i) ? "text-fg/70" : read ? "text-fg/25" : tick % (words.length + 6) === i ? "text-fg" : "text-fg/40"
+              named?.has(i) ? "text-fg underline decoration-fg/35 decoration-1 underline-offset-[7px]" : read?.extras.has(i) ? "text-fg/70" : named?.size ? "text-fg/25" : read ? "text-fg/40" : tick % (words.length + 6) === i ? "text-fg" : "text-fg/40"
             }`}
           >
             {w}
