@@ -24,10 +24,8 @@ export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWar
   const [text, setText] = useState(draft);
   const [mode, setMode] = useState("3d");
   const [hint, setHint] = useState(HINTS[0]);
-  const [typing, setTyping] = useState(false);
   const input = useRef(null);
   const filled = useRef(Boolean(draft));
-  const quiet = useRef(0);
   const ready = text.trim().length > 0;
 
   useLayoutEffect(() => grow(input.current), []);
@@ -42,7 +40,6 @@ export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWar
     return () => {
       clearTimeout(timer);
       clearTimeout(focus);
-      clearTimeout(quiet.current);
     };
   }, [intro]);
 
@@ -87,7 +84,7 @@ export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWar
         </button>
       )}
       <span className="block w-[76px] sm:w-[96px]" style={{ viewTransitionName: "mark" }}>
-        <Mark intro={intro} cursor={typing ? "on" : "blink"} cursorName="cursor" />
+        <Mark intro={intro} cursorName="cursor" />
       </span>
       <div className={`mt-14 w-full max-w-[600px] sm:mt-16 ${enter}`}>
         <div className="relative" style={{ viewTransitionName: "prompt" }}>
@@ -103,9 +100,6 @@ export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWar
               setText(e.target.value);
               filled.current = Boolean(e.target.value);
               grow(e.target);
-              setTyping(true);
-              clearTimeout(quiet.current);
-              quiet.current = setTimeout(() => setTyping(false), 650);
             }}
             onKeyDown={(e) => {
               if (e.key === "Enter" && !e.shiftKey) {
