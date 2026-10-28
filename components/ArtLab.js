@@ -18,9 +18,9 @@ export default function ArtLab() {
         await new Promise((r) => setTimeout(r, 0));
         if (gone) return;
         const t = performance.now();
-        const canvas = still(MEMORY, seed);
+        const canvas = await still(MEMORY, seed);
         const { choice } = canvas.picture;
-        const label = ["sun", "sky", "water", "land"].map((k) => `${k} ${choice[k].system}`).join(" · ");
+        const label = ["shot", "sun", "sky", "water", "land"].filter((k) => choice[k]).map((k) => `${k} ${choice[k].system}`).join(" · ");
         setThumbs((s) => ({ ...s, [seed]: { src: canvas.toDataURL("image/jpeg", 0.9), ms: Math.round(performance.now() - t), label } }));
       }
     })();
@@ -32,8 +32,14 @@ export default function ArtLab() {
   useEffect(() => {
     if (open == null) return;
     let stop;
-    import("@/lib/art").then(({ mount }) => (stop = mount(stage.current, MEMORY, open)));
-    return () => stop?.();
+    let gone = false;
+    import("@/lib/art")
+      .then(({ mount }) => mount(stage.current, MEMORY, open))
+      .then((s) => (gone ? s() : (stop = s)));
+    return () => {
+      gone = true;
+      stop?.();
+    };
   }, [open]);
 
   return (
