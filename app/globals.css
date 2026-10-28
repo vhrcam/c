@@ -1,13 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #e5e1d8;
-  --color-paper-deep: #dad5ca;
-  --color-ink: #1a1916;
-  --color-muted: #6c675f;
-  --color-faint: #9d978d;
-  --color-line: rgb(26 25 22 / 0.14);
-  --font-serif: var(--font-instrument);
   --font-sans: var(--font-geist);
   --font-mono: var(--font-geist-mono);
 }
@@ -32,14 +25,6 @@ body {
 ::selection {
   background: var(--fg);
   color: var(--bg);
-}
-
-@keyframes tag-in {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-    filter: blur(3px);
-  }
 }
 
 @keyframes rise {
@@ -87,10 +72,6 @@ body {
   }
 }
 
-.tag-in {
-  animation: tag-in 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
 .rise {
   animation: rise 800ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
@@ -121,12 +102,6 @@ body {
     blink 1.06s step-end 1.2s infinite;
 }
 
-::view-transition-group(logo),
-::view-transition-group(slogan) {
-  animation-duration: 760ms;
-  animation-timing-function: cubic-bezier(0.2, 0.75, 0.15, 1);
-}
-
 ::view-transition-group(mark),
 ::view-transition-group(cursor),
 ::view-transition-group(prompt) {
@@ -140,7 +115,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tag-in,
   .rise,
   .mark svg,
   .mark-cursor {
