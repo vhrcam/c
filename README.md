@@ -32,10 +32,10 @@
 
 ## How c makes an artwork
 
-1. **Understanding.** Gemini turns the description into a construction plan: what each subject is (a building style, a vehicle type, a tree, a planet or an object made of primitives), how they relate (a train on a bridge), the viewpoint, time, season, weather, lights and palette. Offline, a keyword reader builds the same kind of plan.
-2. **Form.** Buildings come from architectural recipes (walls, roof types, window grids, porticos, battlements, spires, arches), and vehicles from profile-extruded bodies with real wheels, glass and lights. Objects are signed distance fields meshed with marching cubes. Trees grow by recursive branching, and planets are built in layers.
-3. **Construction.** Edges draw themselves first, particles stream from the subject's heart onto its surface, the surface fills in with a fixed grain, and at night the windows light up.
-4. **World.** Terrain is shaped by noise into meadows, snowfields and distant mountain ranges, carved into rivers under bridges and coasts with Gerstner-wave water, and lit by a sun or moon that matches the time of day. Weather rides a wind field.
+1. **Understanding.** Gemini turns the description into a construction plan: what each subject is (a building style, a vehicle type, a tree, a planet or an object made of primitives), how the subjects relate (a train on a bridge), the time, season, weather, lights and palette, and whether it's one thing on its own or a whole scene. Offline, a keyword reader builds the same kind of plan.
+2. **Form.** Buildings come from architectural recipes (porches, dormers, shutters, window boxes, roof slopes, porticos, battlements, spires, arches), and each regeneration varies the colors, porch, roof pitch and wings. Vehicles are profile-extruded bodies with real wheels, glass and lights, and the recipes run all the way to a three-masted galleon. Objects are signed distance fields meshed with marching cubes. Trees grow by recursive branching, and planets are built in layers.
+3. **Construction.** Edges draw themselves, particles stream from the subject's heart onto its surface and fade as it fills in with a fixed grain, and at night the windows light up.
+4. **World.** A lone subject stands by itself. A scene is built on a compact round stage with a solid base. The countryside grows into a patchwork of wheat, lavender and plowed fields with crop rows, swaying grass, wildflowers and branching hedgerow trees. A city lays out a street grid, mid-rises and towers that fall off from the center, rooftop tanks, streetlights and traffic. Water is Gerstner waves, storms roll in a cloud bank with lightning, and the light follows the time of day.
 
 ## Tools
 
