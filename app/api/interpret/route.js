@@ -1,5 +1,5 @@
 import { askJSON } from "@/lib/ai";
-import { DRIFTS, FORMS, KINDS, LIGHTS, LOOKS, MATERIALS, MOODS, MOTIONS, PARTICLES, POSES, RELS, SEASONS, SETTINGS, SHAPES, SPECIES, STYLES, TEMPS, TIMES, VIEWS, WEATHER, normalizePlan } from "@/lib/engine/plan";
+import { BUILDINGS, DRIFTS, FORMS, KINDS, LIGHTS, LOOKS, MATERIALS, MOODS, MOTIONS, PARTICLES, RELS, SEASONS, SETTINGS, SHAPES, STYLES, TEMPS, TIMES, VEHICLE_TYPES, VIEWS, WEATHER, normalizePlan } from "@/lib/engine/plan";
 import { PRESETS } from "@/lib/engine/presets";
 import { findReference } from "@/lib/engine/reference";
 import { readPlan } from "@/lib/engine/words";
@@ -55,15 +55,14 @@ const SCHEMA = {
           label: str,
           kind: enumOf(KINDS),
           form: enumOf(FORMS),
-          species: enumOf(SPECIES),
-          pose: enumOf(POSES),
+          building: { type: "object", properties: { style: enumOf(BUILDINGS), floors: { type: "integer" }, width: num, roof: enumOf(["auto", "gable", "hip", "flat", "mansard", "dome", "spire", "gambrel"]), wings: { type: "integer" }, towers: { type: "integer" }, columns: { type: "boolean" } } },
+          vehicle: { type: "object", properties: { type: enumOf(VEHICLE_TYPES) } },
           material: enumOf(MATERIALS),
           colors: { type: "array", items: hex },
           size: { type: "number", description: "largest dimension in meters" },
           count: { type: "integer" },
           motion: enumOf(MOTIONS),
-          traits: { type: "object", properties: { length: unit, legs: unit, bulk: unit, neck: unit, head: unit, ears: unit, tail: unit, fur: unit, feminine: unit, age: unit, ocean: unit, gas: unit, rings: unit } },
-          hair: { type: "object", properties: { color: hex, length: enumOf(["none", "short", "medium", "long", "bun"]) } },
+          traits: { type: "object", properties: { ocean: unit, gas: unit, rings: unit } },
           wiki: { type: "string", description: "English Wikipedia article title for what this subject is" },
           parts: { type: "array", items: PART },
         },
@@ -108,11 +107,10 @@ Fields:
 - read: one sentence saying what a viewer recognizes first.
 - style: pixel only for pixel art, 8-bit, 16-bit or retro game looks; line for line art, sketches or drawings; cells for mosaic or stained glass; otherwise auto.
 - subjects: the 1 to 4 main things (people, animals, objects, structures, plants, a planet). Not the setting, weather or sky. id is a short unique slug. label uses the person's own words for it ("girlfriend", "me", "my dog", "the lighthouse").
-  - form: quadruped for any four-legged animal (species = closest of ${SPECIES.join(", ")}), human for a person, tree for a single tree, planet for a planet (size 1, traits ocean/gas/rings), parts for everything else.
-  - size: largest dimension in meters (a banana 0.2, a person 1.7, a wolf 1.4, a lighthouse 30).
-  - colors: hex, main color first (for a human: top/jacket first, then pants or skirt). pose and motion where it matters. count for identical copies.
-  - traits (optional, 0 to 1, 0.5 typical): nudges like legs, bulk, neck, ears, tail, fur, feminine, age.
-  - hair (humans): color and length.
+  - People and animals are not built yet: leave them out of subjects (they can still shape the mood, read and title).
+  - form: building for any building or structure (house, mansion, castle, church, skyscraper, tower, lighthouse, barn, temple, pagoda, bridge, windmill, cabin) with building.style, floors, roof, wings (0 to 2 side wings), towers and columns (a portico); vehicle for cars, trucks, buses, trains and boats with vehicle.type; tree for a single tree; planet for a planet (size 1, traits ocean/gas/rings); parts for any other object.
+  - size: largest dimension in meters (a banana 0.2, a car 4.7, a house 12, a lighthouse 30).
+  - colors: hex, main color first. For a building: walls, roof, trim. For a vehicle: paint, then trim. count for identical copies.
   - parts (form parts only): 3 to 24 primitives in meters. y is up, the ground is y=0, the object's front faces +x, centered on x=0 and z=0.
       ellipsoid: a=center, b=radii [rx,ry,rz], rot=[degX,degY,degZ]
       box: a=center, b=full size [sx,sy,sz], r=[corner rounding], rot
