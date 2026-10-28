@@ -11,6 +11,7 @@ const HINTS = [
   "a steam train crossing a stone bridge in the fog",
   "a skyscraper at night in the rain",
   "a sailboat off a rocky coast at sunset",
+  "an old windmill in a wheat field",
 ];
 
 export const MODES = ["3d"];
