@@ -54,7 +54,7 @@ export default function Readout({ run, phases, step, ready, done, error, onRetry
     return (
       <div className="rise max-w-[460px]">
         <p className="text-[15px] leading-snug text-fg">{plan.title}</p>
-        {plan.read && <p className="mt-1 font-mono text-[11px] leading-relaxed text-fg/50 sm:text-[11.5px]">{plan.read}</p>}
+        {plan.read && <p className="mt-1 font-mono text-[11px] leading-relaxed text-fg/65 sm:text-[11.5px]">{plan.read}</p>}
       </div>
     );
 
