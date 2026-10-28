@@ -56,9 +56,9 @@ const ICONS = {
   ),
 };
 
-function Button({ label, text, icon, onClick }) {
+function Button({ label, text, icon, keys, onClick }) {
   return (
-    <button type="button" onClick={onClick} aria-label={label} title={label} className="flex h-9 min-w-9 items-center justify-center gap-2 rounded-full px-2.5 text-fg/70 transition-colors hover:bg-fg/[0.08] hover:text-fg">
+    <button type="button" onClick={onClick} aria-label={label} aria-keyshortcuts={keys} title={keys ? `${label} (${keys.toLowerCase()})` : label} className="flex h-9 min-w-9 items-center justify-center gap-2 rounded-full px-2.5 text-fg/70 transition-colors hover:bg-fg/[0.08] hover:text-fg">
       {icon && ICONS[icon]}
       {text && <span className={`font-mono text-[11px] ${icon ? "hidden lg:inline" : ""}`}>{text}</span>}
     </button>
@@ -80,14 +80,14 @@ export default function Dock({ done, playing, full, mode, onToggle, onSkip, onFu
         </>
       ) : (
         <>
-          <Button label={playing ? "Pause" : "Play"} icon={playing ? "pause" : "play"} onClick={onToggle} />
+          <Button label={playing ? "Pause" : "Play"} icon={playing ? "pause" : "play"} keys="Space" onClick={onToggle} />
           <Button label="Skip to the finished piece" icon="skip" onClick={onSkip} />
         </>
       )}
       {onFull && (
         <>
           <span aria-hidden className="mx-1 h-4 w-px bg-fg/12" />
-          <Button label={full ? "Exit fullscreen" : "Fullscreen"} icon={full ? "exit" : "full"} onClick={onFull} />
+          <Button label={full ? "Exit fullscreen" : "Fullscreen"} icon={full ? "exit" : "full"} keys="F" onClick={onFull} />
         </>
       )}
     </div>
