@@ -104,7 +104,7 @@ Fields:
 - title: 1 to 4 lowercase words, plain and evocative ("first kiss, october").
 - read: one sentence saying what a viewer recognizes first.
 - style: pixel only for pixel art, 8-bit, 16-bit or retro game looks; line for line art, sketches or drawings; cells for mosaic or stained glass; otherwise auto.
-- subjects: the 1 to 4 main things (people, animals, objects, structures, plants, a planet). Not the setting, weather or sky. id is a short unique slug.
+- subjects: the 1 to 4 main things (people, animals, objects, structures, plants, a planet). Not the setting, weather or sky. id is a short unique slug. label uses the person's own words for it ("girlfriend", "me", "my dog", "the lighthouse").
   - form: quadruped for any four-legged animal (species = closest of ${SPECIES.join(", ")}), human for a person, tree for a single tree, planet for a planet (size 1, traits ocean/gas/rings), parts for everything else.
   - size: largest dimension in meters (a banana 0.2, a person 1.7, a wolf 1.4, a lighthouse 30).
   - colors: hex, main color first (for a human: top/jacket first, then pants or skirt). pose and motion where it matters. count for identical copies.
