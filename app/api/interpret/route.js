@@ -128,7 +128,7 @@ Fields:
     ${example("streetlight")}
 - relations: a (subject id) rel b (subject id).
 - view: the starting camera. outside is a 3/4 view. first-person puts the camera on the "from" subject looking "look" toward "at". aerial, close, wide, low.
-- world: setting (void for a single object with no environment), time, season (none if unknown), weather, temperature, energy (0 calm to 1 violent).
+- world: setting is void when they name just one thing and no place or surroundings ("a skyscraper", "a red sports car at night"): c then builds only that thing. Any place, surroundings or second thing ("in a crowded city", "on a country road", "with a few buildings around") means a real setting, and c fills in the rest of the scene. Also time, season (none if unknown), weather, temperature, energy (0 calm to 1 violent).
 - lights: sources that matter (sun, moon, streetlight, lamp, fire, beam for a lighthouse, glow, window); at = the subject id it belongs to.
 - particles: up to 3 systems (leaves, snow, rain, petals, dust, sparks, fireflies, embers, spray, bubbles) with color, amount 0 to 1 and motion.
 - palette: background (dark for night, space or moody scenes; light for bright daytime studies), ink (a neutral line color that reads on the background), colors (3 to 6), accent.
