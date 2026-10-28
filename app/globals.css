@@ -9,22 +9,29 @@
   --color-line: rgb(26 25 22 / 0.14);
   --font-serif: var(--font-instrument);
   --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
 }
 
-html {
-  color-scheme: light;
-  background: var(--color-paper);
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+}
+
+:root {
+  --bg: #11100e;
+  --fg: #ece7dd;
+  color-scheme: dark;
+  background: var(--bg);
 }
 
 body {
-  background-color: var(--color-paper);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .09 0 0 0 0 .08 0 0 0 .2 -.055'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  color: var(--color-ink);
+  background: var(--bg);
+  color: var(--fg);
 }
 
 ::selection {
-  background: var(--color-ink);
-  color: var(--color-paper);
+  background: var(--fg);
+  color: var(--bg);
 }
 
 @keyframes tag-in {
@@ -42,6 +49,44 @@ body {
   }
 }
 
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes think {
+  50% {
+    transform: scaleY(0.16);
+  }
+}
+
+@keyframes type-c {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+
+@keyframes type-cursor {
+  0% {
+    transform: translateX(-306.8%);
+  }
+  18%,
+  56% {
+    opacity: 0;
+  }
+  37% {
+    opacity: 1;
+  }
+  75% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .tag-in {
   animation: tag-in 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
@@ -50,9 +95,42 @@ body {
   animation: rise 800ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
+.mark-cursor {
+  transform-origin: 50% 100%;
+}
+
+.mark-cursor[data-state="blink"] {
+  animation: blink 1.06s step-end infinite;
+}
+
+.mark-cursor[data-state="think"] {
+  animation: think 1.3s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.mark-cursor[data-state="off"] {
+  opacity: 0;
+}
+
+.mark[data-intro] svg {
+  animation: type-c 1.2s step-end both;
+}
+
+.mark[data-intro] .mark-cursor {
+  animation:
+    type-cursor 1.2s step-end both,
+    blink 1.06s step-end 1.2s infinite;
+}
+
 ::view-transition-group(logo),
 ::view-transition-group(slogan) {
   animation-duration: 760ms;
+  animation-timing-function: cubic-bezier(0.2, 0.75, 0.15, 1);
+}
+
+::view-transition-group(mark),
+::view-transition-group(cursor),
+::view-transition-group(prompt) {
+  animation-duration: 720ms;
   animation-timing-function: cubic-bezier(0.2, 0.75, 0.15, 1);
 }
 
@@ -63,13 +141,15 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .tag-in,
-  .rise {
-    animation: none;
+  .rise,
+  .mark svg,
+  .mark-cursor {
+    animation: none !important;
   }
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-ink);
+  outline: 2px solid var(--fg);
   outline-offset: 2px;
 }
 
