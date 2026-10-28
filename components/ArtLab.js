@@ -3,12 +3,15 @@
 import { useEffect, useState } from "react";
 
 const MEMORIES = [
+  "two people kissing",
+  "two women kissing in the rain, one with short red hair and a yellow raincoat",
   "me and her watching the sunset",
+  "racing down the beach at night",
   "the lake behind my grandparents' cabin where we spent every summer",
-  "racing down the beach at sunrise",
-  "walking home together in the rain through the city at night",
+  "fireworks over the city on new year's eve",
+  "my grandmother's garden in full bloom",
 ];
-const SEEDS = [11, 2024, 7, 314];
+const SEEDS = [11, 2024, 7];
 
 const plans = new Map();
 
@@ -17,13 +20,18 @@ async function planFor(text) {
   return plans.get(text);
 }
 
+const used = new Map();
+
 async function render(text, seed, scale) {
-  const { normalizePlan } = await import("@/lib/art/plan");
+  const { composition, normalizePlan } = await import("@/lib/art/plan");
   const { paint } = await import("@/lib/art/directions");
-  const plan = normalizePlan(await planFor(text));
+  const avoid = used.get(text) || [];
+  const plan = normalizePlan({ ...(await planFor(text)), avoid: avoid.slice(-2) });
+  if (scale < 1) used.set(text, [...avoid, composition(plan, seed).direction]);
   const c = await paint(plan, seed, { scale });
   const m = c.meta;
-  return { src: c.toDataURL("image/jpeg", 0.9), meta: `${m.direction} · ${m.framing} · ${m.place} · ${m.time} · ${m.pose}` };
+  const who = plan.people.subjects.map((x) => `${x.label}:${x.gender[0]}${x.age === "child" ? "c" : ""}`).join(" ");
+  return { src: c.toDataURL("image/jpeg", 0.9), meta: `${m.direction} · ${m.layout} · ${m.framing} · ${m.place} · ${m.time} · ${m.pose} ${who}` };
 }
 
 export default function ArtLab() {
@@ -68,7 +76,7 @@ export default function ArtLab() {
       {MEMORIES.map((text) => (
         <section key={text} className="mt-7">
           <h2 className="font-mono text-[11px] text-fg/50">“{text}”</h2>
-          <ul className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
+          <ul className="mt-3 grid grid-cols-3 gap-3">
             {SEEDS.map((seed) => {
               const t = thumbs[`${text}-${seed}`];
               return (
