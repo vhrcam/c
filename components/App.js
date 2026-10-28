@@ -13,6 +13,21 @@ import Works from "./Works";
 const engine = () => import("@/lib/engine");
 const newSeed = () => Math.floor(Math.random() * 2 ** 31);
 
+async function direct(text) {
+  const res = await fetch("/api/art", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text }), signal: AbortSignal.timeout(45000) });
+  if (!res.ok) throw new Error(`Art request failed: ${res.status}`);
+  const [{ plan, source }, { composition, normalizePlan, withView }] = await Promise.all([res.json(), import("@/lib/art/plan")]);
+  const art = normalizePlan({ ...plan, text: plan?.text || text });
+  return { source, plan: withView(art, composition(art, art.seed).direction) };
+}
+
+async function redirect(plan) {
+  const { composition, normalizePlan, withView } = await import("@/lib/art/plan");
+  const used = composition(plan, plan.seed).direction;
+  const next = normalizePlan({ ...plan, seed: newSeed(), avoid: [used, ...(plan.avoid || [])].slice(0, 2) });
+  return withView(next, composition(next, next.seed).direction);
+}
+
 async function interpret(text, mode) {
   const res = await fetch("/api/interpret", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text, mode }), signal: AbortSignal.timeout(65000) });
   if (!res.ok) throw new Error(`Interpret request failed: ${res.status}`);
@@ -59,6 +74,11 @@ export default function App() {
       setRun((r) => (r?.id === id ? r : { id, text, mode, start, plan: null }));
     });
     try {
+      if (mode === "2d") {
+        const { plan, source } = await direct(text);
+        if (id === ticket.current) setRun({ id, text, mode, start, took: performance.now() - start, source, plan });
+        return;
+      }
       const [{ plan, source }, { normalizePlan }] = await Promise.all([interpret(text, mode), engine()]);
       if (id === ticket.current) setRun({ id, text, mode, start, took: performance.now() - start, source, plan: normalizePlan({ ...plan, text: plan?.text || text, mode }) });
     } catch {
@@ -66,7 +86,11 @@ export default function App() {
     }
   };
 
-  const regenerate = () => setRun({ ...run, id: ++ticket.current, plan: { ...run.plan, seed: newSeed() } });
+  const regenerate = async () => {
+    const id = ++ticket.current;
+    const plan = run.plan.art ? await redirect(run.plan) : { ...run.plan, seed: newSeed() };
+    if (id === ticket.current) setRun({ ...run, id, plan });
+  };
 
   const switchMode = () => {
     const mode = run.plan.mode === "3d" ? "2d" : "3d";

@@ -4,18 +4,17 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Mark from "./Mark";
 
 const HINTS = [
-  "describe anything",
-  "a pirate ship in the ocean with a storm coming",
-  "a farmhouse in the countryside at golden hour",
-  "a skyscraper in a crowded city at night",
-  "a steam train crossing a stone bridge in the fog",
-  "a log cabin in the mountains in winter",
-  "a red vintage car on a country road at golden hour",
-  "a lighthouse on the coast at dusk",
-  "an old windmill in a wheat field",
+  "describe a memory",
+  "me and her watching the sunset",
+  "the lake behind my grandparents' cabin where we spent every summer",
+  "racing down the beach at sunrise",
+  "walking home together in the rain through the city at night",
+  "slow dancing in the kitchen at midnight",
+  "sitting on the dock with my dad as the sun came up",
+  "the first snow in the mountains",
 ];
 
-export const MODES = ["3d"];
+export const MODES = ["2d"];
 
 const grow = (el) => {
   el.style.height = "auto";
@@ -24,7 +23,7 @@ const grow = (el) => {
 
 export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWarm }) {
   const [text, setText] = useState(draft);
-  const [mode, setMode] = useState("3d");
+  const [mode, setMode] = useState("2d");
   const [hint, setHint] = useState(HINTS[0]);
   const input = useRef(null);
   const filled = useRef(Boolean(draft));
@@ -119,15 +118,16 @@ export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWar
         </div>
         <div className="h-px bg-fg/15" />
         <div className="mt-4 flex items-center justify-end">
-          {MODES.length > 1 && (
-            <div role="radiogroup" aria-label="Mode" className="mr-auto flex rounded-full border border-fg/12 p-[3px] font-mono text-[11px]">
-              {MODES.map((m) => (
-                <button key={m} type="button" role="radio" aria-checked={mode === m} onClick={() => setMode(m)} className={`rounded-full px-3 py-1 transition-colors ${mode === m ? "bg-fg text-bg" : "text-fg/45 hover:text-fg"}`}>
-                  {m}
-                </button>
-              ))}
-            </div>
-          )}
+          <div role="radiogroup" aria-label="Mode" className="mr-auto flex rounded-full border border-fg/12 p-[3px] font-mono text-[11px]">
+            {MODES.map((m) => (
+              <button key={m} type="button" role="radio" aria-checked={mode === m} onClick={() => setMode(m)} className={`rounded-full px-3 py-1 transition-colors ${mode === m ? "bg-fg text-bg" : "text-fg/45 hover:text-fg"}`}>
+                {m}
+              </button>
+            ))}
+            <span role="radio" aria-checked="false" aria-disabled="true" title="3D is coming soon" className="cursor-default rounded-full px-3 py-1 text-fg/25">
+              3d <span className="text-fg/20">soon</span>
+            </span>
+          </div>
           <button type="button" onClick={submit} aria-disabled={!ready} className={`flex items-center gap-2 font-mono text-[12px] transition-colors ${ready ? "text-fg" : "text-fg/25"}`}>
             generate <span className="text-fg/40">↵</span>
           </button>
