@@ -43,9 +43,9 @@ export default function LabRender() {
       window.cLab = {
         series: async (raw, n, seed = 1009, force = []) => {
           const out = [];
-          let plan = P.normalizePlan({ ...raw, seed });
+          const base = P.normalizePlan({ ...raw, seed });
           for (let k = 0; k < n; k++) {
-            if (k) plan = P.variant ? P.variant(plan, k) : P.normalizePlan({ ...plan, seed: seed + k * 7919, avoid: out.map((o) => o.meta.direction).slice(-2) });
+            const plan = k ? P.variant(base, k) : base;
             const t = performance.now();
             const c = await paint(plan, plan.seed, force.length ? { scale: 0.6, direction: force[k % force.length] } : { scale: 0.6 });
             out.push({ png: c.toDataURL("image/png"), meta: c.meta, ms: Math.round(performance.now() - t), ...measure(c) });

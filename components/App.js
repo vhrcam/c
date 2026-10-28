@@ -22,9 +22,8 @@ async function direct(text) {
 }
 
 async function redirect(plan) {
-  const { composition, normalizePlan, withView } = await import("@/lib/art/plan");
-  const used = composition(plan, plan.seed).direction;
-  const next = normalizePlan({ ...plan, seed: newSeed(), avoid: [used, ...(plan.avoid || [])].slice(0, 2) });
+  const { composition, variant, withView } = await import("@/lib/art/plan");
+  const next = variant({ ...plan, seed: newSeed() }, 1);
   return withView(next, composition(next, next.seed).direction);
 }
 
