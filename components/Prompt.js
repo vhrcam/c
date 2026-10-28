@@ -9,8 +9,8 @@ const HINTS = [
   "a red vintage car on a coastal road",
   "a cabin in the mountains at dawn",
   "a steam train crossing a stone bridge in the fog",
-  "the city at night from a rooftop",
-  "an old windmill in a wheat field",
+  "a skyscraper at night in the rain",
+  "a sailboat off a rocky coast at sunset",
 ];
 
 export const MODES = ["3d"];
