@@ -5,12 +5,12 @@ import Mark from "./Mark";
 
 const HINTS = [
   "describe anything",
-  "a lighthouse in a storm, seen from the top",
-  "a red vintage car on a coastal road",
-  "a cabin in the mountains at dawn",
+  "a pirate ship in the ocean with a storm coming",
+  "a farmhouse in the countryside at golden hour",
+  "a skyscraper in a crowded city at night",
   "a steam train crossing a stone bridge in the fog",
-  "a skyscraper at night in the rain",
-  "a sailboat off a rocky coast at sunset",
+  "a log cabin in the mountains in winter",
+  "a lighthouse on the coast at dusk",
   "an old windmill in a wheat field",
 ];
 
