@@ -63,6 +63,18 @@ export default function LabRender() {
           });
         },
         norm: (raw) => P.normalizePlan(raw),
+        // the Oct 24 plotter people, staged into today's composition, drawn over the scene buffer
+        oldPeople: async (raw, seed = 1009) => {
+          const plan = P.normalizePlan({ ...raw, seed });
+          const S = await prepare(plan, seed);
+          const [{ figure }, { sceneBuffer }, lines] = await Promise.all([import("@/lib/art/subject"), import("@/lib/art/scene"), import("@/lib/art/oldlines")]);
+          const fg = await figure(plan, S.comp, S.world, seed);
+          const cv = sceneBuffer({ ...S, fig: null }, 0.5).canvas;
+          const g = cv.getContext("2d");
+          g.setTransform(0.5, 0, 0, 0.5, 0, 0);
+          if (fg) lines.drawOld(g, fg, seed);
+          return cv.toDataURL("image/png");
+        },
         // one character shot on plain paper, close or wide, so the people can be judged on their own
         studio: async (raw, seed = 1009, shot = "close") => {
           const plan = P.normalizePlan({ ...raw, seed, conceptIndex: 0, concepts: [{ idea: "", spatial: shot === "close" ? "close" : "scene", framing: shot, construction: "lines", abstraction: 0.2 }] });

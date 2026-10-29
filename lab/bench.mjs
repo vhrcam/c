@@ -36,7 +36,7 @@ const corr = (a, b) => {
   return num / Math.sqrt(da * db || 1);
 };
 
-const browser = await puppeteer.launch({ executablePath: process.env.CHROME || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", headless: "new" });
+const browser = await puppeteer.launch({ executablePath: process.env.CHROME || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", headless: "new", args: ["--use-angle=swiftshader", "--enable-unsafe-swiftshader"] });
 const page = await browser.newPage();
 page.on("pageerror", (e) => console.log("ERR", e.message));
 await page.goto(`${base}/lab/render`, { waitUntil: "load", timeout: 120000 });
