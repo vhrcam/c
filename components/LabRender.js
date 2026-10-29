@@ -63,6 +63,21 @@ export default function LabRender() {
           });
         },
         norm: (raw) => P.normalizePlan(raw),
+        // one character shot on plain paper, close or wide, so the people can be judged on their own
+        studio: async (raw, seed = 1009, shot = "close") => {
+          const plan = P.normalizePlan({ ...raw, seed, conceptIndex: 0, concepts: [{ idea: "", spatial: shot === "close" ? "close" : "scene", framing: shot, construction: "lines", abstraction: 0.2 }] });
+          const S = await prepare(plan, seed);
+          const { figureLayer } = await import("@/lib/art/scene");
+          const cv = document.createElement("canvas");
+          cv.width = 1200;
+          cv.height = 800;
+          const g = cv.getContext("2d");
+          g.fillStyle = "#f3eee5";
+          g.fillRect(0, 0, 1200, 800);
+          const layer = figureLayer(S, 0.8);
+          if (layer) g.drawImage(layer, 0, 0);
+          return cv.toDataURL("image/png");
+        },
         world: async (raw, seed = 1009) => {
           const plan = P.normalizePlan({ ...raw, seed });
           const S = await prepare(plan, seed);
