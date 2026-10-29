@@ -104,6 +104,18 @@ export default function LabRender() {
           for (const who of [1, 2]) for (const mat of [1, 2, 4, 5, 6, 7, 9]) out[`${who}:${mat}`] = S.fig.fill(mat, who)[0];
           return out;
         },
+        // one finished artwork at a chosen scale, optionally cropped, for looking closely at details
+        big: async (raw, seed = 1009, scale = 1.2, crop = null) => {
+          const plan = P.normalizePlan({ ...raw, seed });
+          const c = await paint(plan, plan.seed, { scale });
+          if (!crop) return c.toDataURL("image/png");
+          const [x, y, w, h] = crop.map((v) => v * scale);
+          const o = document.createElement("canvas");
+          o.width = w;
+          o.height = h;
+          o.getContext("2d").drawImage(c, x, y, w, h, 0, 0, w, h);
+          return o.toDataURL("image/png");
+        },
         series: async (raw, n, seed = 1009, force = []) => {
           const out = [];
           const base = P.normalizePlan({ ...raw, seed });
