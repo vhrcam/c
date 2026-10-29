@@ -39,7 +39,7 @@ const corr = (a, b) => {
 const browser = await puppeteer.launch({ executablePath: process.env.CHROME || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", headless: "new" });
 const page = await browser.newPage();
 page.on("pageerror", (e) => console.log("ERR", e.message));
-await page.goto(`${base}/lab/render`, { waitUntil: "networkidle0" });
+await page.goto(`${base}/lab/render`, { waitUntil: "load", timeout: 120000 });
 await page.waitForFunction(() => window.cLab, { timeout: 120000 });
 const rows = [];
 for (const m of memories) {

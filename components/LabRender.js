@@ -39,8 +39,44 @@ export default function LabRender() {
   useEffect(() => {
     let gone = false;
     (async () => {
-      const [{ paint }, P] = await Promise.all([import("@/lib/art/directions"), import("@/lib/art/plan")]);
+      const [{ paint, prepare }, P] = await Promise.all([import("@/lib/art/directions"), import("@/lib/art/plan")]);
       window.cLab = {
+        buffer: async (raw, seed = 1009, keep = null) => {
+          const plan = P.normalizePlan({ ...raw, seed });
+          const S = await prepare(plan, seed);
+          if (keep && S.fig) S.fig.items = S.fig.items.filter((_, i) => keep.includes(i));
+          const { figureLayer, sceneBuffer } = await import("@/lib/art/scene");
+          const cv = sceneBuffer(S, 0.5).canvas;
+          const layer = figureLayer(S, 0.5);
+          const g = cv.getContext("2d");
+          g.setTransform(1, 0, 0, 1, 0, 0);
+          if (layer) g.drawImage(layer, 0, 0, cv.width, cv.height);
+          return cv.toDataURL("image/png");
+        },
+        inspect: async (raw, seed = 1009) => {
+          const plan = P.normalizePlan({ ...raw, seed });
+          const S = await prepare(plan, seed);
+          return (S.fig?.items || []).map((it) => {
+            const xs = it.pts.map((q) => q[0]);
+            const ys = it.pts.map((q) => q[1]);
+            return { kind: it.kind, mat: it.mat, color: it.color, z: it.z, person: it.person, w: Math.round(Math.max(...xs) - Math.min(...xs)), h: Math.round(Math.max(...ys) - Math.min(...ys)), n: it.pts.length };
+          });
+        },
+        norm: (raw) => P.normalizePlan(raw),
+        world: async (raw, seed = 1009) => {
+          const plan = P.normalizePlan({ ...raw, seed });
+          const S = await prepare(plan, seed);
+          const r = (v) => Math.round(v);
+          return { comp: { layout: S.comp.layout, framing: S.comp.framing, subject: S.comp.subject, feet: r(S.comp.feet ?? -1), body: r(S.comp.body), ppm: r(S.comp.ppm), hz: r(S.world.horizon), focusX: r(S.comp.focusX) }, support: S.world.support, attract: S.world.attract, objects: S.world.objects.filter((o) => o.kind === "thing" || o.kind === "window" || o.kind === "house").map((o) => `${o.kind}:${o.label || ""} x${r(o.x)} y${r(o.y ?? 0)} w${r(o.w ?? 0)} h${r(o.h ?? 0)}${o.front ? " front" : ""}`) };
+        },
+        words: (text) => P.readWords(text),
+        colors: async (raw, seed = 1009) => {
+          const plan = P.normalizePlan({ ...raw, seed });
+          const S = await prepare(plan, seed);
+          const out = {};
+          for (const who of [1, 2]) for (const mat of [1, 2, 4, 5, 6, 7, 9]) out[`${who}:${mat}`] = S.fig.fill(mat, who)[0];
+          return out;
+        },
         series: async (raw, n, seed = 1009, force = []) => {
           const out = [];
           const base = P.normalizePlan({ ...raw, seed });
