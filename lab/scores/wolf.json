@@ -1,0 +1,71 @@
+{
+ "text": "a wolf howling at the moon on a cliff",
+ "title": "wolf howling at moon",
+ "reading": "a solitary wolf standing on a high rocky cliff throws its head back in a howl toward the bright full moon",
+ "format": "tall",
+ "time": "night",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "lonesome fierce wild nocturnal",
+ "energy": 0.65,
+ "palette": [
+  "#0b1326",
+  "#1c2b4a",
+  "#4a586e",
+  "#8c9cb3",
+  "#e6f0fa"
+ ],
+ "light": {
+  "x": 80,
+  "y": 22,
+  "color": "#e6f0fa"
+ },
+ "layout": "cliff ledge on lower left and center with a massive howling wolf filling the central frame, looking up diagonally toward the full moon in the upper right sky",
+ "forms": [
+  {
+   "name": "moon",
+   "role": "setting",
+   "shapes": [
+    "blob | light | #e6f0fa | moon_glow | 80,22,10,10,0",
+    "blob | light | #ffffff | moon_disc | 80,22,7,7,0"
+   ]
+  },
+  {
+   "name": "distant_ridge",
+   "role": "setting",
+   "shapes": [
+    "band | stone | #0d1522 | distant_mountains | 0,105 30,100 60,110 100,95"
+   ]
+  },
+  {
+   "name": "cliff",
+   "role": "setting",
+   "shapes": [
+    "poly | stone | #151d2a | cliff_body | 0,120 65,118 85,138 100,150 0,150",
+    "poly | stone | #232f42 | cliff_top | 0,120 65,118 60,123 0,124"
+   ]
+  },
+  {
+   "name": "wolf",
+   "role": "focus",
+   "shapes": [
+    "tube | fur | #28303d | far_hind_leg | 20,120,2.2 19,105,3 22,95,3.5",
+    "tube | fur | #28303d | far_front_leg | 52,120,2.2 51,100,3 50,82,3.8",
+    "tube | fur | #3b4759 | tail | 22,95,4 14,105,3.5 10,118,2",
+    "tube | fur | #4a586e | torso | 24,96,8 35,88,9.5 48,80,10.5",
+    "poly | fur | #7889a0 | chest_ruff | 42,72 54,76 56,86 48,92 40,84",
+    "tube | fur | #4a586e | neck | 48,80,9.5 47,62,7.5 45,46,6",
+    "poly | fur | #28303d | far_ear | 41,40 38,30 43,36",
+    "blob | fur | #4a586e | head | 45,42,6,7,-30",
+    "tube | fur | #3b4759 | upper_jaw | 47,38,3.5 53,28,2.2",
+    "tube | fur | #28303d | lower_jaw | 45,40,2.5 50,33,1.8",
+    "poly | skin | #8a3b43 | mouth_gap | 47,37 52,29 49,32",
+    "poly | fur | #5a6a82 | near_ear | 44,41 40,29 47,37",
+    "tube | fur | #1a222e | eye_slit | 45,39,0.6 47,38,0.5",
+    "blob | leather | #121820 | nose | 53,27,1.2,1,30",
+    "tube | fur | #4a586e | near_hind_leg | 28,120,2.5 25,104,3.2 26,95,4",
+    "tube | fur | #5a6a82 | near_front_leg | 58,120,2.5 56,100,3.2 52,80,4"
+   ]
+  }
+ ]
+}

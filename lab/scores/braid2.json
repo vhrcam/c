@@ -1,0 +1,94 @@
+{
+ "text": "my mom braiding my hair before school",
+ "title": "morning braid",
+ "reading": "A mother sits behind her daughter on a quiet morning, gently weaving her hair into braids before school.",
+ "format": "tall",
+ "time": "golden",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "tender gentle nostalgic warm",
+ "energy": 0.25,
+ "palette": [
+  "#fef3c7",
+  "#9e7b9e",
+  "#2b4c7e",
+  "#5c4033",
+  "#e0b89b"
+ ],
+ "light": {
+  "x": 10,
+  "y": 20,
+  "color": "#fef3c7"
+ },
+ "layout": "Mother seated to the left behind her child, leaning forward as her hands shape the child's long hair near the center of the frame.",
+ "forms": [
+  {
+   "name": "interior",
+   "role": "setting",
+   "shapes": [
+    "poly | wall | #e8dfd1 | plaster | 0,0 100,0 100,120 0,120",
+    "poly | wood | #9c7a5b | window_frame | 10,20 35,20 35,80 10,80",
+    "poly | glass | #e6f2ff | window_pane | 13,23 32,23 32,77 13,77",
+    "band | wood | #5c4033 | floor | 0,120 100,120"
+   ]
+  },
+  {
+   "name": "mother_chair",
+   "role": "support",
+   "shapes": [
+    "tube | wood | #3d2b1f | leg_left | 25,105,2.5 23,138,2",
+    "tube | wood | #3d2b1f | leg_right | 37,105,2.5 36,138,2",
+    "blob | wood | #543d2b | seat | 31,105,15,5,0"
+   ]
+  },
+  {
+   "name": "child_stool",
+   "role": "support",
+   "shapes": [
+    "tube | wood | #4a3525 | leg_back | 44,110,2 42,136,1.5",
+    "tube | wood | #4a3525 | leg_front | 60,110,2 62,136,1.5",
+    "blob | wood | #6b4d37 | seat | 52,110,13,5,0"
+   ]
+  },
+  {
+   "name": "child",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #2b4c7e | left_leg | 52,110,3.5 54,130,3",
+    "tube | skin | #e0b89b | left_lower_leg | 54,130,2.5 54,142,2",
+    "tube | cloth | #2b4c7e | right_leg | 56,110,3.5 60,128,3",
+    "tube | skin | #e0b89b | right_lower_leg | 60,128,2.5 62,142,2",
+    "tube | cloth | #2b4c7e | skirt | 52,95,7 54,112,8",
+    "tube | cloth | #ffffff | torso | 50,72,6 51,85,6.5 52,95,6",
+    "tube | cloth | #ffffff | left_arm | 48,74,2.5 45,88,2 48,96,1.8",
+    "blob | skin | #e0b89b | left_hand | 48,97,2.5,2,0",
+    "tube | skin | #e0b89b | neck | 50,65,2.5 50,70,2.8",
+    "blob | skin | #e0b89b | head | 50,56,6.5,7.5,-5",
+    "poly | hair | #3b2314 | hair_back | 45,52 55,52 57,75 46,75 | round",
+    "tube | hair | #3b2314 | braid_left | 50,62,2.5 48,76,2 47,86,1.5",
+    "tube | hair | #3b2314 | braid_right | 52,62,2.5 53,75,2 54,84,1.5",
+    "poly | hair | #3b2314 | hair_crown | 44,50 56,50 56,60 44,60 | round"
+   ]
+  },
+  {
+   "name": "mother",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #7c5c7c | lower_body | 30,105,9 32,126,8",
+    "tube | cloth | #9e7b9e | torso | 34,70,7.5 33,85,8 31,105,8.5",
+    "tube | skin | #d8a88a | neck | 37,64,2.8 36,69,3",
+    "blob | skin | #d8a88a | head | 39,55,6.5,7.5,15",
+    "poly | hair | #2c1a0e | mother_hair | 33,48 44,49 43,62 34,60 | round",
+    "tube | skin | #d8a88a | nose | 44,55,0.8 46,56,0.6",
+    "tube | skin | #c48369 | mouth | 43,59,0.8 45,59,0.7",
+    "blob | skin | #4a2e1b | eye | 44,53,0.8,1.2,0",
+    "tube | cloth | #9e7b9e | left_arm | 32,73,3 39,78,2.6 45,74,2.2",
+    "tube | skin | #d8a88a | left_forearm | 45,74,2 48,70,1.7",
+    "blob | skin | #d8a88a | left_hand | 49,69,2.2,1.8,-10",
+    "tube | cloth | #9e7b9e | right_arm | 36,72,3.2 43,76,2.8 47,72,2.4",
+    "tube | skin | #d8a88a | right_forearm | 47,72,2.2 49,69,1.8",
+    "blob | skin | #d8a88a | right_hand | 51,68,2.2,1.8,20"
+   ]
+  }
+ ]
+}

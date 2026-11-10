@@ -1,0 +1,60 @@
+{
+ "text": "a red vintage car parked under a streetlight",
+ "title": "midnight cherry",
+ "reading": "A classic red vintage sedan rests under the warm amber glow of a tall streetlight on a silent night street.",
+ "format": "wide",
+ "time": "night",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "quiet, cinematic",
+ "energy": 0.1,
+ "palette": [
+  "#050510",
+  "#111111",
+  "#cc0000",
+  "#fff5cc"
+ ],
+ "light": {
+  "x": 50,
+  "y": 22,
+  "color": "#fff5cc"
+ },
+ "layout": "The vintage car is the primary focus, positioned on the right side of the frame, while a tall streetlight stands on the left, casting light onto the car's hood.",
+ "forms": [
+  {
+   "name": "street",
+   "role": "setting",
+   "shapes": [
+    "band | concrete | #141414 | road | 0,90 150,90"
+   ]
+  },
+  {
+   "name": "lamp",
+   "role": "support",
+   "shapes": [
+    "tube | metal | #222222 | post | 25,95,2.5 25,15,1.8",
+    "tube | metal | #222222 | arm | 25,15,1.8 50,20,1.2",
+    "blob | glass | #ffffaa | bulb | 50,22,6,4,0",
+    "blob | light | #fff5cc | light_pool | 50,22,30,20,0"
+   ]
+  },
+  {
+   "name": "car",
+   "role": "focus",
+   "shapes": [
+    "poly | metal | #7a0000 | undercarriage | 60,88 130,88 130,92 60,92",
+    "blob | rubber | #111111 | wheel_rear | 120,90,12,12,0",
+    "blob | rubber | #111111 | wheel_front | 70,90,12,12,0",
+    "poly | metal | #cc0000 | body_main | 45,82 48,70 65,62 135,62 145,70 148,82 140,90 50,90 | round",
+    "poly | metal | #cc0000 | fender_front | 45,82 55,70 85,75 80,88 | round",
+    "poly | metal | #cc0000 | fender_rear | 110,88 105,75 145,70 148,82 | round",
+    "poly | metal | #cc0000 | cabin | 75,62 85,42 120,42 130,62 | round",
+    "poly | glass | #1a2a3a | window | 88,46 118,46 125,58 82,58",
+    "blob | metal | #dddddd | hub_rear | 120,90,5,5,0",
+    "blob | metal | #dddddd | hub_front | 70,90,5,5,0",
+    "blob | glass | #ffffeb | headlamp | 48,74,4,3,10",
+    "tube | metal | #eeeeee | bumper | 42,84,1.5 55,87,1.5"
+   ]
+  }
+ ]
+}

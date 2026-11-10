@@ -1,0 +1,100 @@
+{
+ "text": "my grandma reading to me on the porch swing",
+ "title": "grandma reading on porch",
+ "reading": "an elderly woman and a young child sit close together on a wooden porch swing, absorbed in a book.",
+ "format": "wide",
+ "time": "golden",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "tender, peaceful, nostalgic",
+ "energy": 0.2,
+ "palette": [
+  "#f4e4bc",
+  "#8b7355",
+  "#5c88a8",
+  "#70655d",
+  "#d9d9d9"
+ ],
+ "light": {
+  "x": 140,
+  "y": 10,
+  "color": "#ffecb3"
+ },
+ "layout": "the focus is the grandmother and child sitting together on a hanging swing that dominates the middle-right of the frame, backed by the porch wall.",
+ "forms": [
+  {
+   "name": "house wall",
+   "role": "setting",
+   "shapes": [
+    "band | wood | #e3d9c1 | wall | 0,85 150,85",
+    "poly | wood | #b0a68d | window_frame | 10,20 40,20 40,60 10,60",
+    "poly | glass | #aed9e0 | window_pane | 12,22 38,22 38,58 12,58"
+   ]
+  },
+  {
+   "name": "porch floor",
+   "role": "setting",
+   "shapes": [
+    "band | wood | #8b7355 | floor | 0,78 60,78 150,78"
+   ]
+  },
+  {
+   "name": "porch swing",
+   "role": "support",
+   "shapes": [
+    "tube | metal | #707070 | chain_l | 48,0,0.4 48,65,0.4",
+    "tube | metal | #707070 | chain_r | 102,0,0.4 102,65,0.4",
+    "poly | wood | #5a3e2b | backrest | 45,45 105,45 105,65 45,65 | round",
+    "poly | wood | #5a3e2b | seat | 45,65 105,65 108,78 42,78 | round"
+   ]
+  },
+  {
+   "name": "grandmother",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #70655d | torso | 62,44,6 62,56,7 62,68,7.5",
+    "tube | cloth | #70655d | arm_l | 56,46,2.2 50,55,2 54,62,1.8",
+    "tube | cloth | #70655d | arm_r | 68,46,2.2 75,55,2 78,62,1.8",
+    "tube | skin | #e8d0c0 | hand_l | 54,62,1.5 56,65,1.5",
+    "tube | skin | #e8d0c0 | hand_r | 78,62,1.5 76,65,1.5",
+    "tube | cloth | #70655d | leg_l | 58,68,3.5 54,82,3 62,85,2.8",
+    "tube | cloth | #70655d | leg_r | 66,68,3.5 70,82,3 78,85,2.8",
+    "tube | skin | #e8d0c0 | neck | 62,44,2 62,38,1.8",
+    "blob | skin | #e8d0c0 | head | 62,35,5,6,0",
+    "poly | hair | #d9d9d9 | hair | 57,35 67,35 68,28 62,25 56,28",
+    "blob | bone | #221a15 | eye_l | 60,34,0.5,0.5,0",
+    "blob | bone | #221a15 | eye_r | 64,34,0.5,0.5,0",
+    "tube | skin | #e8d0c0 | nose | 62,35,0.4 62,37,0.4",
+    "tube | skin | #b07d7d | mouth | 60,39,0.5 64,39,0.5"
+   ]
+  },
+  {
+   "name": "child",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #5c88a8 | torso | 86,55,4 86,65,5 86,68,5.5",
+    "tube | cloth | #5c88a8 | arm_l | 82,56,1.8 78,65,1.6 80,70,1.4",
+    "tube | cloth | #5c88a8 | arm_r | 90,56,1.8 94,65,1.6 92,70,1.4",
+    "tube | skin | #f2e1d5 | neck | 86,55,1.5 86,50,1.5",
+    "blob | skin | #f2e1d5 | head | 86,47,4.5,5,0",
+    "poly | hair | #4a3728 | hair | 82,47 90,47 91,40 86,38 81,41",
+    "tube | skin | #f2e1d5 | hand_l | 80,70,1.2 82,72,1.2",
+    "tube | skin | #f2e1d5 | hand_r | 92,70,1.2 90,72,1.2",
+    "tube | cloth | #5c88a8 | leg_l | 83,68,3 80,85,2.5 86,88,2.3",
+    "tube | cloth | #5c88a8 | leg_r | 89,68,3 92,85,2.5 98,88,2.3",
+    "blob | bone | #221a15 | eye_l | 84,46,0.4,0.4,0",
+    "blob | bone | #221a15 | eye_r | 88,46,0.4,0.4,0",
+    "tube | skin | #f2e1d5 | nose | 86,47,0.3 86,49,0.3",
+    "tube | skin | #e0a0a0 | mouth | 84,51,0.5 88,51,0.5"
+   ]
+  },
+  {
+   "name": "book",
+   "role": "focus",
+   "shapes": [
+    "poly | leather | #8a2a2a | cover | 67,59 83,59 85,73 65,73",
+    "poly | paper | #ffffff | pages | 68,60 82,60 84,72 66,72"
+   ]
+  }
+ ]
+}

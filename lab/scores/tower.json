@@ -1,0 +1,74 @@
+{
+ "text": "my view from the top of tokyo tower at night",
+ "title": "tokyo night overlook",
+ "reading": "A high-angle night view of the sprawling Tokyo city lights framed by the red steel girders of the tower.",
+ "format": "wide",
+ "time": "night",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "vast, silent, electric",
+ "energy": 0.5,
+ "palette": [
+  "#050510",
+  "#d90429",
+  "#ffcc33",
+  "#ffffff",
+  "#1a1a2e"
+ ],
+ "light": {
+  "x": 75,
+  "y": 120,
+  "color": "#ffd700"
+ },
+ "layout": "The horizon is placed high to emphasize the city below, with the tower's red metal frame creating a strong foreground border.",
+ "forms": [
+  {
+   "name": "distant_city",
+   "role": "setting",
+   "shapes": [
+    "band | land | #020205 | ground | 0,30 50,28 100,32 150,30"
+   ]
+  },
+  {
+   "name": "office_lights",
+   "role": "focus",
+   "shapes": [
+    "blob | light | #ffffff | window | 75,60,0.4,0.6,0"
+   ],
+   "scatter": {
+    "count": 120,
+    "x0": 0,
+    "y0": 30,
+    "x1": 150,
+    "y1": 90,
+    "far": 0.15
+   }
+  },
+  {
+   "name": "street_arteries",
+   "role": "support",
+   "shapes": [
+    "tube | light | #ffcc33 | road | 75,60,0.2 75,75,0.4"
+   ],
+   "scatter": {
+    "count": 25,
+    "x0": 10,
+    "y0": 40,
+    "x1": 140,
+    "y1": 90,
+    "far": 0.3
+   }
+  },
+  {
+   "name": "tower_structure",
+   "role": "support",
+   "shapes": [
+    "poly | metal | #d90429 | pillar_left | -5,0 15,0 25,100 -5,100",
+    "poly | metal | #d90429 | pillar_right | 155,0 135,0 125,100 155,100",
+    "tube | metal | #d90429 | cross_beam | 0,15,1.5 150,15,1.5",
+    "tube | metal | #050505 | floor_base | 0,96,4 150,96,4",
+    "tube | metal | #333338 | handrail | 0,86,0.8 150,86,0.8"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "text": "my best friend smiling at me across the table at the diner",
+ "title": "diner smile",
+ "reading": "A best friend smiles warmly from across a diner table, their hands resting on the surface.",
+ "format": "square",
+ "time": "night",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "warm, intimate, kind",
+ "energy": 0.3,
+ "palette": [
+  "#8b0000",
+  "#d1ccc0",
+  "#52664c",
+  "#fdf5e6",
+  "#e8beac"
+ ],
+ "light": {
+  "x": 60,
+  "y": -20,
+  "color": "#fdf5e6"
+ },
+ "layout": "The friend is centered in a booth, viewed from across a table that fills the lower foreground.",
+ "forms": [
+  {
+   "name": "booth",
+   "role": "setting",
+   "shapes": [
+    "poly | leather | #8b0000 | backrest | 15,35 105,35 105,90 15,90 | round"
+   ]
+  },
+  {
+   "name": "friend",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #52664c | torso | 60,110,12 60,60,11 60,42,9",
+    "tube | skin | #e8beac | neck | 60,42,4 60,36,3.5",
+    "blob | skin | #e8beac | face | 60,28,8,9,0",
+    "poly | hair | #4a3728 | hair | 52,32 50,22 55,16 65,16 70,22 68,32 60,35",
+    "blob | skin | #2b1d12 | eye_l | 57,27,0.8,0.8,0",
+    "blob | skin | #2b1d12 | eye_r | 63,27,0.8,0.8,0",
+    "tube | hair | #4a3728 | brow_l | 55,24,0.3 59,24,0.3",
+    "tube | hair | #4a3728 | brow_r | 61,24,0.3 65,24,0.3",
+    "tube | skin | #e8beac | nose | 60,28,0.5 60,31,0.8",
+    "tube | skin | #c08080 | mouth | 56,33,0.5 60,35,0.6 64,33,0.5",
+    "tube | cloth | #52664c | sleeve_l | 49,45,4 40,65,3.5 48,92,3",
+    "tube | cloth | #52664c | sleeve_r | 71,45,4 80,65,3.5 72,92,3"
+   ]
+  },
+  {
+   "name": "table",
+   "role": "setting",
+   "shapes": [
+    "band | plastic | #d1ccc0 | surface | 0,90 120,90"
+   ]
+  },
+  {
+   "name": "details",
+   "role": "support",
+   "shapes": [
+    "blob | skin | #e8beac | hand_l | 48,94,4,3,10",
+    "blob | skin | #e8beac | hand_r | 72,94,4,3,-10",
+    "blob | ceramic | #ffffff | mug_body | 35,96,5,6,0",
+    "blob | water | #4b3621 | coffee | 35,92,4,2,0",
+    "tube | ceramic | #ffffff | mug_handle | 40,94,1 43,96,1 43,98,1 40,100,1"
+   ]
+  }
+ ]
+}

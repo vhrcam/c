@@ -1,0 +1,54 @@
+{
+ "text": "a cat staring down at me from the top of the fridge",
+ "title": "fridge summit cat",
+ "reading": "A large ginger cat perches on the very edge of a white refrigerator, gazing directly down at the viewer.",
+ "format": "tall",
+ "time": "day",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "imposing, quiet",
+ "energy": 0.3,
+ "palette": [
+  "#eeeeee",
+  "#f2a65a",
+  "#d97b26",
+  "#222222"
+ ],
+ "light": {
+  "x": 50,
+  "y": -50,
+  "color": "#ffffff"
+ },
+ "layout": "The refrigerator fills the bottom third of the frame, providing a high pedestal for the cat which occupies the center and upper half, looking down.",
+ "forms": [
+  {
+   "name": "refrigerator",
+   "role": "setting",
+   "shapes": [
+    "poly | metal | #eeeeee | front | 0,110 100,110 100,150 0,150",
+    "tube | plastic | #cccccc | seal | 0,110,1 100,110,1"
+   ]
+  },
+  {
+   "name": "cat",
+   "role": "focus",
+   "shapes": [
+    "tube | fur | #f2a65a | tail | 35,110,3 25,115,3 15,100,2",
+    "tube | fur | #f2a65a | rear_leg_l | 40,110,5 38,100,4",
+    "tube | fur | #f2a65a | rear_leg_r | 60,110,5 62,100,4",
+    "tube | fur | #f2a65a | torso | 50,110,10 50,85,12 50,65,10 | stripes #d97b26",
+    "tube | fur | #f2a65a | front_leg_l | 45,110,4 45,70,3.5",
+    "tube | fur | #f2a65a | front_leg_r | 55,110,4 55,70,3.5",
+    "tube | fur | #f2a65a | neck | 50,65,5 50,55,4",
+    "blob | fur | #f2a65a | head | 50,45,12,13,0",
+    "poly | fur | #f2a65a | ear_l | 40,38 36,25 46,35",
+    "poly | fur | #f2a65a | ear_r | 60,38 64,25 54,35",
+    "blob | skin | #222222 | eye_l | 44,45,1.5,2.5,0",
+    "blob | skin | #222222 | eye_r | 56,45,1.5,2.5,0",
+    "tube | skin | #ffb7c5 | nose | 50,51,1 50,53,0.8",
+    "tube | hair | #ffffff | whisker_l | 42,53,0.3 28,55,0.1",
+    "tube | hair | #ffffff | whisker_r | 58,53,0.3 72,55,0.1"
+   ]
+  }
+ ]
+}

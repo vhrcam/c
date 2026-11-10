@@ -1,0 +1,56 @@
+{
+ "text": "my dog waiting at the door every day when I came home from school",
+ "title": "loyal wait",
+ "reading": "A golden dog sits patiently on a wooden floor, facing a dark wooden door as afternoon light streams through the glass.",
+ "format": "tall",
+ "time": "day",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "patient, loyal, warm",
+ "energy": 0.2,
+ "palette": [
+  "#3e2723",
+  "#d4a76a",
+  "#6d4c41",
+  "#e1f5fe",
+  "#fff9c4"
+ ],
+ "light": {
+  "x": 50,
+  "y": 40,
+  "color": "#fff9c4"
+ },
+ "layout": "The dog is centered in the lower half of the frame, looking up at the door which dominates the background.",
+ "forms": [
+  {
+   "name": "hallway",
+   "role": "setting",
+   "shapes": [
+    "poly | concrete | #d7ccc8 | wall | 0,0 100,0 100,140 0,140",
+    "band | wood | #6d4c41 | floor | 0,140 100,140",
+    "poly | wood | #3e2723 | door | 20,10 80,10 80,140 20,140",
+    "poly | wood | #21100b | frame | 18,8 82,8 82,140 78,140 78,12 22,12 22,140 18,140",
+    "poly | glass | #e1f5fe | window | 30,25 70,25 70,65 30,65",
+    "blob | metal | #c0c0c0 | handle | 72,90,2,2,0",
+    "poly | light | #fff9c4 | beam | 30,65 70,65 95,140 5,140"
+   ]
+  },
+  {
+   "name": "dog",
+   "role": "focus",
+   "shapes": [
+    "tube | fur | #d4a76a | tail | 65,135,3 85,138,2 90,130,1.5",
+    "tube | fur | #d4a76a | torso | 50,135,11 50,110,9",
+    "tube | fur | #d4a76a | back-leg | 42,130,5 38,140,5",
+    "tube | fur | #d4a76a | back-leg | 58,130,5 62,140,5",
+    "tube | fur | #d4a76a | front-leg | 46,135,3.5 46,110,3.5",
+    "tube | fur | #d4a76a | front-leg | 54,135,3.5 54,110,3.5",
+    "tube | fur | #d4a76a | neck | 50,110,5 50,95,5",
+    "blob | fur | #d4a76a | head | 50,88,7,9,0",
+    "blob | fur | #d4a76a | snout | 50,92,5,4,0",
+    "poly | fur | #b58d56 | left-ear | 44,82 40,95 48,90 | round",
+    "poly | fur | #b58d56 | right-ear | 56,82 60,95 52,90 | round"
+   ]
+  }
+ ]
+}

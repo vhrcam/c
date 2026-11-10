@@ -1,0 +1,73 @@
+{
+ "text": "a giraffe eating from a tall tree at the zoo",
+ "title": "giraffe at the tree",
+ "reading": "A tall giraffe reaches its long neck into an acacia tree canopy to eat leaves in a sunny zoo enclosure.",
+ "format": "tall",
+ "time": "day",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "peaceful sunny warm",
+ "energy": 0.3,
+ "palette": [
+  "#7ec0ee",
+  "#8a9e4b",
+  "#d4a359",
+  "#593112",
+  "#3e662c"
+ ],
+ "light": {
+  "x": 15,
+  "y": 10,
+  "color": "#fff4d0"
+ },
+ "layout": "A tall giraffe stands on the left facing right, extending its long neck upwards to browse foliage from a spreading acacia tree on the right side of the frame.",
+ "forms": [
+  {
+   "name": "zoo enclosure ground",
+   "role": "setting",
+   "shapes": [
+    "band | grass | #8a9e4b | lawn | 0,130 40,128 70,131 100,129",
+    "band | soil | #6e593f | dirt path | 0,138 50,137 100,139",
+    "tube | wood | #785a3c | fence rail lower | 0,124,1 100,124,1",
+    "tube | wood | #785a3c | fence rail upper | 0,114,1 100,114,1",
+    "tube | wood | #5c432b | fence post 1 | 15,110,2 15,135,2",
+    "tube | wood | #5c432b | fence post 2 | 55,110,2 55,135,2",
+    "tube | wood | #5c432b | fence post 3 | 90,110,2 90,135,2"
+   ]
+  },
+  {
+   "name": "acacia tree",
+   "role": "support",
+   "shapes": [
+    "tube | bark | #3d2b1d | trunk | 84,135,5 82,90,4.5 78,50,3.5 75,30,2.5",
+    "tube | bark | #3d2b1d | branch left | 78,52,3 68,40,2 60,32,1.2",
+    "tube | bark | #3d2b1d | branch right | 76,38,2.5 85,26,1.8 94,20,1",
+    "blob | foliage | #2d4a20 | canopy deep | 78,28,22,12,-5",
+    "blob | foliage | #3e662c | canopy main | 72,25,18,10,-10",
+    "blob | foliage | #52803b | canopy highlight | 76,18,15,8,5",
+    "blob | foliage | #436e2f | canopy cluster left | 58,30,10,6,-15"
+   ]
+  },
+  {
+   "name": "browsing giraffe",
+   "role": "focus",
+   "shapes": [
+    "tube | fur | #8a5a2b | back leg far | 23,105,3 22,120,2 23,132,1.4",
+    "tube | fur | #b88344 | back leg near | 29,105,3.5 28,120,2.3 29,132,1.6",
+    "tube | fur | #8a5a2b | front leg far | 38,88,3 39,110,2 40,131,1.4",
+    "tube | fur | #b88344 | front leg near | 44,88,3.5 45,110,2.3 46,131,1.6",
+    "poly | fur | #d4a359 | body torso | 21,104 27,108 45,91 43,80 33,83 23,93 | spots #593112",
+    "tube | fur | #b88344 | tail | 21,102 17,114 15,121,1",
+    "blob | fur | #38200d | tail tip | 14,123,2.5,1.5,15",
+    "tube | fur | #d4a359 | neck | 41,81,6.5 49,60,5.2 59,40,4 67,26,3 | stripes #593112",
+    "tube | fur | #4a280d | mane | 43,79,1 51,58,1 61,38,1 69,24,1",
+    "blob | fur | #d4a359 | head | 70,24,5,3,-25",
+    "blob | skin | #4a3b32 | muzzle | 74,26,3,2,-15",
+    "tube | skin | #222230 | tongue | 76,27 79,26,0.8",
+    "tube | fur | #593112 | ossicone left | 68,21,0.8 67,17,1",
+    "tube | fur | #593112 | ossicone right | 70,21,0.8 70,16,1",
+    "poly | fur | #b88344 | ear | 66,23 60,20 64,25"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "text": "a fox crossing the snowy field behind our house at dawn",
+ "title": "the morning visitor",
+ "reading": "A red fox with a thick brush tail trots across a vast, snow-covered field under the soft pink light of dawn.",
+ "format": "wide",
+ "time": "dawn",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "silent, crisp, still",
+ "energy": 0.1,
+ "palette": [
+  "#a8c0d8",
+  "#e8f0f8",
+  "#be5624",
+  "#ffb4a2",
+  "#3d2b1f"
+ ],
+ "light": {
+  "x": 0,
+  "y": 40,
+  "color": "#ffb4a2"
+ },
+ "layout": "The fox moves horizontally from left to right across the middle ground, set against a distant treeline and framed by a foreground fence line.",
+ "forms": [
+  {
+   "name": "distant treeline",
+   "role": "setting",
+   "shapes": [
+    "band | foliage | #4a6a8a | trees | 0,65 30,62 70,66 110,61 150,65"
+   ]
+  },
+  {
+   "name": "snowy field",
+   "role": "setting",
+   "shapes": [
+    "band | snow | #e8f0f8 | field | 0,70 50,75 100,72 150,75"
+   ]
+  },
+  {
+   "name": "fox",
+   "role": "focus",
+   "shapes": [
+    "tube | fur | #be5624 | tail | 95,65,4 115,72,7 130,68,3",
+    "blob | fur | #ffffff | tail-tip | 130,68,5,4,10",
+    "tube | fur | #be5624 | torso | 55,65,6 75,63,7 95,65,6",
+    "blob | fur | #ffffff | chest | 52,65,6,8,20",
+    "tube | fur | #be5624 | neck | 55,65,5 48,55,4",
+    "blob | fur | #be5624 | head | 45,50,7,5,-10",
+    "blob | fur | #be5624 | muzzle | 38,52,4,2.5,-10",
+    "poly | fur | #be5624 | ear-l | 42,45 38,35 46,42",
+    "poly | fur | #be5624 | ear-r | 48,45 52,35 50,42",
+    "tube | fur | #1a1a1a | leg-f1 | 58,70,2 58,88,1.2",
+    "tube | fur | #1a1a1a | leg-f2 | 62,68,2 65,85,1.2",
+    "tube | fur | #1a1a1a | leg-b1 | 90,70,2.5 88,88,1.5",
+    "tube | fur | #1a1a1a | leg-b2 | 95,68,2.5 98,85,1.5"
+   ]
+  },
+  {
+   "name": "fence",
+   "role": "setting",
+   "shapes": [
+    "tube | wood | #3d2b1f | post | 20,95,3 20,110,3",
+    "tube | wood | #3d2b1f | rail | 0,95,1.5 150,95,1.5"
+   ],
+   "scatter": {
+    "count": 4,
+    "x0": 0,
+    "y0": 95,
+    "x1": 150,
+    "y1": 95,
+    "far": 1
+   }
+  }
+ ]
+}

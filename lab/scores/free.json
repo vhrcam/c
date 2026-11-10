@@ -1,0 +1,79 @@
+{
+ "text": "feeling free",
+ "title": "feeling free",
+ "reading": "A lone figure leaps high on a breezy hilltop with arms stretched wide against a golden sky.",
+ "format": "wide",
+ "time": "golden",
+ "weather": "wind",
+ "backdrop": "sky",
+ "mood": "exhilarating peaceful open",
+ "energy": 0.85,
+ "palette": [
+  "#f7b05b",
+  " #f4845f",
+  " #3a5a32",
+  " #3b4d73",
+  " #2d2338"
+ ],
+ "light": {
+  "x": 20,
+  "y": 30,
+  "color": "#fcd581"
+ },
+ "layout": "A hilltop slopes across the lower third with the focus figure leaping on the right center against the vast golden sky.",
+ "forms": [
+  {
+   "name": "distant hills",
+   "role": "setting",
+   "shapes": [
+    "band | stone | #5a4b66 | far hills | 0,70 45,66 90,72 150,68"
+   ]
+  },
+  {
+   "name": "grassy ridge",
+   "role": "setting",
+   "shapes": [
+    "band | grass | #385e34 | foreground hill | 0,82 50,76 100,80 150,86",
+    "poly | grass | #487042 | hill slope | 10,80 60,74 110,78 150,85 150,100 0,100 | round"
+   ]
+  },
+  {
+   "name": "person leaping",
+   "role": "focus",
+   "shapes": [
+    "tube | skin | #d49a73 | far leg | 56,76,2.2 53,62,2.8 54,48,3.2",
+    "poly | cloth | #2b3a5c | far shoe | 56,76 60,78 57,80 54,78 | round",
+    "tube | cloth | #e6dbca | far sleeve | 48,28,2.2 42,22,2.0 34,16,1.8",
+    "blob | skin | #d49a73 | far hand | 33,15,2.2,1.8,-20",
+    "tube | cloth | #e6dbca | shirt torso | 56,48,4.2 55,38,4.5 53,28,4.0",
+    "poly | cloth | #3b4d73 | shorts | 50,45 61,45 62,54 49,54 | round",
+    "tube | skin | #e0a37e | near leg | 58,52,3.5 62,64,3.0 66,75,2.4",
+    "poly | cloth | #1f2a42 | near shoe | 66,75 72,76 70,79 64,78 | round",
+    "tube | skin | #e0a37e | neck | 53,28,2.0 52,23,1.8",
+    "poly | hair | #3d2417 | back hair | 46,20 50,14 56,18 52,25 | round",
+    "blob | skin | #e0a37e | head | 52,20,3.5,4.2,-15",
+    "poly | hair | #3d2417 | windblown hair | 44,18 40,12 48,15 45,22 | round",
+    "tube | skin | #c88460 | nose | 50,19,0.5 48,19,0.4",
+    "tube | skin | #8a4332 | smile mouth | 50,22,0.6 48,22,0.6",
+    "blob | skin | #2b1a10 | eye | 50,18,0.6,0.6,0",
+    "tube | cloth | #f0e6d8 | near sleeve | 55,28,2.5 64,22,2.2 74,16,2.0",
+    "blob | skin | #e0a37e | near hand | 75,15,2.5,2.0,20"
+   ]
+  },
+  {
+   "name": "birds in sky",
+   "role": "setting",
+   "shapes": [
+    "poly | feather | #2d2338 | wing silhouette | 110,25 114,21 118,25 114,23"
+   ],
+   "scatter": {
+    "count": 8,
+    "x0": 80,
+    "y0": 15,
+    "x1": 140,
+    "y1": 35,
+    "far": 0.4
+   }
+  }
+ ]
+}

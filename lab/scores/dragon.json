@@ -1,0 +1,75 @@
+{
+ "text": "a dragon sleeping on a pile of gold",
+ "title": "sleeping dragon",
+ "reading": "A great crimson dragon lies asleep, curled atop a towering mound of gold coins inside a dark stone cavern.",
+ "format": "wide",
+ "time": "golden",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "ancient serene treasure",
+ "energy": 0.2,
+ "palette": [
+  "#181424",
+  "#8c1b26",
+  "#ffd700",
+  "#d9c8a7",
+  "#4a1017"
+ ],
+ "light": {
+  "x": 75,
+  "y": 60,
+  "color": "#ffe580"
+ },
+ "layout": "Cavern stone backdrop filling the frame; a massive mound of glittering gold spans the lower central field (x=15 to 135, y=50 to 95); the coiled red dragon rests heavily on top of the pile with folded wings and its head pillowed near the front.",
+ "forms": [
+  {
+   "name": "cavern chamber",
+   "role": "setting",
+   "shapes": [
+    "band | stone | #181424 | wall | 0,40 30,35 75,30 120,35 150,40",
+    "band | stone | #120f1c | floor | 0,75 40,70 110,70 150,75"
+   ]
+  },
+  {
+   "name": "gold pile",
+   "role": "support",
+   "shapes": [
+    "poly | metal | #9e6f13 | treasure_base | 15,95 25,65 55,52 95,50 135,68 140,95",
+    "poly | metal | #d4a017 | treasure_mid | 20,95 32,68 60,56 90,54 125,72 135,95",
+    "poly | metal | #ffd700 | treasure_top | 25,95 38,72 65,60 88,58 118,75 130,95",
+    "blob | metal | #ffe55c | treasure_glow | 75,64,25,10,-5",
+    "blob | metal | #b8860b | chest | 115,78,8,5,-10",
+    "blob | metal | #e6b800 | coins_left | 22,85,12,6,15",
+    "blob | metal | #e6b800 | coins_right | 128,84,10,5,-15"
+   ]
+  },
+  {
+   "name": "sleeping dragon",
+   "role": "focus",
+   "shapes": [
+    "poly | leather | #3b0d13 | far_wing_membrane | 65,48 78,22 96,35 85,55",
+    "tube | bone | #7a634a | far_wing_arm | 65,48 78,22 96,35",
+    "tube | scales | #5c141c | far_hind_leg | 108,62,8 114,75,6 108,86,4.5",
+    "tube | scales | #5c141c | far_front_leg | 42,66,6 38,76,4.5 42,83,3.5",
+    "tube | scales | #8c1b26 | body_coil | 112,62,13 90,48,15 62,50,14 44,60,11.5",
+    "tube | scales | #d4824d | belly_underside | 88,56,9 65,57,8.5",
+    "poly | bone | #300a0f | spine_plates | 110,48 92,34 68,36 50,48 | round",
+    "tube | scales | #7a1822 | tail_coil | 114,64,7.5 125,76,6 121,88,4.5 104,91,3.5 82,90,2.8 65,92,2",
+    "poly | bone | #d9c8a7 | tail_spade | 65,92 57,91 63,94",
+    "tube | scales | #9e1f2d | near_hind_leg | 98,60,9.5 104,74,7 94,84,5",
+    "poly | scales | #7a1822 | near_hind_foot | 94,84 88,88 97,90 101,85",
+    "tube | scales | #9e1f2d | neck_curve | 48,58,11 38,64,9 35,74,7.5",
+    "blob | scales | #8c1b26 | head_base | 38,75,10.5,7,-15",
+    "blob | scales | #7a1822 | snout | 30,77,6,4.5,-10",
+    "tube | skin | #1c0407 | eye_closed | 33,74,0.7 37,75,0.7",
+    "tube | bone | #d9c8a7 | upper_horn | 42,70,2.5 54,58,1.6 62,54,0.8",
+    "tube | bone | #b8a686 | lower_horn | 44,73,2 53,65,1.2 59,62,0.6",
+    "tube | scales | #9e1f2d | near_front_leg | 46,68,6.5 50,78,5 42,83,4",
+    "poly | scales | #7a1822 | near_front_paw | 42,83 34,84 36,87 44,86",
+    "poly | leather | #4a1017 | near_wing_membrane | 75,46 58,24 88,16 104,30 96,50 | round",
+    "tube | bone | #d9c8a7 | near_wing_strut1 | 75,46 58,24 88,16",
+    "tube | bone | #d9c8a7 | near_wing_strut2 | 58,24 104,30"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "text": "me and her watching the sunset",
+ "title": "watching sunset",
+ "reading": "Two people sit close together on a grassy hill from behind, watching the warm sun sink behind distant hills.",
+ "format": "wide",
+ "time": "golden",
+ "weather": "cloud",
+ "backdrop": "sky",
+ "mood": "peaceful warm intimate nostalgia",
+ "energy": 0.2,
+ "palette": [
+  "#2b183b",
+  "#8c3b52",
+  "#e66b3b",
+  "#f9b248",
+  "#1c121e"
+ ],
+ "light": {
+  "x": 75,
+  "y": 50,
+  "color": "#f9b248"
+ },
+ "layout": "A low horizon line with distant mountains and a low sun. In the foreground, a sweeping dark grassy slope holds two figures sitting side-by-side facing away toward the sun.",
+ "forms": [
+  {
+   "name": "distant hills",
+   "role": "setting",
+   "shapes": [
+    "band | stone | #4a2840 | horizon_ridge | 0,62 40,58 85,56 120,60 150,62"
+   ]
+  },
+  {
+   "name": "setting sun",
+   "role": "setting",
+   "shapes": [
+    "blob | light | #f9b248 | sun_glow | 75,50,18,18,0",
+    "blob | light | #fff0aa | sun_core | 75,50,9,9,0"
+   ]
+  },
+  {
+   "name": "sunset clouds",
+   "role": "setting",
+   "shapes": [
+    "poly | cloud | #8c3b52 | cloud_top | 10,20 45,15 80,22 40,27 | round",
+    "poly | cloud | #b84a4c | cloud_mid | 80,28 120,23 145,31 100,35 | round",
+    "poly | cloud | #e66b3b | cloud_low | 20,38 65,35 90,41 45,43 | round"
+   ]
+  },
+  {
+   "name": "grassy hill",
+   "role": "setting",
+   "shapes": [
+    "band | grass | #1c121e | hill_slope | 0,80 50,75 100,77 150,82"
+   ]
+  },
+  {
+   "name": "me",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #1d1824 | leg_left | 60,78,4.5 52,80,3.8 48,83,3.2",
+    "tube | cloth | #1d1824 | leg_right | 66,78,4.5 70,82,3.8 74,84,3.2",
+    "tube | cloth | #2a2030 | torso | 64,80,7.5 65,68,7.0 67,56,6.0",
+    "tube | cloth | #2a2030 | arm_left | 60,58,2.8 54,66,2.3 57,75,2.0",
+    "tube | cloth | #2a2030 | arm_right | 73,58,2.8 76,67,2.3 78,74,2.0",
+    "tube | skin | #694038 | neck | 67,51,2.2 67,48,2.0",
+    "blob | skin | #694038 | head | 67,42,4.5,5.2,0",
+    "poly | hair | #140d16 | hair | 62,43 67,35 72,43 70,47 64,47 | round"
+   ]
+  },
+  {
+   "name": "her",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #261724 | leg_left | 74,78,4.0 70,81,3.5 67,83,3.0",
+    "tube | cloth | #261724 | leg_right | 80,78,4.0 86,81,3.5 90,83,3.0",
+    "tube | cloth | #4a2838 | torso | 78,80,6.8 76,69,6.2 74,58,5.5",
+    "tube | cloth | #4a2838 | arm_right | 80,60,2.5 85,68,2.1 82,76,1.8",
+    "tube | cloth | #4a2838 | arm_left | 70,60,2.5 68,67,2.1 72,74,1.8",
+    "tube | skin | #784840 | neck | 73,52,2.0 73,49,1.8",
+    "blob | skin | #784840 | head | 72,43,4.0,4.8,-18",
+    "poly | hair | #180a14 | hair | 67,42 72,36 77,41 79,56 71,60 | round"
+   ]
+  }
+ ]
+}

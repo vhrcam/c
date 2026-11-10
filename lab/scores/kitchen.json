@@ -1,0 +1,91 @@
+{
+ "text": "my grandmother's kitchen on a sunday morning",
+ "title": "sunday morning kitchen",
+ "reading": "an elderly woman sits peacefully at a wooden kitchen table in warm morning sunlight.",
+ "format": "wide",
+ "time": "golden",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "warm nostalgic peaceful gentle",
+ "energy": 0.2,
+ "palette": [
+  "#fceabb",
+  "#8c5a3c",
+  "#5b7365",
+  "#e6dacb",
+  "#3b281a"
+ ],
+ "light": {
+  "x": 105,
+  "y": 25,
+  "color": "#ffe8b3"
+ },
+ "layout": "wide indoor shot with a sunny window on the right casting golden light across a wooden table and seated grandmother on the left.",
+ "forms": [
+  {
+   "name": "kitchen_room",
+   "role": "setting",
+   "shapes": [
+    "poly | plaster | #ebdcc7 | back_wall | 0,0 150,0 150,72 0,72",
+    "band | wood | #4a3322 | wooden_floor | 0,72 150,72",
+    "poly | wood | #735741 | wainscot_trim | 0,68 150,68 150,72 0,72"
+   ]
+  },
+  {
+   "name": "window_and_light",
+   "role": "setting",
+   "shapes": [
+    "poly | wood | #3b281a | window_frame | 85,12 125,12 125,58 85,58",
+    "poly | glass | #fff6df | window_pane | 88,15 122,15 122,55 88,55",
+    "tube | wood | #3b281a | frame_mullion_v | 105,15,1 105,55,1",
+    "tube | wood | #3b281a | frame_mullion_h | 88,35,1 122,35,1",
+    "poly | cloth | #f5eee4 | curtain_left | 78,10 90,12 86,58 76,55 | round",
+    "poly | cloth | #f5eee4 | curtain_right | 120,12 132,10 134,55 124,58 | round",
+    "poly | light | #fff0c2 | morning_sunbeam | 90,18 120,18 150,95 55,95"
+   ]
+  },
+  {
+   "name": "wooden_table",
+   "role": "support",
+   "shapes": [
+    "poly | wood | #6b4c35 | table_top | 25,62 115,62 110,70 20,70",
+    "poly | wood | #4a3322 | table_apron | 23,70 112,70 112,74 23,74",
+    "tube | wood | #4a3322 | leg_front_left | 26,74,2.5 24,96,2",
+    "tube | wood | #4a3322 | leg_front_right | 108,74,2.5 110,96,2",
+    "tube | wood | #3b281a | leg_back_left | 31,70,2 30,88,1.6",
+    "tube | wood | #3b281a | leg_back_right | 103,70,2 104,88,1.6"
+   ]
+  },
+  {
+   "name": "grandmother",
+   "role": "focus",
+   "shapes": [
+    "poly | wood | #4a3322 | chair_back | 34,30 38,30 38,65 34,65",
+    "poly | cloth | #3b4d43 | skirt | 40,58 52,58 56,76 38,76 | round",
+    "tube | knit | #5b7365 | sweater_torso | 46,58,6 46,45,5.5 46,38,4",
+    "poly | cloth | #f2ede4 | apron | 42,42 50,42 52,72 40,72 | round",
+    "tube | skin | #e0bfa9 | neck | 46,38,2.5 46,33,2",
+    "blob | skin | #e0bfa9 | head | 46,28,4.5,5.5,0",
+    "poly | hair | #d9d9d9 | hair_mass | 42,27 46,21 50,27 48,32 42,32 | round",
+    "blob | hair | #cccccc | hair_bun | 41,25,2.5,2.5,0",
+    "tube | knit | #5b7365 | arm_left | 44,40,2.2 50,47,1.8 56,52,1.6",
+    "tube | knit | #5b7365 | arm_right | 48,40,2.2 54,46,1.8 60,51,1.6",
+    "blob | skin | #e0bfa9 | hand_left | 57,53,1.8,1.4,20",
+    "blob | skin | #e0bfa9 | hand_right | 61,52,1.8,1.4,-15"
+   ]
+  },
+  {
+   "name": "tabletop_breakfast",
+   "role": "support",
+   "shapes": [
+    "blob | ceramic | #f5f2eb | teacup | 64,52,2.5,2,0",
+    "tube | ceramic | #f5f2eb | cup_handle | 66.5,52,0.8 68,52,0.8",
+    "blob | metal | #d6c5b0 | teapot | 80,53,4.5,4,0",
+    "tube | metal | #b5a28c | teapot_handle | 84,49,1 84,57,1",
+    "tube | metal | #b5a28c | teapot_spout | 76,52,1 74,50,0.8",
+    "poly | food | #d18d47 | loaf_bread | 90,54 98,54 100,59 88,59 | round",
+    "blob | ceramic | #ffffff | butter_dish | 73,55,2,1.2,0"
+   ]
+  }
+ ]
+}

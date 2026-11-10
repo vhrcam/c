@@ -1,0 +1,102 @@
+{
+ "text": "me and my brother building a snowman in the front yard",
+ "title": "building a snowman",
+ "reading": "Two young brothers standing in a snowy yard putting the finishing touches on a cheerful snowman.",
+ "format": "wide",
+ "time": "day",
+ "weather": "snow",
+ "backdrop": "sky",
+ "mood": "playful nostalgic winter warmth",
+ "energy": 0.45,
+ "palette": [
+  "#d6e5f0",
+  "#8faec4",
+  "#c0392b",
+  "#27ae60",
+  "#f39c12"
+ ],
+ "light": {
+  "x": 130,
+  "y": 15,
+  "color": "#fff4e0"
+ },
+ "layout": "The snowman stands central-left in the snowy yard, flanked closely by the older brother on the left reaching out to adjust its branch arm and the younger brother on the right adjusting its carrot nose, with a cozy house and pine treeline in the soft background.",
+ "forms": [
+  {
+   "name": "far_trees",
+   "role": "setting",
+   "shapes": [
+    "band | foliage | #3b4e43 | treeline | 0,55 30,50 60,53 90,48 120,52 150,50"
+   ]
+  },
+  {
+   "name": "house",
+   "role": "setting",
+   "shapes": [
+    "poly | wood | #6e5041 | wall | 10,42 45,42 45,64 10,64",
+    "poly | wood | #3a261c | roof | 7,43 27,27 48,43",
+    "poly | glass | #e0f0f5 | window | 18,48 26,48 26,56 18,56"
+   ]
+  },
+  {
+   "name": "snow_yard",
+   "role": "setting",
+   "shapes": [
+    "band | snow | #e3edf5 | ground | 0,64 50,62 100,65 150,63"
+   ]
+  },
+  {
+   "name": "snowman",
+   "role": "focus",
+   "shapes": [
+    "blob | snow | #f0f6fa | base | 63,75,17,14,0",
+    "blob | snow | #f4f9fc | torso | 63,55,13,11,0",
+    "blob | snow | #f9fbfd | head | 63,38,9,8.5,0",
+    "tube | wood | #4a3222 | arm_right | 73,54 88,48 93,44",
+    "tube | wood | #4a3222 | arm_left | 52,54 38,48 33,43",
+    "blob | bone | #1a1a1a | eye_left | 60,36,1,1,0",
+    "blob | bone | #1a1a1a | eye_right | 65,36,1,1,0",
+    "tube | food | #e66012 | carrot_nose | 63,39 70,40,1.4",
+    "blob | bone | #1a1a1a | button1 | 63,49,1.1,1.1,0",
+    "blob | bone | #1a1a1a | button2 | 63,55,1.1,1.1,0",
+    "blob | bone | #1a1a1a | button3 | 63,61,1.1,1.1,0",
+    "poly | cloth | #9e2a2b | scarf | 55,44 71,44 70,48 55,48",
+    "poly | cloth | #9e2a2b | scarf_tail | 68,46 72,46 74,58 69,58",
+    "poly | felt | #2b2b2b | hat_brim | 52,31 74,31 74,33 52,33",
+    "poly | felt | #2b2b2b | hat_top | 56,19 70,19 70,31 56,31"
+   ]
+  },
+  {
+   "name": "brother",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #2b3a4a | leg_left | 40,76,3.2 41,64,3.8 42,54,4",
+    "tube | cloth | #2b3a4a | leg_right | 46,76,3.2 46,64,3.8 45,54,4",
+    "tube | cloth | #c0392b | torso | 43,54,5.5 44,41,6.5 44,36,6",
+    "blob | skin | #f5c29b | head | 44,27,4.2,4.8,0",
+    "poly | knit | #f39c12 | beanie | 39,27 49,27 47,20 41,20 | round",
+    "blob | skin | #f5c29b | ear | 40,27,1,1.4,0",
+    "blob | bone | #2c3e50 | eye | 46,26,0.7,0.7,0",
+    "tube | skin | #e0a37e | nose | 47,27 49,28,0.6",
+    "tube | cloth | #962d22 | arm_left | 43,37,2.4 37,45,2.1 35,51,1.9",
+    "tube | cloth | #c0392b | arm_right | 45,37,2.6 51,38,2.3 55,39,2",
+    "blob | knit | #f39c12 | mitten_right | 56,39,2,2,0"
+   ]
+  },
+  {
+   "name": "me",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #1f2d3d | leg_left | 82,76,2.8 82,65,3.2 81,56,3.5",
+    "tube | cloth | #1f2d3d | leg_right | 87,76,2.8 86,65,3.2 85,56,3.5",
+    "tube | cloth | #27ae60 | torso | 83,57,4.8 82,47,5.2 82,43,4.8",
+    "blob | skin | #f7d0b3 | head | 82,35,3.8,4.2,0",
+    "poly | knit | #2980b9 | beanie | 78,35 86,35 84,29 80,29 | round",
+    "blob | bone | #2c3e50 | eye | 80,34,0.6,0.6,0",
+    "tube | cloth | #219150 | arm_left | 80,44,2.2 74,42,1.9 70,41,1.7",
+    "blob | knit | #2980b9 | mitten_left | 69,41,1.7,1.7,0",
+    "tube | cloth | #219150 | arm_right | 84,44,2.2 87,50,1.9 88,55,1.7"
+   ]
+  }
+ ]
+}

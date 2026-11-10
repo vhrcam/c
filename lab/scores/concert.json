@@ -1,0 +1,81 @@
+{
+ "text": "my first concert, the whole crowd singing",
+ "title": "first chorus",
+ "reading": "A silhouetted audience sings together as one, their hands raised toward the vibrant amber and purple glow of a concert stage.",
+ "format": "wide",
+ "time": "night",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "euphoric, communal, electric",
+ "energy": 0.95,
+ "palette": [
+  "#0a0a0c",
+  "#ff4d00",
+  "#7b2cbf",
+  "#ffd166",
+  "#1a1a1a"
+ ],
+ "light": {
+  "x": 75,
+  "y": -50,
+  "color": "#ffd166"
+ },
+ "layout": "A dominant figure in the foreground right and another to the left stand before a massive, silhouetted crowd that stretches toward the glowing stage lights at the top.",
+ "forms": [
+  {
+   "name": "stage atmosphere",
+   "role": "setting",
+   "shapes": [
+    "poly | light | #7b2cbf | wash | 0,0 150,0 150,100 0,100",
+    "poly | light | #ff4d00 | beam_left | 10,0 50,0 75,100 35,100",
+    "poly | light | #ff4d00 | beam_right | 100,0 140,0 115,100 75,100"
+   ]
+  },
+  {
+   "name": "distant crowd",
+   "role": "setting",
+   "shapes": [
+    "tube | cloth | #050505 | torso | 0,0,6 0,-15,5 0,-25,6",
+    "blob | hair | #000000 | head | 0,-33,4,5,0",
+    "tube | skin | #151515 | arm_l | -4,-20,1.5 -8,-35,1.2 -10,-50,1",
+    "tube | skin | #151515 | arm_r | 4,-20,1.5 8,-35,1.2 10,-50,1"
+   ],
+   "scatter": {
+    "count": 60,
+    "x0": 0,
+    "y0": 60,
+    "x1": 150,
+    "y1": 105,
+    "far": 0.3
+   }
+  },
+  {
+   "name": "nearby fan",
+   "role": "support",
+   "shapes": [
+    "tube | cloth | #121212 | torso | 35,105,12 37,80,10 35,65,11",
+    "tube | skin | #4a342a | neck | 35,65,3 35,58,2.5",
+    "blob | hair | #1a110a | hair | 35,50,7,8.5,0",
+    "tube | skin | #4a342a | arm_up | 42,70,3 50,50,2.5 55,30,2",
+    "blob | skin | #4a342a | hand | 55,27,3,4,15"
+   ]
+  },
+  {
+   "name": "foreground singer",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #1a1a1a | torso | 90,105,13 92,80,11 90,65,12",
+    "tube | skin | #5c4033 | neck | 90,65,3.5 90,58,3",
+    "blob | skin | #5c4033 | head | 90,50,9,10,0",
+    "poly | hair | #0d0d0d | hair | 81,50 90,38 99,50 95,65 85,65 | round",
+    "tube | skin | #3d2b22 | eye_l | 87,48 88,48",
+    "tube | skin | #3d2b22 | eye_r | 93,48 92,48",
+    "blob | skin | #1a0a05 | mouth | 90,56,3,2,0",
+    "tube | skin | #5c4033 | arm_l | 81,72,4 70,55,3.5 60,35,3",
+    "tube | skin | #5c4033 | arm_r | 100,72,4 110,55,3.5 120,35,3",
+    "blob | skin | #5c4033 | hand_l | 60,32,3.5,4.5,10",
+    "blob | skin | #5c4033 | hand_r | 120,32,3.5,4.5,-10"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "text": "my cat sleeping on the windowsill on a rainy afternoon",
+ "title": "rainy window nap",
+ "reading": "a warm orange cat lies fast asleep curled on a cushion upon a wooden windowsill while rain streaks the window pane outside.",
+ "format": "wide",
+ "time": "day",
+ "weather": "rain",
+ "backdrop": "room",
+ "mood": "cozy peaceful quiet",
+ "energy": 0.15,
+ "palette": [
+  "#241d18 knights wall brown",
+  "#5a6b78 cool rain sky",
+  "#d97736 ginger cat fur",
+  "#a69585 soft cushion neutral",
+  "#3a4d40 misty foliage"
+ ],
+ "light": {
+  "x": 75,
+  "y": 35,
+  "color": "#9bb0c1"
+ },
+ "layout": "A wide indoor view of a wooden window frame looking out at a rain-soaked garden, centered around a ginger cat curled up asleep on a cushion along the sill.",
+ "forms": [
+  {
+   "name": "outside_garden",
+   "role": "setting",
+   "shapes": [
+    "band | foliage | #3a4d40 | garden | 0,55 40,50 80,52 120,48 150,53",
+    "band | cloud | #788591 | overcast_sky | 0,20 75,25 150,20"
+   ]
+  },
+  {
+   "name": "window_frame_and_pane",
+   "role": "setting",
+   "shapes": [
+    "poly | glass | #5a6b78 | window_glass | 20,10 130,10 130,75 20,75",
+    "tube | wood | #2a221d | mullion_v | 75,10,2 75,75,2",
+    "tube | wood | #2a221d | mullion_h | 20,42,2 130,42,2",
+    "poly | wood | #241d18 | frame_top | 0,0 150,0 150,10 0,10",
+    "poly | wood | #241d18 | frame_left | 0,10 20,10 20,75 0,75",
+    "poly | wood | #241d18 | frame_right | 130,10 150,10 150,75 130,75",
+    "poly | wood | #3b3028 | sill_top | 15,75 135,75 138,83 12,83",
+    "poly | wood | #241d18 | sill_front | 12,83 138,83 138,100 12,100",
+    "tube | water | #8ba0b2 | raindrop_1 | 35,20,0.5 35,32,0.3",
+    "tube | water | #8ba0b2 | raindrop_2 | 55,30,0.6 55,48,0.3",
+    "tube | water | #8ba0b2 | raindrop_3 | 95,18,0.5 95,34,0.3",
+    "tube | water | #8ba0b2 | raindrop_4 | 115,35,0.6 115,52,0.3"
+   ]
+  },
+  {
+   "name": "sleeping_cat",
+   "role": "focus",
+   "shapes": [
+    "poly | cloth | #a69585 | cushion | 45,73 105,73 107,77 43,77 | round",
+    "poly | fur | #d97736 | flank | 55,67 65,58 85,56 98,63 95,73 75,75 58,72 | round",
+    "blob | fur | #c46424 | hind_quarter | 86,65,10,8,15",
+    "tube | fur | #d97736 | back_curve | 92,66,7 78,59,8 64,61,7",
+    "tube | fur | #b35317 | tail | 92,67,2.5 97,72,2.2 88,74,2.0 76,74,1.8",
+    "blob | fur | #d97736 | head | 56,67,6.5,5.8,-10",
+    "blob | fur | #e09053 | muzzle | 53,69,3,2.5,-10",
+    "poly | fur | #b35317 | ear_left | 54,61 51,55 58,59",
+    "poly | fur | #b35317 | ear_right | 60,61 60,54 64,60",
+    "blob | fur | #f0c29e | paw_front | 56,72,2.5,2,0",
+    "tube | skin | #4a2810 | closed_eye | 53,67,0.4 55,68,0.4"
+   ]
+  },
+  {
+   "name": "curtains",
+   "role": "support",
+   "shapes": [
+    "poly | cloth | #4a3b32 | curtain_left | 0,0 25,0 18,100 0,100 | round",
+    "poly | cloth | #4a3b32 | curtain_right | 125,0 150,0 150,100 132,100 | round"
+   ]
+  }
+ ]
+}

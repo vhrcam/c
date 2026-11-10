@@ -1,0 +1,79 @@
+{
+ "text": "the old lighthouse on the rocks during a storm",
+ "title": "the old lighthouse",
+ "reading": "A tall stone lighthouse stands resolute on sharp jagged rocks amid dark churning storm waves at night.",
+ "format": "tall",
+ "time": "night",
+ "weather": "storm",
+ "backdrop": "sky",
+ "mood": "dramatic solitary fierce",
+ "energy": 0.85,
+ "palette": [
+  "#121820 shroud-dark-blue",
+  "#212d3b stormy-slate",
+  "#4a5b6e churning-foam",
+  "#8c9cae wet-stone",
+  "#ffeaa7 beacon-glow"
+ ],
+ "light": {
+  "x": 50,
+  "y": 36,
+  "color": "#ffeaa7"
+ },
+ "layout": "A vertical composition featuring a stormy ocean at the base, jagged dark rocks supporting a tall central stone lighthouse whose beacon shines brightly from the lantern room.",
+ "forms": [
+  {
+   "name": "distant storm sea",
+   "role": "setting",
+   "shapes": [
+    "band | water | #121820 | horizon_sea | 0,115 25,112 50,116 75,113 100,115"
+   ]
+  },
+  {
+   "name": "rocky outcrop",
+   "role": "support",
+   "shapes": [
+    "poly | stone | #212833 | rock_base_1 | 10,142 25,120 45,108 50,105 75,112 90,125 100,145 100,150 0,150",
+    "poly | stone | #171c24 | rock_detail_1 | 15,138 30,118 42,122 35,148",
+    "poly | stone | #2c3542 | rock_detail_2 | 38,112 52,104 65,115 58,138",
+    "poly | stone | #13171f | rock_detail_3 | 60,116 78,110 88,128 72,145"
+   ]
+  },
+  {
+   "name": "crashing waves",
+   "role": "setting",
+   "shapes": [
+    "band | water | #2a3747 | churning_foreground | 0,132 20,128 40,134 60,129 80,133 100,128",
+    "poly | water | #4a5b6e | wave_crest_left | 5,134 18,124 28,128 20,138",
+    "poly | water | #687a8e | wave_crest_right | 65,136 80,126 92,130 82,142"
+   ]
+  },
+  {
+   "name": "old lighthouse",
+   "role": "focus",
+   "shapes": [
+    "poly | stone | #353c45 | tower_shadow_base | 41,106 59,106 57,48 43,48",
+    "poly | brick | #545c66 | tower_main_body | 42,106 58,106 56,48 44,48",
+    "tube | stone | #262b32 | masonry_band_bottom | 41.5,102,1.5 58.5,102,1.5",
+    "tube | stone | #2e343c | masonry_band_mid | 42.5,75,1.5 57.5,75,1.5",
+    "tube | stone | #39404a | masonry_band_top | 43.5,50,1.5 56.5,50,1.5",
+    "poly | stone | #454d57 | gallery_corbel | 42,48 58,48 60,43 40,43",
+    "poly | metal | #1e2228 | gallery_deck | 39,43 61,43 61,41 39,41",
+    "tube | metal | #13161a | gallery_railing | 39,37,0.5 61,37,0.5",
+    "tube | metal | #13161a | railing_post_left | 40,41,0.5 40,37,0.5",
+    "tube | metal | #13161a | railing_post_mid | 50,41,0.5 50,37,0.5",
+    "tube | metal | #13161a | railing_post_right | 60,41,0.5 60,37,0.5",
+    "poly | glass | #788a9c | lantern_room_glass | 43,41 57,41 56,31 44,31",
+    "blob | light | #ffeaa7 | lantern_beacon | 50,36,4,4,0",
+    "tube | metal | #181b1f | lantern_mullion_1 | 46,41,0.5 46,31,0.5",
+    "tube | metal | #181b1f | lantern_mullion_2 | 50,41,0.5 50,31,0.5",
+    "tube | metal | #181b1f | lantern_mullion_3 | 54,41,0.5 54,31,0.5",
+    "poly | metal | #252a30 | lantern_dome | 43,31 57,31 50,22 | round",
+    "tube | metal | #181b1f | spire_lightning_rod | 50,22,0.6 50,16,0.2",
+    "poly | wood | #241e1a | wooden_door | 47,106 53,106 53,96 47,96 | round",
+    "blob | glass | #ffeaa7 | tower_window_lower | 50,82,1.5,2.5,0",
+    "blob | glass | #ffeaa7 | tower_window_upper | 50,60,1.5,2.5,0"
+   ]
+  }
+ ]
+}

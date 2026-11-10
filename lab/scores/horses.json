@@ -1,0 +1,100 @@
+{
+ "text": "riding horses on the beach",
+ "title": "golden shore gallop",
+ "reading": "A rider on a chestnut horse gallops through the shallow surf along a wide sunset beach, leaving distant riders behind in the haze.",
+ "format": "wide",
+ "time": "golden",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "expansive and rhythmic",
+ "energy": 0.7,
+ "palette": [
+  "#4a332d",
+  "#f5f5f5",
+  "#d4b595",
+  "#2e4a62",
+  "#e88d67"
+ ],
+ "light": {
+  "x": 160,
+  "y": 10,
+  "color": "#ffccaa"
+ },
+ "layout": "A wide coastal scene with the main horse and rider at the right third, mid-gallop in the surf, with smaller riders trailing in the distance to the left.",
+ "forms": [
+  {
+   "name": "distant_water",
+   "role": "setting",
+   "shapes": [
+    "band | water | #2e4a62 | ocean | 0,65 150,65"
+   ]
+  },
+  {
+   "name": "shallows",
+   "role": "setting",
+   "shapes": [
+    "band | water | #4a7c9e | surf | 0,72 60,70 150,75"
+   ]
+  },
+  {
+   "name": "beach_sand",
+   "role": "setting",
+   "shapes": [
+    "band | sand | #d4b595 | shore | 0,80 150,80"
+   ]
+  },
+  {
+   "name": "distant_riders",
+   "role": "support",
+   "shapes": [
+    "tube | fur | #5a4632 | body | 30,65,4 45,63,4",
+    "tube | fur | #5a4632 | neck | 45,63,2.5 48,58,2",
+    "blob | fur | #5a4632 | head | 50,57,3,2,20",
+    "tube | fur | #5a4632 | leg_f | 43,64,1 45,75,0.8",
+    "tube | fur | #5a4632 | leg_b | 32,65,1 30,75,0.8",
+    "tube | cloth | #eeeeee | shirt | 40,60,1.8 40,52,1.5",
+    "blob | skin | #d2b48c | head | 40,50,1.8,2,0"
+   ],
+   "scatter": {
+    "count": 2,
+    "x0": 10,
+    "y0": 62,
+    "x1": 50,
+    "y1": 68,
+    "far": 0.6
+   }
+  },
+  {
+   "name": "horse_focus",
+   "role": "focus",
+   "shapes": [
+    "tube | fur | #4a332d | body | 70,60,8 85,62,9 100,60,8.5 110,55,7",
+    "tube | fur | #4a332d | neck | 110,55,5 115,48,4 118,38,3",
+    "blob | fur | #4a332d | head | 122,34,6,3.5,25",
+    "tube | fur | #4a332d | leg_fn | 105,60,3 107,75,2.2 109,90,1.8",
+    "tube | fur | #4a332d | leg_ff | 110,58,3 112,72,2.2 114,87,1.8",
+    "tube | fur | #4a332d | leg_bn | 75,62,3.8 72,78,2.6 68,92,2",
+    "tube | fur | #4a332d | leg_bf | 80,60,3.8 82,75,2.6 86,89,2",
+    "blob | horn | #111111 | hoof_fn | 109,90,2.5,1.5,0",
+    "blob | horn | #111111 | hoof_ff | 114,87,2.5,1.5,0",
+    "blob | horn | #111111 | hoof_bn | 68,92,2.5,1.5,0",
+    "blob | horn | #111111 | hoof_bf | 86,89,2.5,1.5,0",
+    "tube | hair | #221100 | tail | 70,60,2 60,75,1.5 55,85,1",
+    "poly | hair | #221100 | mane | 110,55 118,38 114,35 108,45",
+    "tube | water | #ffffff | splash | 105,90,1 115,88,4 125,85,1"
+   ]
+  },
+  {
+   "name": "rider_focus",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #f5f5f5 | shirt | 90,50,4 90,38,3.5 92,30,3",
+    "blob | skin | #d2b48c | head | 92,25,3.5,4,0",
+    "poly | hair | #ffd700 | hair | 92,21 88,27 96,27 94,21",
+    "tube | cloth | #f5f5f5 | arm | 90,34,1.5 100,42,1.2 112,44,1",
+    "tube | leather | #3d2b1f | leg | 90,50,3.2 98,62,2.8 95,72,2.2",
+    "tube | leather | #221100 | reins | 112,44,0.3 120,40,0.3"
+   ]
+  }
+ ]
+}

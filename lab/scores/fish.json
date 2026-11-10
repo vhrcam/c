@@ -1,0 +1,88 @@
+{
+ "text": "my dad teaching me to fish off the dock at sunrise",
+ "title": "teaching me to fish",
+ "reading": "A father and child sitting together at the edge of a wooden dock, holding fishing rods as the sun rises over calm water.",
+ "format": "wide",
+ "time": "dawn",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "warm nostalgic peaceful",
+ "energy": 0.2,
+ "palette": [
+  "#f4a261",
+  "#e76f51",
+  "#2a9d8f",
+  "#264653",
+  "#e9c46a"
+ ],
+ "light": {
+  "x": 130,
+  "y": 45,
+  "color": "#ffdda1"
+ },
+ "layout": "Off-center composition with father and child sitting on the right edge of a wooden pier stretching from bottom-left to right, overlooking serene water.",
+ "forms": [
+  {
+   "name": "distant shoreline",
+   "role": "setting",
+   "shapes": [
+    "band | foliage | #1f3a38 | treeline | 0,55 30,53 70,54 110,52 150,55"
+   ]
+  },
+  {
+   "name": "lake water",
+   "role": "setting",
+   "shapes": [
+    "band | water | #264653 | lake | 0,55 150,55"
+   ]
+  },
+  {
+   "name": "rising sun",
+   "role": "setting",
+   "shapes": [
+    "blob | light | #ffdda1 | sun | 130,48,10,10,0"
+   ]
+  },
+  {
+   "name": "wooden dock",
+   "role": "setting",
+   "shapes": [
+    "poly | wood | #3d2b1f | deck | 0,85 150,75 150,100 0,100",
+    "tube | wood | #2a1d15 | post left | 20,84,3 20,100,3",
+    "tube | wood | #2a1d15 | post right | 100,78,3 100,100,3"
+   ]
+  },
+  {
+   "name": "father",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #2b4c7e | torso | 102,78,7 100,60,6",
+    "poly | hair | #3a2e2b | hair | 96,43 102,42 105,47 98,48",
+    "blob | skin | #d99b73 | head | 100,47,4,4.5,-10",
+    "tube | cloth | #e76f51 | sleeve left | 99,57,2.5 108,66,2.2",
+    "tube | skin | #d99b73 | arm left | 108,66,2.2 114,64,1.8",
+    "tube | cloth | #e76f51 | sleeve right | 101,57,2.5 106,60,2.2",
+    "tube | skin | #d99b73 | arm right | 106,60,2.2 110,63,1.8",
+    "tube | cloth | #1d2a44 | leg left | 104,78,4 105,92,3.5",
+    "tube | cloth | #1d2a44 | leg right | 99,78,4 98,92,3.5",
+    "tube | metal | #8d99ae | dad fishing rod | 110,63,0.5 140,30,0.2"
+   ]
+  },
+  {
+   "name": "child",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #e9c46a | torso | 115,80,4.5 114,68,4",
+    "poly | hair | #5c3d2e | hair | 111,54 116,53 118,58 112,59",
+    "blob | skin | #e0a98b | head | 114,57,3,3.5,-5",
+    "tube | cloth | #e9c46a | sleeve left | 114,66,1.8 118,72,1.5",
+    "tube | skin | #e0a98b | arm left | 118,72,1.5 120,70,1.2",
+    "tube | cloth | #e9c46a | sleeve right | 114,66,1.8 116,70,1.5",
+    "tube | skin | #e0a98b | arm right | 116,70,1.5 119,71,1.2",
+    "tube | cloth | #2a9d8f | leg left | 116,80,2.8 117,90,2.3",
+    "tube | cloth | #2a9d8f | leg right | 113,80,2.8 112,90,2.3",
+    "tube | metal | #b8c0c2 | child fishing rod | 120,70,0.4 145,45,0.2"
+   ]
+  }
+ ]
+}

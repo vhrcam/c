@@ -1,0 +1,88 @@
+{
+ "text": "my little brother blowing out his birthday candles",
+ "title": "birthday candles",
+ "reading": "A young boy wearing a party hat leans over a glowing birthday cake, eyes wide and lips pursed to blow out the flickering candles.",
+ "format": "square",
+ "time": "night",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "warm festive intimate joyful",
+ "energy": 0.45,
+ "palette": [
+  "#1a1015",
+  "#3d2314",
+  "#d94b4b",
+  "#f4c5a3",
+  "#ffea75"
+ ],
+ "light": {
+  "x": 60,
+  "y": 60,
+  "color": "#ffea75"
+ },
+ "layout": "The child sits centrally behind a dining table, leaning forward over a lit birthday cake placed at center foreground. Candle flames illuminate his face from below against a dark room backdrop.",
+ "forms": [
+  {
+   "name": "dim_room",
+   "role": "setting",
+   "shapes": [
+    "band | wood | #1a1015 | back_wall | 0,0 120,0",
+    "poly | wood | #261720 | doorframe | 10,10 35,10 35,78 10,78",
+    "poly | paper | #2e1d28 | framed_picture | 85,20 110,20 110,45 85,45"
+   ]
+  },
+  {
+   "name": "little_brother",
+   "role": "focus",
+   "shapes": [
+    "blob | hair | #3a2216 | hair_back | 60,28,14,15,0",
+    "tube | cloth | #d94b4b | torso | 60,72,12 60,52,10 60,46,9",
+    "poly | cloth | #bf3b3b | sleeve_left | 51,46 38,56 43,60 53,50 | round",
+    "tube | skin | #f4c5a3 | arm_left | 40,58,2.5 48,72,2",
+    "blob | skin | #f4c5a3 | hand_left | 49,73,3,2.5,10",
+    "poly | cloth | #bf3b3b | sleeve_right | 69,46 82,56 77,60 67,50 | round",
+    "tube | skin | #f4c5a3 | arm_right | 80,58,2.5 72,72,2",
+    "blob | skin | #f4c5a3 | hand_right | 71,73,3,2.5,-10",
+    "tube | skin | #f4c5a3 | neck | 60,46,4.5 60,39,4",
+    "blob | skin | #f4c5a3 | head | 60,31,12,13,0",
+    "poly | hair | #3a2216 | hair_fringe | 48,24 60,20 72,24 68,29 52,29 | round",
+    "blob | hair | #f4c5a3 | ear_left | 47,32,2,3,-10",
+    "blob | hair | #f4c5a3 | ear_right | 73,32,2,3,10",
+    "blob | skin | #1e100a | eye_left | 54,30,1.2,1.8,0",
+    "blob | skin | #1e100a | eye_right | 66,30,1.2,1.8,0",
+    "tube | skin | #e2ab87 | nose | 60,30,0.8 60,35,1.2",
+    "blob | skin | #c96b5d | mouth_blowing | 60,39,2.2,2.8,0",
+    "poly | paper | #4ba3d9 | party_hat | 60,5 47,22 73,22 | round",
+    "blob | paper | #ffea75 | hat_pom_pom | 60,4,2.5,2.5,0"
+   ]
+  },
+  {
+   "name": "dining_table",
+   "role": "setting",
+   "shapes": [
+    "band | wood | #3d2314 | table_surface | 0,76 120,76",
+    "poly | cloth | #e6dace | table_runner | 30,76 90,76 95,120 25,120"
+   ]
+  },
+  {
+   "name": "birthday_cake",
+   "role": "focus",
+   "shapes": [
+    "blob | ceramic | #ffffff | cake_plate | 60,86,28,7,0",
+    "poly | food | #4a2a18 | cake_base | 42,72 78,72 80,84 40,84 | round",
+    "poly | food | #fce8d5 | frosting_layer | 41,71 79,71 80,77 40,77 | round",
+    "blob | food | #e85a8a | icing_top | 60,71,19,4,0",
+    "tube | plastic | #e85a5a | candle_1 | 48,70,1 48,61,0.8",
+    "blob | fire | #ffea75 | flame_1 | 48,58,1.5,2.5,0",
+    "tube | plastic | #6ba6e8 | candle_2 | 54,69,1 54,60,0.8",
+    "blob | fire | #ffea75 | flame_2 | 54,57,1.5,2.5,0",
+    "tube | plastic | #e8d06b | candle_3 | 60,68,1 60,59,0.8",
+    "blob | fire | #ffea75 | flame_3 | 60,56,1.5,2.5,0",
+    "tube | plastic | #75e896 | candle_4 | 66,69,1 66,60,0.8",
+    "blob | fire | #ffea75 | flame_4 | 66,57,1.5,2.5,0",
+    "tube | plastic | #c875e8 | candle_5 | 72,70,1 72,61,0.8",
+    "blob | fire | #ffea75 | flame_5 | 72,58,1.5,2.5,0"
+   ]
+  }
+ ]
+}

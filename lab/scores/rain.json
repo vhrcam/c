@@ -1,0 +1,117 @@
+{
+ "text": "walking home together in the rain through the city at night",
+ "title": "walking home in rain",
+ "reading": "Two figures walk close together under a shared umbrella down a wet, glowing city street at night.",
+ "format": "wide",
+ "time": "night",
+ "weather": "rain",
+ "backdrop": "sky",
+ "mood": "tender quiet reflective warm",
+ "energy": 0.35,
+ "palette": [
+  "#0a0d1a",
+  "#1b263b",
+  "#e0a96d",
+  "#c85a32",
+  "#4a6fa5"
+ ],
+ "light": {
+  "x": 75,
+  "y": 30,
+  "color": "#f0c888"
+ },
+ "layout": "Two central figures placed around x=70-85 walking away down the center lane, framed by towering dark city architecture on left and right, with glowing reflections stretching forward across the wet asphalt.",
+ "forms": [
+  {
+   "name": "wet street",
+   "role": "setting",
+   "shapes": [
+    "band | asphalt | #101420 | ground road | 0,64 50,60 100,60 150,64",
+    "band | water | #1e2942 | reflection zone | 0,72 75,68 150,72",
+    "poly | light | #e0a96d | streetlight reflection | 40,65 52,65 60,98 35,98 | round",
+    "poly | light | #c85a32 | neon store reflection | 110,65 130,65 145,98 105,98 | round"
+   ]
+  },
+  {
+   "name": "left city buildings",
+   "role": "setting",
+   "shapes": [
+    "poly | brick | #0d111d | building wall left | 0,10 48,18 48,64 0,67",
+    "poly | glass | #f5ab56 | illuminated window upper | 12,22 24,24 24,34 12,32",
+    "poly | glass | #e67e43 | illuminated window lower | 28,28 38,30 38,44 28,42",
+    "poly | wood | #211915 | shop awning | 5,52 45,54 48,60 2,58"
+   ]
+  },
+  {
+   "name": "right city buildings",
+   "role": "setting",
+   "shapes": [
+    "poly | concrete | #0a0e17 | building wall right | 102,15 150,8 150,67 102,63",
+    "poly | glass | #4a6fa5 | office light strip | 110,22 142,17 142,26 110,31",
+    "poly | light | #c85a32 | glowing sign board | 112,38 135,34 135,46 112,50"
+   ]
+  },
+  {
+   "name": "street lantern",
+   "role": "support",
+   "shapes": [
+    "tube | metal | #252e3d | post stem | 45,63,1.5 46,32,1.2 48,22,1",
+    "blob | light | #ffe08a | glowing lantern bulb | 48,21,5,5,0"
+   ]
+  },
+  {
+   "name": "left walker",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #111827 | left leg | 71,72,2.2 70,80,1.9 69,87,1.5",
+    "tube | cloth | #111827 | right leg | 74,72,2.2 76,80,1.9 77,86,1.5",
+    "blob | leather | #0f172a | left shoe | 69,87,2.5,1.5,-10",
+    "blob | leather | #0f172a | right shoe | 77,86,2.5,1.5,10",
+    "tube | cloth | #1f2937 | coat body | 73,72,4.5 73,58,4 74,50,3.5",
+    "tube | skin | #d4a373 | neck | 74,50,1.2 74,46,1.2",
+    "blob | skin | #d4a373 | head back | 74,43,3.5,4,0",
+    "poly | hair | #1c130e | short dark hair | 71,40 77,40 77,44 71,44 | round",
+    "tube | cloth | #1f2937 | right arm raising umbrella | 76,52,1.8 79,46,1.4 78,38,1"
+   ]
+  },
+  {
+   "name": "right walker",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #3b101a | left leg | 80,74,2 80,82,1.6 79,87,1.3",
+    "tube | cloth | #3b101a | right leg | 84,74,2 85,82,1.6 86,87,1.3",
+    "blob | leather | #1a090d | left boot | 79,87,2.2,1.4,-5",
+    "blob | leather | #1a090d | right boot | 86,87,2.2,1.4,5",
+    "poly | cloth | #721f30 | trench coat torso and skirt | 78,51 84,52 86,74 77,74 | round",
+    "blob | skin | #e0b084 | head back | 81,45,3.2,3.8,5",
+    "poly | hair | #4a2c11 | long flowing hair | 77,43 84,43 85,56 76,54 | round",
+    "tube | cloth | #721f30 | left arm holding companion | 81,54,1.6 77,56,1.4 75,56,1.2"
+   ]
+  },
+  {
+   "name": "shared umbrella",
+   "role": "focus",
+   "shapes": [
+    "tube | metal | #8d99ae | umbrella central stick | 78,38,0.4 78,30,0.4",
+    "poly | plastic | #b91c1c | umbrella canopy | 60,32 78,21 96,32 90,34 78,32 66,34",
+    "tube | metal | #1f2937 | rib left frame | 78,22,0.3 62,32,0.2",
+    "tube | metal | #1f2937 | rib right frame | 78,22,0.3 94,32,0.2"
+   ]
+  },
+  {
+   "name": "falling rain droplets",
+   "role": "setting",
+   "shapes": [
+    "tube | water | #a0c4ff | rain streak | 0,0,0.3 0,4,0.3"
+   ],
+   "scatter": {
+    "count": 45,
+    "x0": 5,
+    "y0": 5,
+    "x1": 145,
+    "y1": 90,
+    "far": 0.6
+   }
+  }
+ ]
+}

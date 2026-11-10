@@ -1,0 +1,87 @@
+{
+ "text": "the lake behind my grandparents' cabin where we spent every summer",
+ "title": "summer lake cabin",
+ "reading": "A weathered wooden dock reaches into a still, golden lake reflecting the far treeline under a soft summer sky.",
+ "format": "wide",
+ "time": "golden",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "nostalgic, peaceful, warm",
+ "energy": 0.2,
+ "palette": [
+  "#2d3e50",
+  "#5d8aa8",
+  "#8b5a2b",
+  "#ffcc66",
+  "#1e3020"
+ ],
+ "light": {
+  "x": 140,
+  "y": 20,
+  "color": "#ffcc66"
+ },
+ "layout": "The far treeline divides the frame horizontally, with the lake filling the center and a perspective dock extending from the foreground into the water.",
+ "forms": [
+  {
+   "name": "far woods",
+   "role": "setting",
+   "shapes": [
+    "band | foliage | #1e3020 | treeline | 0,45 30,42 70,46 110,43 150,45"
+   ]
+  },
+  {
+   "name": "the lake",
+   "role": "setting",
+   "shapes": [
+    "band | water | #5d8aa8 | surface | 0,55 50,53 100,57 150,55"
+   ]
+  },
+  {
+   "name": "the bank",
+   "role": "setting",
+   "shapes": [
+    "band | grass | #3a5a40 | shore | 0,85 40,82 110,88 150,85"
+   ]
+  },
+  {
+   "name": "wooden dock",
+   "role": "focus",
+   "shapes": [
+    "tube | wood | #4a342a | piling_left | 45,85,2.5 45,55,2",
+    "tube | wood | #4a342a | piling_right | 105,85,2.5 105,55,2",
+    "poly | wood | #8b5a2b | deck_base | 40,55 110,55 125,95 25,95",
+    "tube | wood | #a0785a | plank_1 | 42,58,1.5 108,58,1.5",
+    "tube | wood | #a0785a | plank_2 | 40,65,1.6 110,65,1.6",
+    "tube | wood | #a0785a | plank_3 | 38,72,1.7 112,72,1.7",
+    "tube | wood | #a0785a | plank_4 | 36,79,1.8 114,79,1.8",
+    "tube | wood | #a0785a | plank_5 | 34,86,1.9 116,86,1.9",
+    "tube | wood | #a0785a | plank_6 | 32,93,2 118,93,2"
+   ]
+  },
+  {
+   "name": "sentinel pine",
+   "role": "support",
+   "shapes": [
+    "tube | bark | #3d2b1f | trunk | 15,95,4 18,60,3 17,10,1.5",
+    "poly | foliage | #1b2e1a | lower_boughs | 2,80 30,80 18,55",
+    "poly | foliage | #1b2e1a | middle_boughs | 5,60 28,60 18,35",
+    "poly | foliage | #1b2e1a | upper_boughs | 8,40 25,40 17,15"
+   ]
+  },
+  {
+   "name": "shore rocks",
+   "role": "setting",
+   "shapes": [
+    "blob | stone | #666666 | rock_edge | 130,90,5,3,15"
+   ],
+   "scatter": {
+    "count": 6,
+    "x0": 120,
+    "y0": 85,
+    "x1": 145,
+    "y1": 98,
+    "far": 0.6
+   }
+  }
+ ]
+}

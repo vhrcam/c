@@ -1,0 +1,59 @@
+{
+ "text": "holding my daughter for the first time",
+ "title": "first hold",
+ "reading": "A parent cradles a tiny, swaddled newborn baby close to their chest in a moment of quiet awe.",
+ "format": "square",
+ "time": "day",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "tender and serene",
+ "energy": 0.1,
+ "palette": [
+  "#fdfdfd",
+  "#f5d1b5",
+  "#e8e2d9",
+  "#a4b5c4"
+ ],
+ "light": {
+  "x": -30,
+  "y": 40,
+  "color": "#fffcf5"
+ },
+ "layout": "The parent is seated and centered, angled slightly to the left, with their head bowed toward the infant held in their lap and arms.",
+ "forms": [
+  {
+   "name": "hospital chair",
+   "role": "setting",
+   "shapes": [
+    "poly | cloth | #a4b5c4 | backrest | 20,50 100,50 110,120 10,120 | round",
+    "poly | cloth | #93a6b5 | armrest_left | 5,80 25,80 25,120 5,120 | round",
+    "poly | cloth | #93a6b5 | armrest_right | 95,80 115,80 115,120 95,120 | round"
+   ]
+  },
+  {
+   "name": "parent",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #e8e2d9 | torso | 60,115,16 60,90,14 62,65,13",
+    "tube | skin | #f5d1b5 | neck | 62,65,4.5 63,55,4",
+    "blob | skin | #f5d1b5 | head | 65,48,8.5,10,15",
+    "poly | hair | #4a3728 | hair_mass | 57,40 73,42 75,55 60,58 55,50 | round",
+    "tube | cloth | #e8e2d9 | arm_upper_left | 50,68,5.5 35,85,5",
+    "tube | cloth | #e8e2d9 | arm_lower_left | 35,85,5 50,105,4.5",
+    "tube | cloth | #e8e2d9 | arm_upper_right | 74,68,5.5 88,85,5",
+    "tube | cloth | #e8e2d9 | arm_lower_right | 88,85,5 72,105,4.5",
+    "blob | skin | #f5d1b5 | hand_left | 50,105,4,3,30",
+    "blob | skin | #f5d1b5 | hand_right | 72,105,4,3,-30"
+   ]
+  },
+  {
+   "name": "baby",
+   "role": "focus",
+   "shapes": [
+    "poly | cloth | #fdfdfd | swaddle_body | 48,102 74,102 76,116 46,116 | round",
+    "blob | skin | #f9e2d2 | baby_head | 61,96,4.5,5,10",
+    "poly | cloth | #fdfdfd | hat | 57,93 66,93 68,98 55,98 | round"
+   ]
+  }
+ ]
+}

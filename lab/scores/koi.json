@@ -1,0 +1,81 @@
+{
+ "text": "koi fish in a pond with lily pads",
+ "title": "pond life silence",
+ "reading": "A large, patterned koi fish glides through dark water between floating green lily pads.",
+ "format": "square",
+ "time": "day",
+ "weather": "clear",
+ "backdrop": "deep",
+ "mood": "tranquil, meditative",
+ "energy": 0.2,
+ "palette": [
+  "#1a3a4a",
+  "#ff4500",
+  "#f2f2f2",
+  "#2d5a27"
+ ],
+ "light": {
+  "x": 20,
+  "y": -50,
+  "color": "#ffffff"
+ },
+ "layout": "The koi fish dominates the center-right, while lily pads are scattered across the surface, framing the movement.",
+ "forms": [
+  {
+   "name": "pond floor",
+   "role": "setting",
+   "shapes": [
+    "band | sand | #0d1b24 | depth | 0,0 120,0"
+   ]
+  },
+  {
+   "name": "water surface",
+   "role": "setting",
+   "shapes": [
+    "band | water | #1a3a4a | surface | 0,5 30,3 60,6 90,4 120,5"
+   ]
+  },
+  {
+   "name": "lily pad",
+   "role": "support",
+   "shapes": [
+    "poly | foliage | #2d5a27 | leaf | 20,20 35,15 45,20 45,35 40,45 25,45 15,35 15,25 | round",
+    "poly | foliage | #1a3a4a | notch | 35,15 40,25 45,20"
+   ],
+   "scatter": {
+    "count": 6,
+    "x0": 10,
+    "y0": 10,
+    "x1": 100,
+    "y1": 100,
+    "far": 0.7
+   }
+  },
+  {
+   "name": "koi fish",
+   "role": "focus",
+   "shapes": [
+    "poly | skin | #ffffff | tail_fin | 95,60 115,45 120,60 115,75 95,60 | round",
+    "poly | skin | #ffffff | left_fin | 55,54 40,40 50,35 | round",
+    "poly | skin | #ffffff | right_fin | 55,66 40,80 50,85 | round",
+    "tube | scales | #f2f2f2 | body | 35,60,6 60,62,8 85,60,5 100,60,2",
+    "poly | scales | #ff4500 | pattern_head | 32,58 45,55 42,65 32,62 | round",
+    "poly | scales | #ff4500 | pattern_mid | 55,58 70,58 75,66 60,68 | round",
+    "poly | scales | #ff4500 | pattern_tail | 85,58 95,59 92,63 85,62 | round",
+    "blob | scales | #f2f2f2 | head | 35,60,8,7,-5",
+    "blob | bone | #000000 | eye_l | 32,56,1.2,1.2,0",
+    "blob | bone | #000000 | eye_r | 32,64,1.2,1.2,0",
+    "tube | skin | #f2f2f2 | whisker_l | 28,57,0.4 22,54,0.1",
+    "tube | skin | #f2f2f2 | whisker_r | 28,63,0.4 22,66,0.1"
+   ]
+  },
+  {
+   "name": "ripples",
+   "role": "support",
+   "shapes": [
+    "tube | water | #ffffff | ring1 | 40,60,20 60,60,20",
+    "tube | water | #ffffff | ring2 | 50,60,35 70,60,35"
+   ]
+  }
+ ]
+}

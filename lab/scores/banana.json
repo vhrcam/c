@@ -1,0 +1,53 @@
+{
+ "text": "a banana",
+ "title": "a banana",
+ "reading": "A bright yellow banana with a green stem rests on a warm tabletop.",
+ "format": "square",
+ "time": "day",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "simple clean quiet",
+ "energy": 0.2,
+ "palette": [
+  "#f3dc43",
+  "#485623",
+  "#f2efe9",
+  "#d4c5b3",
+  "#211a0e"
+ ],
+ "light": {
+  "x": 20,
+  "y": 10,
+  "color": "#fffaee"
+ },
+ "layout": "The banana spans the center frame horizontally, gently curving downward in the middle with its stem pointed up on the left.",
+ "forms": [
+  {
+   "name": "shadow",
+   "role": "support",
+   "shapes": [
+    "blob | shadow | #a89a87 | banana_shadow | 60,77,34,5,4"
+   ]
+  },
+  {
+   "name": "banana",
+   "role": "focus",
+   "shapes": [
+    "poly | food | #d4aa15 | outer_peel | 26,48 31,60 43,73 62,76 80,72 92,62 95,58 87,63 73,65 58,64 43,59 33,52 26,48",
+    "poly | food | #f3dc43 | body_highlight | 28,50 34,61 45,71 62,74 78,70 90,61 93,58 86,62 72,63 58,62 44,57 34,51 28,50",
+    "tube | food | #485623 | stem | 20,40,2.5 24,44,2.8 27,49,3",
+    "blob | food | #211a0e | stem_cut | 19,39,3,2,-25",
+    "blob | food | #211a0e | flower_end | 95,58,2,2,30",
+    "tube | food | #b89314 | ridge_line | 27,49,1 33,60,1 44,71,1 62,74,1 78,70,1 93,58,0.8",
+    "poly | paper | #164ca6 | sticker | 56,64 62,64 63,69 55,69 | round"
+   ]
+  },
+  {
+   "name": "tabletop",
+   "role": "setting",
+   "shapes": [
+    "band | wood | #d4c5b3 | table_surface | 0,74 120,74"
+   ]
+  }
+ ]
+}

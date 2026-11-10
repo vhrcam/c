@@ -1,0 +1,77 @@
+{
+ "text": "fireworks over the city on new year's eve",
+ "title": "midnight firework bloom",
+ "reading": "Bright starburst fireworks explode in a deep night sky over the dark silhouette of a city skyline and its harbor.",
+ "format": "wide",
+ "time": "night",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "vibrant, festive, dark",
+ "energy": 0.9,
+ "palette": [
+  "#020205",
+  "#0a0a0b",
+  "#ff1a75",
+  "#42f5e0",
+  "#ffffff"
+ ],
+ "light": {
+  "x": 75,
+  "y": 30,
+  "color": "#ff1a75"
+ },
+ "layout": "A wide harbor at the bottom, a jagged city skyline across the center, and large firework bursts filling the upper two-thirds of the frame.",
+ "forms": [
+  {
+   "name": "harbor",
+   "role": "setting",
+   "shapes": [
+    "band | water | #050a1a | surface | 0,82 150,82",
+    "tube | light | #ff1a75 | reflection | 75,85,0.5 75,98,2"
+   ]
+  },
+  {
+   "name": "skyline",
+   "role": "setting",
+   "shapes": [
+    "poly | concrete | #0a0a0b | tower | 5,82 25,82 25,50 5,50",
+    "poly | concrete | #08080a | tower | 30,82 50,82 50,30 30,30",
+    "poly | concrete | #0a0a0b | tower | 60,82 85,82 85,45 60,45",
+    "poly | concrete | #08080a | tower | 95,82 115,82 115,35 95,35",
+    "poly | concrete | #0a0a0b | tower | 120,82 145,82 145,60 120,60",
+    "blob | glass | #f5d142 | window | 40,40,1,1.5,0",
+    "blob | glass | #f5d142 | window | 105,45,1,1.5,0",
+    "blob | glass | #f5d142 | window | 70,55,1,1.5,0"
+   ]
+  },
+  {
+   "name": "firework",
+   "role": "focus",
+   "shapes": [
+    "blob | light | #ffffff | core | 75,30,0.8,0.8,0",
+    "tube | light | #ff1a75 | ray | 75,30,0.3 75,5,0.1",
+    "tube | light | #ff1a75 | ray | 75,30,0.3 95,15,0.1",
+    "tube | light | #ff1a75 | ray | 75,30,0.3 105,30,0.1",
+    "tube | light | #ff1a75 | ray | 75,30,0.3 95,48,0.1",
+    "tube | light | #ff1a75 | ray | 75,30,0.3 75,55,0.1",
+    "tube | light | #ff1a75 | ray | 75,30,0.3 55,48,0.1",
+    "tube | light | #ff1a75 | ray | 75,30,0.3 45,30,0.1",
+    "tube | light | #ff1a75 | ray | 75,30,0.3 55,15,0.1",
+    "tube | light | #42f5e0 | spark | 75,30,0.2 82,18,0.05",
+    "tube | light | #42f5e0 | spark | 75,30,0.2 88,30,0.05",
+    "tube | light | #42f5e0 | spark | 75,30,0.2 82,42,0.05",
+    "tube | light | #42f5e0 | spark | 75,30,0.2 68,42,0.05",
+    "tube | light | #42f5e0 | spark | 75,30,0.2 62,30,0.05",
+    "tube | light | #42f5e0 | spark | 75,30,0.2 68,18,0.05"
+   ],
+   "scatter": {
+    "count": 6,
+    "x0": 10,
+    "y0": 10,
+    "x1": 140,
+    "y1": 50,
+    "far": 0.65
+   }
+  }
+ ]
+}

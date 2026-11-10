@@ -1,0 +1,81 @@
+{
+ "text": "my dad's guitar leaning against the amp in the garage",
+ "title": "dad's guitar",
+ "reading": "an acoustic guitar leans back against a black amplifier sitting on the concrete garage floor in warm light",
+ "format": "tall",
+ "time": "golden",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "quiet nostalgic warm simple",
+ "energy": 0.2,
+ "palette": [
+  "#d9823b",
+  "#1f1d1c",
+  "#59534c",
+  "#ffdfa9",
+  "#8c8274"
+ ],
+ "light": {
+  "x": -20,
+  "y": 70,
+  "color": "#ffdfa9"
+ },
+ "layout": "The amplifier rests firmly on the concrete floor at y=122, occupying the center-back of the lower frame. The guitar stands leaning against the center of the amplifier, its body sitting on the floor in front of the grille and its neck angled up toward the upper left at y=35. A wooden shelf with paint cans and hanging tools details the background wall.",
+ "forms": [
+  {
+   "name": "garage wall",
+   "role": "setting",
+   "shapes": [
+    "poly | wood | #3b332b | wall_boards | 0,0 100,0 100,122 0,122",
+    "poly | wood | #5c4a3a | shelf_plank | 8,42 55,42 55,45 8,45",
+    "poly | metal | #8c9299 | paint_can | 14,30 22,30 22,42 14,42",
+    "poly | plastic | #cc3d3d | oil_can | 26,32 32,32 34,42 24,42",
+    "tube | metal | #9da4ab | wrench | 75,50 75,68 1.5"
+   ]
+  },
+  {
+   "name": "garage floor",
+   "role": "setting",
+   "shapes": [
+    "band | concrete | #59534c | floor | 0,122 100,122"
+   ]
+  },
+  {
+   "name": "amplifier",
+   "role": "support",
+   "shapes": [
+    "poly | leather | #1f1d1c | cabinet | 26,75 74,75 74,122 26,122 | round",
+    "poly | cloth | #8c8274 | grille | 30,83 70,83 70,118 30,118",
+    "poly | metal | #141312 | panel | 30,77 70,77 70,82 30,82",
+    "blob | metal | #d9d0c1 | knob1 | 35,79, 1.2,1.2, 0",
+    "blob | metal | #d9d0c1 | knob2 | 40,79, 1.2,1.2, 0",
+    "blob | metal | #d9d0c1 | knob3 | 45,79, 1.2,1.2, 0",
+    "blob | metal | #d9d0c1 | knob4 | 50,79, 1.2,1.2, 0",
+    "tube | rubber | #0a0a0a | amp_handle | 42,73 50,71 58,73 2.0"
+   ]
+  },
+  {
+   "name": "guitar",
+   "role": "focus",
+   "shapes": [
+    "poly | wood | #6e3419 | body_rim | 43,122 55,126 66,120 64,106 58,101 59,93 54,88 45,90 44,98 49,103 43,112 | round",
+    "poly | wood | #d9823b | body_face | 44,121 55,125 65,119 63,106 57,101 58,93 53,89 46,91 45,98 50,103 44,112 | round",
+    "blob | wood | #f0d5a8 | rosette | 52,98, 4.5,4.5, 0",
+    "blob | wood | #1a0d06 | soundhole | 52,98, 3.2,3.2, 0",
+    "poly | plastic | #2e1509 | pickguard | 53,101 57,101 58,108 51,105",
+    "poly | wood | #24140b | bridge | 50,112 58,110 59,113 51,115",
+    "poly | wood | #542b13 | neck_back | 48,91 44,48 40,49 45,92",
+    "poly | wood | #1f1007 | fretboard | 47.5,91 43.5,48 40.5,49 44.5,92",
+    "poly | wood | #3d1c0b | headstock | 43.5,48 39.5,35 34.5,37 38.5,50",
+    "blob | metal | #e0e0e0 | tuner1 | 36.5,41, 1.2,1.2, 0",
+    "blob | metal | #e0e0e0 | tuner2 | 35.5,45, 1.2,1.2, 0",
+    "blob | metal | #e0e0e0 | tuner3 | 41.5,38, 1.2,1.2, 0",
+    "blob | metal | #e0e0e0 | tuner4 | 40.5,42, 1.2,1.2, 0",
+    "tube | metal | #e6edf2 | string1 | 51,113 46,90 41,40 0.2",
+    "tube | metal | #e6edf2 | string2 | 53,113 47,90 40,42 0.2",
+    "tube | metal | #e6edf2 | string3 | 55,112 48,90 38,44 0.2",
+    "tube | rubber | #141414 | coiled_cable | 57,114 66,120 76,123 72,126 64,124 67,121"
+   ]
+  }
+ ]
+}

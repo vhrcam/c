@@ -1,0 +1,88 @@
+{
+ "text": "the first snow in the mountains",
+ "title": "first mountain snow",
+ "reading": "Majestic snow-dusted mountain peaks rise above a quiet pine forest in the early morning light.",
+ "format": "wide",
+ "time": "dawn",
+ "weather": "snow",
+ "backdrop": "sky",
+ "mood": "serene silent majestic crisp",
+ "energy": 0.2,
+ "palette": [
+  "#f0f5fa",
+  "#2f3542",
+  "#4a637d",
+  "#1c2e26",
+  "#e1e9f0"
+ ],
+ "light": {
+  "x": 135,
+  "y": 15,
+  "color": "#ffe6cc"
+ },
+ "layout": "Far jagged mountain peaks dominate the upper half, with lower snowy ridges stepping forward into a quiet evergreen valley filled with snow-laden pine trees.",
+ "forms": [
+  {
+   "name": "distant peak range",
+   "role": "focus",
+   "shapes": [
+    "band | stone | #2f3542 | far_mountains | 0,55 25,38 48,50 75,28 98,44 122,22 150,48",
+    "poly | snow | #f0f5fa | summit_left | 25,38 18,47 32,46",
+    "poly | snow | #ffffff | main_summit | 75,28 64,41 86,39 80,31",
+    "poly | snow | #f0f5fa | summit_right | 122,22 112,35 132,33",
+    "poly | ice | #d5e0ea | shadow_ridge | 75,28 86,39 98,44 80,48"
+   ]
+  },
+  {
+   "name": "midground ridges",
+   "role": "setting",
+   "shapes": [
+    "band | stone | #475363 | mid_mountain | 0,68 35,56 70,63 110,50 150,58",
+    "band | snow | #e1e9f0 | ridge_snow | 0,70 35,58 70,65 110,52 150,60"
+   ]
+  },
+  {
+   "name": "snowy mountain slope",
+   "role": "setting",
+   "shapes": [
+    "band | snow | #f0f5fa | foreground_snowfield | 0,88 45,80 90,86 150,82"
+   ]
+  },
+  {
+   "name": "pine forest trees",
+   "role": "support",
+   "shapes": [
+    "tube | wood | #36281e | trunk | 30,95,2 30,65,1",
+    "poly | foliage | #1c2e26 | tier_top | 30,60 20,73 40,73",
+    "poly | snow | #f0f5fa | snow_top | 30,60 22,70 38,70 | round",
+    "poly | foliage | #1c2e26 | tier_mid | 30,68 14,84 46,84",
+    "poly | snow | #f0f5fa | snow_mid | 30,68 16,81 44,81 | round",
+    "poly | foliage | #1c2e26 | tier_low | 30,78 8,96 52,96",
+    "poly | snow | #f0f5fa | snow_low | 30,78 10,93 50,93 | round"
+   ],
+   "scatter": {
+    "count": 22,
+    "x0": 5,
+    "y0": 52,
+    "x1": 145,
+    "y1": 84,
+    "far": 0.35
+   }
+  },
+  {
+   "name": "foreground framing tree",
+   "role": "support",
+   "shapes": [
+    "tube | wood | #281e16 | trunk | 130,100,3.5 130,35,1",
+    "poly | foliage | #14241c | tier1 | 130,32 120,48 140,48",
+    "poly | snow | #ffffff | snow1 | 130,32 122,45 138,45 | round",
+    "poly | foliage | #14241c | tier2 | 130,44 112,63 148,63",
+    "poly | snow | #ffffff | snow2 | 130,44 114,60 146,60 | round",
+    "poly | foliage | #14241c | tier3 | 130,58 104,80 156,80",
+    "poly | snow | #ffffff | snow3 | 130,58 106,76 154,76 | round",
+    "poly | foliage | #14241c | tier4 | 130,74 98,98 162,98",
+    "poly | snow | #ffffff | snow4 | 130,74 100,94 160,94 | round"
+   ]
+  }
+ ]
+}

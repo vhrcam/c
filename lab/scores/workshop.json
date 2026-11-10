@@ -1,0 +1,103 @@
+{
+ "text": "my grandpa in his workshop",
+ "title": "grandpa's workshop",
+ "reading": "An elderly man in a leather apron stands at a wooden workbench, focused on a project in his sunlit shop.",
+ "format": "wide",
+ "time": "day",
+ "weather": "clear",
+ "backdrop": "room",
+ "mood": "nostalgic, peaceful, focused",
+ "energy": 0.2,
+ "palette": [
+  "#4e342e",
+  "#a24b31",
+  "#e8beac",
+  "#fff4e0",
+  "#704214"
+ ],
+ "light": {
+  "x": 140,
+  "y": 10,
+  "color": "#fff4e0"
+ },
+ "layout": "Grandpa is the focus, centered behind a sturdy workbench that dominates the foreground. Tools hang in the background, and wood shavings are scattered on the floor.",
+ "forms": [
+  {
+   "name": "workshop_wall",
+   "role": "setting",
+   "shapes": [
+    "band | wood | #2d1b18 | wall | 0,40 150,40"
+   ]
+  },
+  {
+   "name": "tool_rack",
+   "role": "support",
+   "shapes": [
+    "tube | metal | #707070 | wrench_shaft | 0,0,0.5 0,8,0.5",
+    "blob | metal | #707070 | wrench_head | 0,0,2,2,0"
+   ],
+   "scatter": {
+    "count": 10,
+    "x0": 20,
+    "y0": 10,
+    "x1": 130,
+    "y1": 20,
+    "far": 0.8
+   }
+  },
+  {
+   "name": "workshop_floor",
+   "role": "setting",
+   "shapes": [
+    "band | stone | #1a0f0d | floor | 0,95 150,95"
+   ]
+  },
+  {
+   "name": "workbench",
+   "role": "setting",
+   "shapes": [
+    "poly | wood | #4e342e | bench_surface | 20,65 130,65 140,85 10,85",
+    "poly | wood | #3e2723 | bench_edge | 10,85 140,85 140,90 10,90",
+    "tube | wood | #3e2723 | leg_l | 20,90,3 20,100,3",
+    "tube | wood | #3e2723 | leg_r | 130,90,3 130,100,3"
+   ]
+  },
+  {
+   "name": "work_piece",
+   "role": "support",
+   "shapes": [
+    "poly | wood | #8d6e63 | block | 68,70 82,70 84,78 66,78"
+   ]
+  },
+  {
+   "name": "grandpa",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #a24b31 | torso | 75,65,8 75,50,9 75,35,7 | stripes #4d2418",
+    "poly | leather | #704214 | apron | 67,35 83,35 80,78 70,78 | round",
+    "tube | cloth | #a24b31 | sleeve_l | 67,35,3.5 58,55,3 62,73,2.5",
+    "tube | cloth | #a24b31 | sleeve_r | 83,35,3.5 92,55,3 88,73,2.5",
+    "blob | skin | #e8beac | hand_l | 62,75,2.5,3.5,15",
+    "blob | skin | #e8beac | hand_r | 88,75,2.5,3.5,-15",
+    "blob | skin | #e8beac | head | 75,25,5,6,0",
+    "poly | hair | #f0f0f0 | hair | 70,20 80,20 82,24 68,24 | round",
+    "tube | metal | #333333 | glasses | 71,25,0.3 75,25,0.3 79,25,0.3"
+   ]
+  },
+  {
+   "name": "shavings",
+   "role": "setting",
+   "shapes": [
+    "poly | wood | #d7b594 | shaving | 0,0 2,1 1,3 0,2 | round"
+   ],
+   "scatter": {
+    "count": 40,
+    "x0": 20,
+    "y0": 90,
+    "x1": 130,
+    "y1": 98,
+    "far": 0.6
+   }
+  }
+ ]
+}

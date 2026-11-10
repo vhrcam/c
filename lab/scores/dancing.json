@@ -1,0 +1,87 @@
+{
+ "text": "dancing in the rain with my girlfriend",
+ "title": "rainy waltz",
+ "reading": "A couple is locked in a dance on a slick, dark street under falling rain, illuminated by the warm glow of a nearby streetlamp.",
+ "format": "wide",
+ "time": "dusk",
+ "weather": "rain",
+ "backdrop": "sky",
+ "mood": "romantic, blissful",
+ "energy": 0.4,
+ "palette": [
+  "#1a1c2c",
+  "#4a4e69",
+  "#e74c3c",
+  "#f1c40f",
+  "#95a5a6"
+ ],
+ "light": {
+  "x": 130,
+  "y": 20,
+  "color": "#f1c40f"
+ },
+ "layout": "The focus is a dancing couple positioned right of center on a wet pavement that anchors the bottom of the frame, with a solitary lamp to the far right.",
+ "forms": [
+  {
+   "name": "pavement",
+   "role": "setting",
+   "shapes": [
+    "band | water | #1a1c2c | street | 0,90 75,88 150,91"
+   ]
+  },
+  {
+   "name": "streetlamp",
+   "role": "setting",
+   "shapes": [
+    "tube | metal | #222222 | post | 130,90,1.5 130,20,1.2",
+    "blob | glass | #f1c40f | bulb | 130,20,4,4,0",
+    "blob | light | #f1c40f | glow | 130,20,12,12,0"
+   ]
+  },
+  {
+   "name": "girlfriend",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #e74c3c | torso | 60,65,3.5 58,52,7 60,42,6",
+    "tube | skin | #ffdbac | neck | 60,42,1.2 60,38,1",
+    "blob | skin | #ffdbac | head | 60,34,3.5,4.5,0",
+    "poly | hair | #4b3621 | hair | 56,30 64,30 68,45 60,48 52,40 | round",
+    "tube | skin | #ffdbac | arm_r | 63,45,1.5 72,50,1.2",
+    "tube | skin | #ffdbac | arm_l | 57,45,1.5 45,60,1.2",
+    "poly | cloth | #e74c3c | dress | 60,55 45,85 75,85 60,55 | round",
+    "tube | skin | #ffdbac | leg_l | 58,75,2 54,82,1.8 56,90,1.5",
+    "tube | skin | #ffdbac | leg_r | 62,75,2 66,82,1.8 64,90,1.5"
+   ]
+  },
+  {
+   "name": "narrator",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #2c3e50 | torso | 80,65,4.5 82,52,8 80,42,7",
+    "tube | skin | #f1c27d | neck | 80,42,1.5 80,38,1.2",
+    "blob | skin | #f1c27d | head | 80,34,4,5,0",
+    "poly | hair | #2c3e50 | hair | 76,30 84,30 84,36 76,36 | round",
+    "tube | cloth | #2c3e50 | arm_l | 78,45,1.8 72,50,1.5",
+    "tube | cloth | #2c3e50 | arm_r | 83,45,1.8 90,60,1.5",
+    "tube | cloth | #34495e | leg_l | 78,75,2.2 76,82,2 78,90,1.8",
+    "tube | cloth | #34495e | leg_r | 82,75,2.2 84,82,2 82,90,1.8",
+    "blob | skin | #f1c27d | hand_r | 90,60,2,1.5,0"
+   ]
+  },
+  {
+   "name": "rain",
+   "role": "support",
+   "shapes": [
+    "tube | water | #95a5a6 | droplet | 20,20,0.2 20,23,0.2"
+   ],
+   "scatter": {
+    "count": 150,
+    "x0": 0,
+    "y0": 0,
+    "x1": 150,
+    "y1": 100,
+    "far": 0.6
+   }
+  }
+ ]
+}

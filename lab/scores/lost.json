@@ -1,0 +1,82 @@
+{
+ "text": "the feeling of being completely lost in a new city",
+ "title": "lost in the neon canyon",
+ "reading": "A lone traveler with a bag stands small at a wet city crosswalk, looking up into soaring unfamiliar skyscrapers bathed in night fog.",
+ "format": "tall",
+ "time": "night",
+ "weather": "fog",
+ "backdrop": "sky",
+ "mood": "disoriented silent awe",
+ "energy": 0.4,
+ "palette": [
+  "#0b0f17static",
+  "#1e293b",
+  "#0f172a",
+  "#38bdf8",
+  "#fde047"
+ ],
+ "light": {
+  "x": 80,
+  "y": 45,
+  "color": "#fde047"
+ },
+ "layout": "Towering geometric skyscrapers lean inward from both edges toward the center top, while a single hooded traveler stands near the bottom foreground looking up.",
+ "forms": [
+  {
+   "name": "city_far",
+   "role": "setting",
+   "shapes": [
+    "poly | concrete | #131c2a | bldg_far_left | 15,20 38,20 38,125 15,125",
+    "poly | concrete | #0f172a | bldg_far_mid | 35,10 65,10 65,125 35,125",
+    "poly | concrete | #141f30 | bldg_far_right | 62,25 85,25 85,125 62,125"
+   ]
+  },
+  {
+   "name": "tower_left",
+   "role": "support",
+   "shapes": [
+    "poly | glass | #0b121e | facade_left | 0,0 32,15 28,128 0,128",
+    "poly | light | #38bdf8 | neon_strip_v | 8,18 12,20 10,120 6,120",
+    "poly | light | #e0f2fe | window_grid | 16,22 24,25 22,100 14,98",
+    "tube | metal | #1e293b | fire_escape | 28,30,1 27,110,1"
+   ]
+  },
+  {
+   "name": "tower_right",
+   "role": "support",
+   "shapes": [
+    "poly | concrete | #0d1522 | facade_right | 68,10 100,0 100,128 72,128",
+    "poly | light | #fde047 | billboard | 74,38 94,32 92,58 72,64",
+    "tube | metal | #334155 | sign_post | 74,38,1.5 72,64,1.5"
+   ]
+  },
+  {
+   "name": "ground",
+   "role": "setting",
+   "shapes": [
+    "band | asphalt | #070a10 | street | 0,122 50,125 100,122",
+    "poly | paint | #475569 | stripe_1 | 15,128 32,128 26,145 8,145",
+    "poly | paint | #475569 | stripe_2 | 42,128 60,128 56,145 36,145",
+    "poly | paint | #475569 | stripe_3 | 70,128 88,128 86,145 66,145"
+   ]
+  },
+  {
+   "name": "traveler",
+   "role": "focus",
+   "shapes": [
+    "blob | skin | #d4a373 | head | 50,82,4,4.8,-10",
+    "poly | hair | #1e1b18 | hair | 46,77 54,77 55,84 45,84 | round",
+    "tube | skin | #d4a373 | neck | 50,86,2 50,90,2.5",
+    "poly | cloth | #334155 | coat_body | 42,90 58,90 63,118 37,118 | round",
+    "tube | cloth | #334155 | left_arm | 43,92,3 35,102,2.5 41,108,2",
+    "tube | cloth | #334155 | right_arm | 57,92,3 64,100,2.5 54,88,2",
+    "tube | cloth | #0f172a | left_leg | 45,118,3.5 44,128,3 43,136,2.5",
+    "tube | cloth | #0f172a | right_leg | 55,118,3.5 56,128,3 57,136,2.5",
+    "poly | leather | #020617 | left_shoe | 43,136 38,138 44,139",
+    "poly | leather | #020617 | right_shoe | 57,136 62,138 56,139",
+    "poly | leather | #78350f | backpack | 45,92 55,92 56,108 44,108 | round",
+    "poly | paper | #f8fafc | map | 37,105 45,102 46,111 38,113"
+   ]
+  }
+ ]
+}
