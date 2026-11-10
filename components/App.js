@@ -11,20 +11,15 @@ import Stage from "./Stage";
 import Works from "./Works";
 
 const engine = () => import("@/lib/engine");
+const draw = () => import("@/lib/draw");
 const newSeed = () => Math.floor(Math.random() * 2 ** 31);
 
-async function direct(text) {
-  const res = await fetch("/api/art", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text }), signal: AbortSignal.timeout(45000) });
+// ask the director to block out the words; earlier holds how previous takes were staged so a new one differs
+async function direct(text, earlier = []) {
+  const res = await fetch("/api/art", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text, earlier }), signal: AbortSignal.timeout(90000) });
   if (!res.ok) throw new Error(`Art request failed: ${res.status}`);
-  const [{ plan, source }, { composition, normalizePlan, withView }] = await Promise.all([res.json(), import("@/lib/art/plan")]);
-  const art = normalizePlan({ ...plan, text: plan?.text || text });
-  return { source, plan: withView(art, composition(art, art.seed).direction) };
-}
-
-async function redirect(plan) {
-  const { composition, variant, withView } = await import("@/lib/art/plan");
-  const next = variant({ ...plan, seed: newSeed() }, 1);
-  return withView(next, composition(next, next.seed).direction);
+  const { plan, source } = await res.json();
+  return { source, plan: { ...plan, mode: "2d" } };
 }
 
 async function interpret(text, mode) {
@@ -85,10 +80,23 @@ export default function App() {
     }
   };
 
+  // a new take: the director stages the same words again, differently; if it can't be reached, c recuts the last staging
   const regenerate = async () => {
     const id = ++ticket.current;
-    const plan = run.plan.art ? await redirect(run.plan) : { ...run.plan, seed: newSeed() };
-    if (id === ticket.current) setRun({ ...run, id, plan });
+    const last = run.plan;
+    if (last.v !== 2) return setRun({ ...run, id, plan: { ...last, seed: newSeed() } });
+    const takes = [...(run.takes || []), last.layout || last.reading].filter(Boolean);
+    const start = performance.now();
+    setTone("");
+    morph(() => setRun({ id, text: run.text, mode: run.mode, start, plan: null, takes }));
+    try {
+      const { plan, source } = last.text ? await direct(last.text, takes) : { plan: null };
+      if (id !== ticket.current) return;
+      const fresh = plan && (source === "ai" || run.source !== "ai");
+      setRun({ id, text: run.text, mode: run.mode, start, took: performance.now() - start, takes, source: fresh ? source : run.source, plan: fresh ? plan : { ...last, seed: newSeed() } });
+    } catch {
+      if (id === ticket.current) setRun({ id, text: run.text, mode: run.mode, start, took: performance.now() - start, takes, source: run.source, plan: { ...last, seed: newSeed() } });
+    }
   };
 
   const switchMode = () => {
@@ -171,7 +179,7 @@ export default function App() {
           onShare={share}
         />
       ) : (
-        <Prompt intro={intro} draft={draft} works={count} onWorks={openWorks} onGenerate={generate} onWarm={engine} />
+        <Prompt intro={intro} draft={draft} works={count} onWorks={openWorks} onGenerate={generate} onWarm={draw} />
       )}
       <Works open={shelf.open} items={shelf.items} onClose={closeWorks} onOpen={openWork} onRemove={drop} />
       <Notice message={note} />

@@ -33,6 +33,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
   const [phase, setPhase] = useState("");
   const [ready, setReady] = useState(Boolean(run.plan) && !run.start);
   const [reference, setReference] = useState(null);
+  const [meta, setMeta] = useState(null);
   const [live, setLive] = useState(false);
   const [done, setDone] = useState(false);
   const [broken, setBroken] = useState(false);
@@ -55,7 +56,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
   useEffect(() => {
     if (!plan || ready) return;
     const found = understand(run.text.split(/\s+/).filter(Boolean), plan).subjects.size > 0;
-    const timer = setTimeout(() => morph(() => setReady(true)), found ? 2400 : 1000);
+    const timer = setTimeout(() => morph(() => setReady(true)), found ? 2200 : 1000);
     return () => clearTimeout(timer);
   }, [plan, ready, run.text]);
 
@@ -65,13 +66,22 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
     let made = null;
     const frame = requestAnimationFrame(() =>
       setTimeout(async () => {
-        const { createArtwork } = await import("@/lib/engine");
-        if (gone) return;
+        const hooks = { onPhase: (id) => setPhase(id), onDone: () => setDone(true) };
         try {
-          made = createArtwork(canvas.current, plan, { mode: plan.mode, onPhase: (id) => setPhase(id), onDone: () => setDone(true) });
+          if (plan.v === 2) {
+            const { createPlayer } = await import("@/lib/draw");
+            if (gone) return;
+            made = createPlayer(canvas.current, plan, hooks);
+          } else {
+            const { createArtwork } = await import("@/lib/engine");
+            if (gone) return;
+            made = createArtwork(canvas.current, plan, { mode: plan.mode, ...hooks });
+          }
         } catch {
           return setBroken(true);
         }
+        if (gone) return made.dispose();
+        setMeta(made.meta || null);
         art.current = made;
         if ("reference" in made) setReference(made.reference || null);
         setPhases(made.phases);
@@ -203,7 +213,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
         </button>
         {!done && !error && <Phases phases={phases} current={live ? step + 1 : 0} />}
         <div className="absolute inset-x-5 bottom-[calc(env(safe-area-inset-bottom)+76px)] sm:inset-x-auto sm:bottom-7 sm:left-7">
-          <Readout run={run} reference={reference} phases={phases} step={step} ready={ready} done={done} error={error} onRetry={run.failed ? onRetry : null} onEdit={onEdit} />
+          <Readout run={run} reference={reference} meta={meta} phases={phases} step={step} ready={ready} done={done} error={error} onRetry={run.failed ? onRetry : null} onEdit={onEdit} />
         </div>
         {plan && live && (
           <div className="absolute inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+16px)] flex justify-center sm:inset-x-auto sm:bottom-6 sm:right-6">
