@@ -72,6 +72,22 @@ function Problem({ error, onRetry, onEdit }) {
   );
 }
 
+// while the director works: the clock, what it is thinking about, and each thing as it names it
+function Thinking({ run }) {
+  const notes = run.notes;
+  return (
+    <div className="max-w-[560px] font-mono text-[11px] leading-[1.75] text-fg/75 sm:text-[12px]">
+      <p className="text-fg/40">
+        {run.takes?.length ? `take ${run.takes.length + 1} · reading ` : "reading "}
+        <Clock since={run.start} />
+      </p>
+      {notes?.think && <Line key={notes.think} label="thinks" text={notes.think.toLowerCase()} />}
+      {notes?.title && <Line label="calls it" text={notes.title} />}
+      {notes?.forms?.length > 0 && <Line key={notes.forms.length} label="places" text={notes.forms.at(-1).replace(/_/g, " ")} />}
+    </div>
+  );
+}
+
 // the log for a score: what the director read, what c is building from it, and with what
 function Score({ run, meta, phases, step, ready, done, error, onRetry, onEdit }) {
   const plan = run.plan;
@@ -83,24 +99,16 @@ function Score({ run, meta, phases, step, ready, done, error, onRetry, onEdit })
         {plan.reading && <p className="mt-1 font-mono text-[11px] leading-relaxed text-fg/65 sm:text-[11.5px]">{offline ? "c couldn’t reach its director, so this is only the place and the hour. Regenerate to try again." : plan.reading}</p>}
       </div>
     );
+  if (!error && !plan) return <Thinking run={run} />;
   if (!error && !ready)
     return (
       <p className="font-mono text-[11px] text-fg/40 sm:text-[12px]">
-        {plan ? (
-          <>
-            read in <span className="tabular-nums text-fg/60">{(run.took / 1000).toFixed(1)}s</span>
-            <span className="text-fg/25">
-              {" "}
-              · {count(plan.forms.length, "form")} · {count(plan.forms.reduce((a, f) => a + f.shapes.length, 0), "shape")}
-              {offline && " · offline"}
-            </span>
-          </>
-        ) : (
-          <>
-            {run.takes?.length ? `take ${run.takes.length + 1} · reading ` : "reading "}
-            <Clock since={run.start} />
-          </>
-        )}
+        read in <span className="tabular-nums text-fg/60">{(run.took / 1000).toFixed(1)}s</span>
+        <span className="text-fg/25">
+          {" "}
+          · {count(plan.forms.length, "form")} · {count(plan.forms.reduce((a, f) => a + f.shapes.length, 0), "shape")}
+          {offline && " · offline"}
+        </span>
       </p>
     );
   const past = (id) => step >= phases.findIndex((p) => p.id === id) && step >= 0;

@@ -33,10 +33,11 @@ export function understand(words, plan) {
   return { subjects, extras };
 }
 
-export default function Command({ text, plan }) {
+export default function Command({ text, plan, notes }) {
   const [tick, setTick] = useState(0);
   const words = text.split(/\s+/).filter(Boolean);
-  const read = plan ? understand(words, plan) : null;
+  // before the score lands, words light up as the director names what it is placing
+  const read = plan ? understand(words, plan) : notes?.forms?.length ? understand(words, { v: 2, forms: notes.forms.map((name) => ({ name, role: "focus" })) }) : null;
 
   useEffect(() => {
     if (plan) return;
@@ -50,14 +51,14 @@ export default function Command({ text, plan }) {
         <Fragment key={i}>
           <span
             className={`transition-colors duration-500 ${
-              read?.subjects.has(i) ? "text-fg underline decoration-fg/35 decoration-1 underline-offset-[7px]" : read?.extras.has(i) ? "text-fg/70" : read?.subjects.size ? "text-fg/25" : read ? "text-fg/40" : tick % (words.length + 6) === i ? "text-fg" : "text-fg/40"
+              read?.subjects.has(i) ? "text-fg underline decoration-fg/35 decoration-1 underline-offset-[7px]" : read?.extras.has(i) ? "text-fg/70" : plan && read?.subjects.size ? "text-fg/25" : plan ? "text-fg/40" : tick % (words.length + 6) === i ? "text-fg" : "text-fg/40"
             }`}
           >
             {w}
           </span>{" "}
         </Fragment>
       ))}
-      <span aria-hidden data-state={read ? "on" : "think"} className="mark-cursor inline-block h-[1.05em] w-[0.55em] translate-y-[0.2em] bg-fg" style={{ viewTransitionName: "cursor" }} />
+      <span aria-hidden data-state={plan ? "on" : "think"} className="mark-cursor inline-block h-[1.05em] w-[0.55em] translate-y-[0.2em] bg-fg" style={{ viewTransitionName: "cursor" }} />
     </p>
   );
 }

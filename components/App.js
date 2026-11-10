@@ -14,13 +14,35 @@ const engine = () => import("@/lib/engine");
 const draw = () => import("@/lib/draw");
 const newSeed = () => Math.floor(Math.random() * 2 ** 31);
 
-// ask the director to block out the words; earlier holds how previous takes were staged so a new one differs
-async function direct(text, earlier = []) {
-  const res = await fetch("/api/art", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text, earlier }), signal: AbortSignal.timeout(90000) });
-  if (!res.ok) throw new Error(`Art request failed: ${res.status}`);
-  const { plan, source } = await res.json();
-  return { source, plan: { ...plan, mode: "2d" } };
+// ask the director to block out the words; earlier holds how previous takes were staged so a new one differs.
+// The answer streams: notes while it thinks and names things (onNote), then the score.
+async function direct(text, earlier = [], onNote) {
+  const res = await fetch("/api/art", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text, earlier }), signal: AbortSignal.timeout(130000) });
+  if (!res.ok || !res.body) throw new Error(`Art request failed: ${res.status}`);
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  let result = null;
+  for (;;) {
+    const { value, done } = await reader.read();
+    buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
+    let end;
+    while ((end = buffer.indexOf("\n")) >= 0) {
+      const line = buffer.slice(0, end).trim();
+      buffer = buffer.slice(end + 1);
+      if (!line) continue;
+      const message = JSON.parse(line);
+      if (message.note) onNote?.(message.note);
+      else if (message.plan) result = message;
+    }
+    if (done) break;
+  }
+  if (!result) throw new Error("The director sent no score");
+  return { source: result.source, plan: { ...result.plan, mode: "2d" } };
 }
+
+// what has been heard from the director so far
+const heard = (notes = { forms: [] }, note) => (note.reset ? { forms: [] } : note.form ? { ...notes, forms: [...notes.forms, note.form] } : { ...notes, ...note });
 
 async function interpret(text, mode) {
   const res = await fetch("/api/interpret", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text, mode }), signal: AbortSignal.timeout(65000) });
@@ -46,6 +68,8 @@ export default function App() {
     noteTimer.current = setTimeout(() => setNote(""), 2600);
   };
 
+  const hear = (id) => (note) => setRun((r) => (r?.id === id && !r.plan ? { ...r, notes: heard(r.notes, note) } : r));
+
   const play = (plan) => {
     const id = ++ticket.current;
     const mode = MODES.includes(plan.mode) ? plan.mode : MODES[0];
@@ -69,7 +93,7 @@ export default function App() {
     });
     try {
       if (mode === "2d") {
-        const { plan, source } = await direct(text);
+        const { plan, source } = await direct(text, [], hear(id));
         if (id === ticket.current) setRun({ id, text, mode, start, took: performance.now() - start, source, plan });
         return;
       }
@@ -90,7 +114,7 @@ export default function App() {
     setTone("");
     morph(() => setRun({ id, text: run.text, mode: run.mode, start, plan: null, takes }));
     try {
-      const { plan, source } = last.text ? await direct(last.text, takes) : { plan: null };
+      const { plan, source } = last.text ? await direct(last.text, takes, hear(id)) : { plan: null };
       if (id !== ticket.current) return;
       const fresh = plan && (source === "ai" || run.source !== "ai");
       setRun({ id, text: run.text, mode: run.mode, start, took: performance.now() - start, takes, source: fresh ? source : run.source, plan: fresh ? plan : { ...last, seed: newSeed() } });
