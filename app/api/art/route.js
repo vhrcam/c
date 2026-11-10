@@ -24,11 +24,13 @@ export async function POST(request) {
         send({ plan, source: "ai" });
       };
       const prompt = brief(text, earlier);
+      const began = Date.now();
       try {
         score(await askLive(prompt, SCHEMA, (note) => send({ note })));
       } catch {
         try {
-          score(await askJSON(prompt, SCHEMA, 48000));
+          if (Date.now() - began > 70000) throw new Error("out of time");
+          score(await askJSON(prompt, SCHEMA, 30000));
         } catch {
           offline();
         }
