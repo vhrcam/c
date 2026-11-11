@@ -18,15 +18,17 @@ export async function POST(request) {
         offline();
         return controller.close();
       }
-      const score = (raw) => {
+      // source says who blocked the scene: "ai" one of the stronger models, "light" the quick one, "words" nobody
+      const score = (raw, source = "ai") => {
         const plan = cleanScore(raw, text, seed);
         if (!plan.forms.length) throw new Error("empty score");
-        send({ plan, source: "ai" });
+        send({ plan, source });
       };
       const prompt = brief(text, earlier);
       const began = Date.now();
       try {
-        score(await askLive(prompt, SCHEMA, (note) => send({ note })));
+        const told = await askLive(prompt, SCHEMA, (note) => send({ note }));
+        score(told.score, told.light ? "light" : "ai");
       } catch {
         try {
           if (Date.now() - began > 70000) throw new Error("out of time");

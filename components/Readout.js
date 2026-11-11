@@ -194,6 +194,7 @@ function Legacy({ run, reference, phases, step, ready, done, error, onRetry, onE
           <span className="text-fg/25">› </span>
           {run.text}
           {run.source === "words" && <span className="text-fg/25"> · read offline</span>}
+          {run.source === "light" && <span className="text-fg/25"> · light model</span>}
         </p>
       )}
       {error ? (
