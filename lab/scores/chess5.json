@@ -1,0 +1,106 @@
+{
+ "text": "my grandfather teaching me chess in the park",
+ "title": "the chess lesson",
+ "reading": "An elderly man and a young child sit at a stone park table, leaning over a chessboard between them.",
+ "format": "wide",
+ "time": "day",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "tender and focused",
+ "energy": 0.2,
+ "palette": [
+  "#7fa662",
+  "#d9c5b2",
+  "#5c4033",
+  "#f5f5dc",
+  "#4682b4"
+ ],
+ "light": {
+  "x": 20,
+  "y": -20,
+  "color": "#fff9e6"
+ },
+ "layout": "The grandfather sits on the right and the child on the left, facing each other across a central stone table that holds the chessboard. A backdrop of park grass and distant trees fills the frame.",
+ "forms": [
+  {
+   "name": "park lawn",
+   "role": "setting",
+   "shapes": [
+    "band | grass | #7fa662 | ground | 0,80 50,78 100,82 150,79"
+   ]
+  },
+  {
+   "name": "distant trees",
+   "role": "setting",
+   "shapes": [
+    "tube | bark | #4a3728 | trunk | 10,80,3 11,60,2 10,45,1.5",
+    "poly | foliage | #2d5a27 | crown | 0,55 10,35 25,35 30,55 15,65 | round"
+   ],
+   "scatter": {
+    "count": 8,
+    "x0": 0,
+    "y0": 75,
+    "x1": 150,
+    "y1": 85,
+    "far": 0.6
+   }
+  },
+  {
+   "name": "grandfather",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #708090 | far-leg | 115,80,4 110,95,3.5",
+    "tube | cloth | #f5f5dc | far-sleeve | 105,45,3.5 112,58,3",
+    "tube | cloth | #f5f5dc | torso | 115,80,7 112,65,6 108,50,7.5 105,42,7",
+    "tube | cloth | #708090 | near-leg | 115,80,4.5 100,82,4 95,95,3.8",
+    "tube | skin | #e8beac | neck | 105,42,3 102,38,2.8",
+    "poly | hair | #f0f0f0 | back-hair | 93,30 96,24 105,24 107,34 98,37",
+    "blob | skin | #e8beac | head | 100,34,6,7,5",
+    "poly | hair | #f0f0f0 | fringe | 94,30 98,26 103,28 100,32",
+    "blob | bone | #2a1a10 | eye | 97,33,0.6,0.6,0",
+    "tube | skin | #e8beac | nose | 94,36,96,36,0.5",
+    "tube | skin | #d1a592 | mouth | 96,40,99,39,0.5",
+    "tube | cloth | #f5f5dc | near-sleeve | 105,42,4 90,50,3.5 82,62,3",
+    "blob | skin | #e8beac | hand | 80,64,3,2,20"
+   ]
+  },
+  {
+   "name": "child",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #8b0000 | far-leg | 35,80,3 40,95,2.5",
+    "tube | cloth | #4682b4 | far-sleeve | 43,55,2.5 48,65,2",
+    "tube | cloth | #4682b4 | torso | 35,80,5 37,70,4.5 40,60,5.5 43,55,5",
+    "tube | cloth | #8b0000 | near-leg | 35,80,3.5 45,82,3 50,95,2.8",
+    "tube | skin | #f4d0b1 | neck | 43,55,2.5 45,52,2.2",
+    "poly | hair | #8b4513 | back-hair | 45,42 48,34 58,34 60,45 52,48",
+    "blob | skin | #f4d0b1 | head | 50,44,5,6,-10",
+    "poly | hair | #8b4513 | fringe | 52,38 56,38 58,42 53,42",
+    "blob | bone | #2a1a10 | eye | 53,44,0.5,0.5,0",
+    "tube | skin | #f4d0b1 | nose | 56,46,55,46,0.4",
+    "tube | skin | #e0b090 | mouth | 54,49,52,49,0.4",
+    "tube | cloth | #4682b4 | near-sleeve | 43,55,3 55,60,2.5 65,63,2",
+    "blob | skin | #f4d0b1 | hand | 67,64,2.5,1.8,10"
+   ]
+  },
+  {
+   "name": "stone table",
+   "role": "support",
+   "shapes": [
+    "poly | stone | #a9a9a9 | surface | 48,65 102,65 108,72 42,72",
+    "tube | stone | #808080 | center-leg | 75,72,6 75,98,6"
+   ]
+  },
+  {
+   "name": "chess game",
+   "role": "support",
+   "shapes": [
+    "poly | wood | #5c4033 | board | 62,65 88,65 90,68 60,68 | checks #d9c5b2",
+    "blob | bone | #ffffff | pawn-white | 68,64,0.8,1.5,0",
+    "blob | bone | #ffffff | knight-white | 72,64,1,2,0",
+    "blob | wood | #2a1a10 | king-black | 82,64,1.2,2.5,0",
+    "blob | wood | #2a1a10 | pawn-black | 78,64,0.8,1.5,0"
+   ]
+  }
+ ]
+}
