@@ -170,6 +170,9 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
     if (blob) download(blob, plan.title);
   };
 
+  // the line engine's pieces are nothing but strokes, so they also leave as a vector file
+  const exportSvg = () => download(art.current.vector(), plan.title, "svg");
+
   const key = useEffectEvent((e) => {
     if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest?.("input, textarea, button, [role=dialog]")) return;
     if (e.key === " ") {
@@ -227,6 +230,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
               onFull={document.fullscreenEnabled ? fullscreen : null}
               onSave={keep}
               onDownload={exportPng}
+              onVector={plan.v === 2 ? exportSvg : null}
               onShare={() => onShare(plan)}
               onRegenerate={onRegenerate}
               onSwitch={onSwitch}

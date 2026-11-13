@@ -65,7 +65,7 @@ function Button({ label, text, icon, keys, onClick }) {
   );
 }
 
-export default function Dock({ done, playing, full, mode, onToggle, onSkip, onFull, onSave, onDownload, onShare, onRegenerate, onSwitch, onNew }) {
+export default function Dock({ done, playing, full, mode, onToggle, onSkip, onFull, onSave, onDownload, onVector, onShare, onRegenerate, onSwitch, onNew }) {
   const other = mode === "3d" ? "2d" : "3d";
   return (
     <div className="pointer-events-auto flex items-center gap-0.5 rounded-full border border-fg/10 bg-bg/55 p-1 backdrop-blur-md">
@@ -73,6 +73,7 @@ export default function Dock({ done, playing, full, mode, onToggle, onSkip, onFu
         <>
           <Button label="Save to your gallery" text="save" icon="save" onClick={onSave} />
           <Button label="Download PNG" text="png" icon="download" onClick={onDownload} />
+          {onVector && <Button label="Download SVG, the lines themselves" text="svg" onClick={onVector} />}
           <Button label="Copy a share link" text="share" icon="share" onClick={onShare} />
           <Button label="Regenerate with a new seed" text="regenerate" icon="again" onClick={onRegenerate} />
           {onSwitch && <Button label={`Build it in ${other}`} text={other} onClick={onSwitch} />}
