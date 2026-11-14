@@ -5,13 +5,13 @@ const sans = Geist({ variable: "--font-geist", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 const site = process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000";
-const description = "Describe anything. c reads it, then a computational system builds it into a living artwork while you watch.";
+const description = "Describe a memory. c reads it, blocks the scene out and draws it in thousands of lines while you watch. No image model: every line is made by code.";
 
 export const metadata = {
   metadataBase: new URL(site),
-  title: "c · describe anything",
+  title: "c · describe a memory",
   description,
-  openGraph: { title: "c · describe anything", description, type: "website" },
+  openGraph: { title: "c · describe a memory", description, type: "website" },
   twitter: { card: "summary_large_image" },
 };
 

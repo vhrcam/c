@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { MARK } from "@/components/Mark";
 
-export const alt = "c · describe anything";
+export const alt = "c · describe a memory";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -19,7 +19,7 @@ export default function OpenGraphImage() {
           <path d={MARK.c} />
           <rect x={k.x} y={k.y} width={k.w} height={k.h} />
         </svg>
-        <div style={{ marginTop: 64, fontFamily: "Geist Mono", fontSize: 28, letterSpacing: 0.5, color: "#8a857b" }}>describe anything</div>
+        <div style={{ marginTop: 64, fontFamily: "Geist Mono", fontSize: 28, letterSpacing: 0.5, color: "#8a857b" }}>describe a memory</div>
       </div>
     ),
     { ...size, fonts: [{ name: "Geist Mono", data: mono, style: "normal", weight: 400 }] }
