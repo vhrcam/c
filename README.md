@@ -4,52 +4,60 @@
 
 <h1 align="center">c</h1>
 
-<p align="center"><em>describe anything</em></p>
+<p align="center"><em>describe a memory</em></p>
 
 <p align="center">
-  Describe any idea. c reads it, chooses a system for every part of it,<br />
-  and builds it into a living 3D artwork while you watch.
+  Describe a memory, or anything else you can picture. c reads it, blocks the scene out,<br />
+  and draws it in thousands of lines while you watch.
 </p>
 
 ---
 
-**c is not an AI image generator.** AI only reads your words and writes a plan. Every edge, particle, surface and wave is built by c's own engine from that plan, so the generation itself is the show, and every piece is one of a kind.
+**c is not an AI image generator.** No image model is involved and no pixel comes from AI. A language model reads your words and says what is in the scene and where, the way a director blocks a stage. Every line after that is computed by c's own code in your browser, so the drawing is the show and no two pieces come out the same.
 
 ## How it works
 
-1. **Describe anything.** Right now c builds buildings, vehicles, trees, planets and objects in their landscapes, with more categories on the way. Type it the way you'd say it: *"a steam train crossing a stone bridge in the fog."*
-2. **c reads it.** Gemini turns your words into a plan: the subjects, how they relate (*train → on → bridge*), the world around them, the light, and the system that should build each part. While it reads, your words sit in the middle of the screen like a command waiting to run. When it understands them, the subjects light up and their relations draw between them.
-3. **The artwork builds itself.** First a seed, then structure, form, detail, light and the world around it. A log types out what c understood and why it chose each system.
-4. **It stays alive.** The finished piece keeps moving. In 3D you can orbit and zoom around it.
+1. **Describe it.** Type it the way you'd say it: *"me and her watching the sunset"*, *"my dog waiting at the door when I came home"*, *"my grandmother's kitchen on a sunday morning"*. People, animals, places, objects and weather all work.
+2. **c reads it.** Your words sit in the middle of the screen like a command waiting to run. A log shows what the director is thinking about, and each word lights up as the thing it names is placed in the scene.
+3. **The artwork builds itself.** First a faint construction sketch of the blocking, then the ground and sky, then each form printed from its base up, then hair, fur and grass, then light and weather. A log types out what c read and what it is drawing with.
+4. **It signs it.** When the last line is down, c signs the corner. Save it to your gallery, download a PNG or an SVG, copy a share link, or regenerate for a different take on the same words.
+
+## How c makes a picture
+
+**The director.** Gemini gets a brief and answers with a *score*: every thing in the scene as a few plain shapes (bands for land and sea, tubes for limbs and trunks, blobs, outlines), each with a substance and a color. It also gives the hour, the weather, where the light comes from and a small palette. That is all the AI does.
+
+**No stored drawings.** Nothing in c's code knows what a person, a dog or a kitchen looks like. There are no rigs, sprites or templates. What c knows is how thirty-odd substances take a line: skin, hair, fur, cloth, wood, stone, water, glass, foliage, fire and so on. Anything the director can block out of shapes, c can draw.
+
+**One relief.** c turns the whole scene into a single bas-relief. Clouds swell the sky, waves ripple the water, and each body is a soft cushion over its silhouette with every part standing a little prouder than the one behind it. Small parts on a soft surface, like the eyes and mouth on a face, are modeled into that surface instead of being stuck on top, and a garment re-covers the body under it.
+
+**Level lines.** A family of parallel planes cuts the relief, and the cuts are the drawing. The tone of each place decides how many cuts it keeps and how wide each one is inked, so light and shade come from line weight alone. Hair, fur, grass and flames are grown as strands along a flow instead. Shadows fall along the ground away from the light, still water holds a broken reflection, and lamps tint the lines around them.
+
+**Paper and ink.** Every color the director names is re-cut against the sheet: dark inks on warm white paper, pale inks on black paper for night scenes.
+
+**A temper of its own.** Each piece rolls how its planes lean and sway, how the sky behaves, how heavy the pen is, how many inks go on the press (full color, two inks, or a grey world with only the subject in color), how the sheet is finished, and one small accident: threads trailing downwind off the subject, or echoes of its outline.
+
+**Built in the open.** The strokes are scheduled on a timeline and drawn one at a time on a canvas. The finished piece is nothing but strokes, which is why it can also leave as an SVG.
 
 ## The interface
 
 - **One input.** A single line and generate. No tags, no settings.
-- **The stage** fills the screen. The build phases tick by in one corner while c's reading types out in another. Pause, skip to the end or go fullscreen (**Space** and **F** work too).
-- **When it's done**, save it, download a PNG, copy a share link, regenerate it with a new seed, or start a new one.
-- **Share links** carry the whole plan, so whoever opens one watches the same artwork build.
+- **The stage** takes the color of the paper. The build phases tick by in one corner while the log types out in another. Pause, skip to the end or go fullscreen (**Space** and **F** work too).
+- **Share links** carry the whole score, so whoever opens one watches the same artwork build.
 - **Gallery:** saved works stay in your browser. No account needed.
-
-## How c makes an artwork
-
-1. **Understanding.** Gemini turns the description into a construction plan: what each subject is (a building style, a vehicle type, a tree, a planet or an object made of primitives), how the subjects relate (a train on a bridge), the time, season, weather, lights and palette, and whether it's one thing on its own or a whole scene. Offline, a keyword reader builds the same kind of plan.
-2. **Form.** Buildings come from architectural recipes (porches, dormers, shutters, window boxes, roof slopes, porticos, battlements, spires, arches), and each regeneration varies the colors, porch, roof pitch and wings. Vehicles are profile-extruded bodies with real wheels, glass and lights, and the recipes run all the way to a three-masted galleon. Objects are signed distance fields meshed with marching cubes. Trees grow by recursive branching, and planets are built in layers.
-3. **Construction.** Edges draw themselves, particles stream from the subject's heart onto its surface and fade as it fills in with a fixed grain, and at night the windows light up.
-4. **World.** A lone subject stands by itself. A scene is built on a compact round stage with a solid base. The countryside grows into a patchwork of wheat, lavender and plowed fields with crop rows, swaying grass, wildflowers and branching hedgerow trees. A city lays out a street grid, mid-rises and towers that fall off from the center, rooftop tanks, streetlights and traffic. Water is Gerstner waves, storms roll in a cloud bank with lightning, and the light follows the time of day.
 
 ## Tools
 
 | Piece | What it does |
 |---|---|
-| **Next.js** (App Router) + **Tailwind CSS** | The app and its interpret API |
-| **three.js** + **GLSL** | The 3D engine and its distance fields |
-| **Google Gemini** (free tier, `gemini-3.5-flash`) | Reads descriptions into construction plans |
+| **Next.js** (App Router) + **Tailwind CSS** | The app and the route that talks to the director |
+| **Canvas 2D** | Draws every stroke; the engine in `lib/draw` is plain JavaScript with no dependencies |
+| **Google Gemini** (free tier) | The director: reads a description into a score, streamed so you can watch it think |
 | **View Transitions API** | Carries the cursor and your words from the input onto the stage |
 | **Geist** + **Geist Mono** | Type |
 
 ## Run it locally
 
-You need Node.js 20+ and, for the AI reader, a free [Gemini API key](https://aistudio.google.com).
+You need Node.js 20+ and a free [Gemini API key](https://aistudio.google.com).
 
 ```bash
 git clone https://github.com/vhrcam/c.git
@@ -58,13 +66,31 @@ npm install
 cp .env.example .env.local
 ```
 
-Put your key in `.env.local` as `GEMINI_API_KEY`. Without one, c reads your words with its built-in keyword reader. Then start it:
+Put your key in `.env.local` as `GEMINI_API_KEY`, then start it:
 
 ```bash
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+The free tier allows about 20 requests a day on the main model. When that runs out c falls back to other Gemini models, and with no key at all it can still read the place, the hour and the weather out of your words and draw the setting.
+
+## The bench
+
+`lab/draw.mjs` runs the engine without a browser, which is how it gets tuned:
+
+```bash
+node --env-file=.env.local lab/draw.mjs ask "walking my dog in the rain" dog   # ask the director, save the score
+node lab/draw.mjs flat dog                                                      # see the raw blocking
+node lab/draw.mjs render dog 3,5,8                                              # render it at three seeds
+```
+
+Renders land in `lab/runs/draw`.
+
+## Also in the repo
+
+`lib/engine` holds a 3D engine from an earlier version of c. It is switched off in the app for now and marked "3d soon".
 
 ## License
 
