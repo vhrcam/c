@@ -1,0 +1,102 @@
+{
+ "text": "teaching my little sister to ride a bike in the park",
+ "title": "first bike ride",
+ "reading": "An older sibling runs alongside a little sister wearing a blue helmet as she learns to ride a red bicycle along a park path.",
+ "format": "wide",
+ "time": "golden",
+ "weather": "clear",
+ "backdrop": "sky",
+ "mood": "warm joyful encouraging",
+ "energy": 0.5,
+ "palette": [
+  "#e8b960塑造",
+  " #5c8a47",
+  " #d93829",
+  " #2b3a4a",
+  " #f2d152"
+ ],
+ "light": {
+  "x": 20,
+  "y": 20,
+  "color": "#ffe8b3"
+ },
+ "layout": "An older sibling on the left leans forward while running alongside to steady the bike seat, while the little sister rides forward on the path through a sunny park.",
+ "forms": [
+  {
+   "name": "background trees",
+   "role": "setting",
+   "shapes": [
+    "band | foliage | #3a6344 | distant_treeline | 0,52 35,48 70,54 110,47 150,51",
+    "blob | foliage | #477852 | tree_clump_1 | 25,44,18,12,0",
+    "blob | foliage | #2f5437 | tree_clump_2 | 65,46,22,14,0",
+    "blob | foliage | #416f4a | tree_clump_3 | 125,43,20,13,0"
+   ]
+  },
+  {
+   "name": "park ground and path",
+   "role": "setting",
+   "shapes": [
+    "band | grass | #5c8a47 | lawn | 0,62 50,60 100,63 150,61",
+    "poly | concrete | #cfc5b4 | paved_path | 0,86 45,78 95,74 150,77 150,96 0,100"
+   ]
+  },
+  {
+   "name": "little bicycle",
+   "role": "support",
+   "shapes": [
+    "blob | rubber | #262626 | back_tyre | 72,78,7.5,7.5,0",
+    "blob | metal | #d9d9d9 | back_rim | 72,78,6,6,0",
+    "blob | rubber | #262626 | front_tyre | 98,78,7.5,7.5,0",
+    "blob | metal | #d9d9d9 | front_rim | 98,78,6,6,0",
+    "tube | metal | #d93829 | chain_stay | 72,78,0.8 82,78,0.8",
+    "tube | metal | #d93829 | seat_stay | 72,78,0.8 80,63,0.8",
+    "tube | metal | #d93829 | seat_tube | 82,78,1 80,60,1",
+    "tube | metal | #d93829 | down_tube | 82,78,1 94,64,1",
+    "tube | metal | #d93829 | top_tube | 80,65,0.9 93,65,0.9",
+    "tube | metal | #d93829 | fork | 94,64,1 98,78,1",
+    "tube | metal | #b0b0b0 | stem_handlebar | 94,64,0.9 93,57,0.9 91,56,1.1",
+    "tube | leather | #40291d | seat | 77,59,2.5 82,59,2",
+    "tube | plastic | #1a1a1a | pedal_crank | 82,78,0.8 82,83,0.8"
+   ]
+  },
+  {
+   "name": "older sibling",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #2b3a4a | far_leg | 60,65,3 56,74,2.5 52,82,2",
+    "tube | leather | #3a2518 | far_foot | 52,82,2 49,83,1.8",
+    "tube | cloth | #d45d3f | torso | 60,65,4.5 60,55,4.2 60,46,4.5 58,40,3.8",
+    "tube | skin | #e5b894 | neck | 58,40,1.8 58,37,1.5",
+    "blob | skin | #e5b894 | head | 58,33,3.5,4,0",
+    "poly | hair | #3a2214 | hair | 54,34 57,28 62,31 61,37 54,37",
+    "blob | skin | #2a1508 | eye | 60,33,0.5,0.5,0",
+    "tube | skin | #d49b73 | nose | 61.5,34,0.4 62.5,35,0.4",
+    "tube | cloth | #a23820 | smile | 60.5,36.5,0.5 61.5,36.8,0.4",
+    "tube | skin | #e5b894 | far_arm | 59,42,1.8 67,46,1.5 76,50,1.2",
+    "tube | cloth | #2b3a4a | near_leg | 60,65,3.2 65,73,2.7 68,81,2.2",
+    "tube | leather | #3a2518 | near_foot | 68,81,2.2 72,82,2",
+    "tube | cloth | #d45d3f | near_arm | 58,42,2 66,48,1.7 78,59,1.4"
+   ]
+  },
+  {
+   "name": "little sister",
+   "role": "focus",
+   "shapes": [
+    "tube | cloth | #e69aaf | far_leg | 80,61,2.2 82,70,1.8 82,76,1.5",
+    "tube | canvas | #ffffff | far_shoe | 82,76,1.5 84,77,1.4",
+    "tube | cloth | #f2d152 | torso | 80,61,3.2 80,54,3 80,47,3 79,42,2.2",
+    "tube | skin | #f5cbaf | neck | 79,42,1.2 79,40,1.1",
+    "blob | skin | #f5cbaf | head | 79,36,3,3.2,0",
+    "poly | plastic | #38b6ff | helmet | 75,36 78,31 83,33 83,37 75,38 | round",
+    "poly | hair | #4a2c11 | pigtail | 75,37 70,39 72,43 76,40",
+    "blob | skin | #2a1508 | eye | 81,36,0.5,0.5,0",
+    "tube | skin | #e0a382 | nose | 82,37,0.4 82.5,37.5,0.4",
+    "tube | skin | #c44343 | open_smile | 81,38.5,0.6 82.5,39,0.5",
+    "tube | cloth | #f2d152 | far_arm | 79,44,1.4 85,48,1.2 91,56,1",
+    "tube | cloth | #e69aaf | near_leg | 80,61,2.4 83,68,2 82,82,1.6",
+    "tube | canvas | #ffffff | near_shoe | 82,82,1.6 85,83,1.4",
+    "tube | cloth | #f2d152 | near_arm | 79,44,1.5 86,49,1.3 91,56,1.1"
+   ]
+  }
+ ]
+}
