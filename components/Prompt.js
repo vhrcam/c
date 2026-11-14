@@ -6,11 +6,11 @@ import Mark from "./Mark";
 const HINTS = [
   "describe a memory",
   "me and her watching the sunset",
+  "my dog waiting at the door when I came home",
   "the lake behind my grandparents' cabin where we spent every summer",
-  "racing down the beach at sunrise",
-  "walking home together in the rain through the city at night",
-  "slow dancing in the kitchen at midnight",
-  "sitting on the dock with my dad as the sun came up",
+  "teaching my little sister to ride a bike",
+  "fireworks over the city on new year's eve",
+  "my grandmother's kitchen on a sunday morning",
   "the first snow in the mountains",
 ];
 
@@ -95,7 +95,7 @@ export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWar
             value={text}
             maxLength={600}
             spellCheck={false}
-            aria-label="Describe anything"
+            aria-label="Describe a memory"
             onFocus={onWarm}
             onChange={(e) => {
               setText(e.target.value);
