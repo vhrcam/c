@@ -21,7 +21,7 @@
 1. **Describe it.** Type it the way you'd say it: *"me and her watching the sunset"*, *"my dog waiting at the door when I came home"*, *"my grandmother's kitchen on a sunday morning"*. People, animals, places, objects and weather all work.
 2. **c reads it.** Your words sit in the middle of the screen like a command waiting to run. A log shows what the director is thinking about, and each word lights up as the thing it names is placed in the scene.
 3. **The artwork builds itself.** First a faint construction sketch of the blocking, then the ground and sky, then each form printed from its base up, then hair, fur and grass, then light and weather. A log types out what c read and what it is drawing with.
-4. **It signs it.** When the last line is down, c signs the corner. Save it to your gallery, download a PNG or an SVG, copy a share link, or regenerate for a different take on the same words.
+4. **Keep it.** When the last line is down, save it to your gallery, download a PNG or an SVG, copy a share link, or regenerate for a different take on the same words.
 
 ## How c makes a picture
 
