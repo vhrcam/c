@@ -3,8 +3,9 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Mark from "./Mark";
 
+const START = "describe a memory";
+
 const HINTS = [
-  "describe a memory",
   "me and her watching the sunset",
   "my dog waiting at the door when I came home",
   "the lake behind my grandparents' cabin where we spent every summer",
@@ -13,6 +14,15 @@ const HINTS = [
   "my grandmother's kitchen on a sunday morning",
   "the first snow in the mountains",
 ];
+
+const shuffle = (list) => {
+  const out = [...list];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+};
 
 export const MODES = ["2d"];
 
@@ -24,7 +34,7 @@ const grow = (el) => {
 export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWarm }) {
   const [text, setText] = useState(draft);
   const [mode, setMode] = useState("2d");
-  const [hint, setHint] = useState(HINTS[0]);
+  const [hint, setHint] = useState(START);
   const input = useRef(null);
   const filled = useRef(Boolean(draft));
   const ready = text.trim().length > 0;
@@ -46,21 +56,24 @@ export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWar
 
   useEffect(() => {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let i = 0;
-    let n = HINTS[0].length;
+    // after the resting line, every hint once in a random order, then a new order, never the same one twice running
+    let line = START;
+    let n = line.length;
+    let bag = [];
     let adding = false;
     let timer;
     const tick = () => {
       if (filled.current) return (timer = setTimeout(tick, 600));
       n += adding ? 1 : -1;
-      setHint(HINTS[i].slice(0, n));
-      if (adding && n < HINTS[i].length) return (timer = setTimeout(tick, 32 + Math.random() * 48));
+      setHint(line.slice(0, n));
+      if (adding && n < line.length) return (timer = setTimeout(tick, 32 + Math.random() * 48));
       if (adding) {
         adding = false;
-        return (timer = setTimeout(tick, i ? 2600 : 4200));
+        return (timer = setTimeout(tick, 2600));
       }
       if (n > 0) return (timer = setTimeout(tick, 14));
-      i = (i + 1) % HINTS.length;
+      if (!bag.length) bag = shuffle(HINTS.filter((h) => h !== line));
+      line = bag.pop();
       adding = true;
       timer = setTimeout(tick, 420);
     };
