@@ -3,7 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Mark from "./Mark";
 
-const START = "describe a memory";
+const START = "describe anything";
 
 // every hint fits on one line in the input on a 360px-wide phone
 const HINTS = [
@@ -159,7 +159,7 @@ export default function Prompt({ intro, draft, works, onWorks, onGenerate, onWar
             value={text}
             maxLength={600}
             spellCheck={false}
-            aria-label="Describe a memory"
+            aria-label="Describe anything"
             onFocus={onWarm}
             onChange={(e) => {
               setText(e.target.value);
