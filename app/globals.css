@@ -40,12 +40,6 @@ body {
   }
 }
 
-@keyframes think {
-  50% {
-    transform: scaleY(0.16);
-  }
-}
-
 @keyframes type-c {
   0% {
     opacity: 0;
@@ -76,16 +70,8 @@ body {
   animation: rise 800ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
-.mark-cursor {
-  transform-origin: 50% 100%;
-}
-
 .mark-cursor[data-state="blink"] {
   animation: blink 1.06s step-end infinite;
-}
-
-.mark-cursor[data-state="think"] {
-  animation: think 1.3s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
 .mark-cursor[data-state="off"] {

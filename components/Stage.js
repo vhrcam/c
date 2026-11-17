@@ -192,12 +192,6 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
   return (
     <div className={`fixed inset-0 overflow-hidden ${hide ? "cursor-none" : ""}`}>
       {plan && ready && <canvas ref={canvas} role="img" aria-label={plan.title} className="absolute inset-0 block size-full touch-none" />}
-      <span
-        aria-hidden
-        data-state="think"
-        className={`mark-cursor pointer-events-none absolute left-1/2 top-1/2 -ml-[6px] -mt-[17px] h-[34px] w-[12px] bg-fg transition-opacity duration-700 ${ready && !live && !error ? "" : "opacity-0"}`}
-        style={{ viewTransitionName: ready && !live && !error ? "cursor" : undefined }}
-      />
       {!ready && !error && (
         <div className="pointer-events-none absolute inset-0 grid place-items-center px-6 pb-10">
           <Command text={run.text} plan={plan} notes={run.notes} />
@@ -212,7 +206,7 @@ export default function Stage({ run, onTone, onHome, onEdit, onRetry, onRegenera
           className="pointer-events-auto absolute left-[max(env(safe-area-inset-left),20px)] top-[max(env(safe-area-inset-top),18px)] block w-[30px] text-fg sm:left-7 sm:top-6"
           style={{ viewTransitionName: "mark" }}
         >
-          <Mark cursor={done ? "blink" : "off"} />
+          <Mark cursor={done ? "blink" : "off"} cursorName="cursor" />
         </button>
         {!done && !error && <Phases phases={phases} current={live ? step + 1 : 0} />}
         <div className="absolute inset-x-5 bottom-[calc(env(safe-area-inset-bottom)+76px)] sm:inset-x-auto sm:bottom-7 sm:left-7">

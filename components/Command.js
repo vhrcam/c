@@ -58,7 +58,6 @@ export default function Command({ text, plan, notes }) {
           </span>{" "}
         </Fragment>
       ))}
-      <span aria-hidden data-state={plan ? "on" : "think"} className="mark-cursor inline-block h-[1.05em] w-[0.55em] translate-y-[0.2em] bg-fg" style={{ viewTransitionName: "cursor" }} />
     </p>
   );
 }
