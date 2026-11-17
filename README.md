@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="app/icon.svg" width="88" alt="The c logo, an italic lowercase c beside a block cursor" />
+  <img src="app/icon.svg" width="88" alt="The c logo, an italic lowercase c" />
 </p>
 
 <h1 align="center">c</h1>
