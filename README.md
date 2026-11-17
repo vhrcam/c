@@ -4,11 +4,12 @@
 
 <h1 align="center">c</h1>
 
-<p align="center"><em>describe a memory</em></p>
+<p align="center"><em>describe anything</em></p>
 
 <p align="center">
-  Describe a memory, or anything else you can picture. c reads it, blocks the scene out,<br />
-  and draws it in thousands of lines while you watch.
+  Describe anything you can picture: a memory, a person, an animal, a place.<br />
+  c reads it, blocks the scene out, and draws it in thousands of lines while you watch.<br />
+  <strong>Live at <a href="https://ccreate.vercel.app">ccreate.vercel.app</a></strong>
 </p>
 
 ---
