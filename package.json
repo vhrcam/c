@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@google/genai": "^2.31.0",
-    "next": "16.4.3",
+    "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "three": "^0.186.1"
@@ -18,7 +18,7 @@
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
     "eslint": "^9",
-    "eslint-config-next": "16.4.3",
+    "eslint-config-next": "16.4.6",
     "puppeteer-core": "^24.43.1",
     "tailwindcss": "^4"
   }
