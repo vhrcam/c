@@ -10,14 +10,13 @@ export const contentType = "image/png";
 const mono = await readFile(join(process.cwd(), "assets/fonts/GeistMono-Regular.ttf"));
 
 export default function OpenGraphImage() {
-  const width = 236;
-  const k = MARK.cursor;
+  // the c alone, at the size it had beside the cursor, centered above the line
+  const scale = 236 / MARK.w;
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "#11100e" }}>
-        <svg width={width} height={(width * MARK.h) / MARK.w} viewBox={`0 0 ${MARK.w} ${MARK.h}`} fill="#ece7dd">
+        <svg width={MARK.cw * scale} height={MARK.h * scale} viewBox={`0 0 ${MARK.cw} ${MARK.h}`} fill="#ece7dd">
           <path d={MARK.c} />
-          <rect x={k.x} y={k.y} width={k.w} height={k.h} />
         </svg>
         <div style={{ marginTop: 64, fontFamily: "Geist Mono", fontSize: 28, letterSpacing: 0.5, color: "#8a857b" }}>describe a memory</div>
       </div>
